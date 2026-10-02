@@ -1,0 +1,1 @@
+export const themeBootScript = `(function(){try{var t=localStorage.getItem("mahfouz-theme");if(t!=="light")t="dark";document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme="dark";}})();`;
