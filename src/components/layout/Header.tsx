@@ -10,6 +10,21 @@ import { BrandMark } from "@/components/ui/BrandMark";
 import { LanguageLink } from "@/components/layout/LanguageLink";
 import { sectionIds } from "@/config/navigation";
 
+/**
+ * Header — fixed site header.
+ *
+ * Owns three small behaviors:
+ * 1. `scrolled` state: toggles the compact "is-scrolled" styling once
+ *    the visitor scrolls past 32px.
+ * 2. Locale persistence: whenever the locale prop changes (including
+ *    on first load), mirror it into localStorage + a cookie so the
+ *    entry route can send the visitor back to their language later.
+ * 3. Mobile menu: Escape closes it and returns focus to the toggle.
+ *
+ * Note: nav links point at `/{locale}#{sectionIds[i]}` — the ids here
+ * must stay in sync with the sections rendered on the home page
+ * (see src/config/navigation.ts).
+ */
 export function Header({ locale }: { locale: Locale }) {
   const t = getContent(locale);
   const [open, setOpen] = useState(false);
