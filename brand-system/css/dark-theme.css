@@ -1,0 +1,19 @@
+/* Intentionally designed dark mode; it is the site default and one of two equal brand modes. */
+:root, [data-brand-theme="dark"] {
+  color-scheme: dark;
+  --ma-background: var(--ma-black);
+  --ma-background-secondary: var(--ma-navy);
+  --ma-surface: var(--ma-blue);
+  --ma-surface-elevated: #12263d;
+  --ma-text: var(--ma-white);
+  --ma-text-secondary: #bcc3cd;
+  --ma-text-muted: var(--ma-muted);
+  --ma-border: rgb(245 245 242 / .13);
+  --ma-border-strong: rgb(245 245 242 / .28);
+  --ma-brand: var(--ma-orange);
+  --ma-brand-hover: var(--ma-orange-bright);
+  --ma-brand-text: var(--ma-orange-bright);
+  --ma-performance: var(--ma-green);
+  --ma-focus: var(--ma-orange-bright);
+  --ma-shadow-card: var(--ma-shadow-md);
+}

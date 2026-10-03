@@ -1,0 +1,11 @@
+/* Component primitives and semantic convenience aliases. Load after tokens and theme files. */
+:root { --brand-primary: var(--ma-brand); --bg-primary: var(--ma-background); --bg-secondary: var(--ma-background-secondary); --surface-primary: var(--ma-surface); --surface-elevated: var(--ma-surface-elevated); --text-primary: var(--ma-text); --text-secondary: var(--ma-text-secondary); --text-muted: var(--ma-text-muted); --border-default: var(--ma-border); --border-strong: var(--ma-border-strong); --brand-hover: var(--ma-brand-hover); --brand-glow: var(--ma-shadow-brand); }
+.brand-button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 24px; border: 1px solid transparent; border-radius: var(--ma-radius-control); background: var(--ma-brand); color: var(--ma-black); font: 800 14px/1.4 var(--ma-latin); text-decoration: none; transition: background var(--ma-motion-fast) var(--ma-ease-standard), transform var(--ma-motion-fast) var(--ma-ease-standard); }
+.brand-button:hover { background: var(--ma-brand-hover); }
+.brand-button:active { transform: scale(.98); }
+.brand-outline { background: transparent; border-color: var(--ma-border-strong); color: var(--ma-text); }
+.brand-card { border: 1px solid var(--ma-border); border-radius: var(--ma-radius-control); background: var(--ma-surface); box-shadow: var(--ma-shadow-card); color: var(--ma-text); }
+:focus-visible { outline: 3px solid var(--ma-focus); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

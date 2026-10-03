@@ -1,0 +1,19 @@
+/* Light mode uses cool neutral surfaces and readable accent text; it is not a color inversion. */
+[data-brand-theme="light"], [data-theme="light"] {
+  color-scheme: light;
+  --ma-background: var(--ma-light-bg);
+  --ma-background-secondary: var(--ma-light-elevated);
+  --ma-surface: #fff;
+  --ma-surface-elevated: #fff;
+  --ma-text: var(--ma-light-text);
+  --ma-text-secondary: var(--ma-light-body);
+  --ma-text-muted: var(--ma-light-muted);
+  --ma-border: rgb(16 24 32 / .12);
+  --ma-border-strong: rgb(16 24 32 / .22);
+  --ma-brand: var(--ma-orange);
+  --ma-brand-hover: var(--ma-orange-light-hover);
+  --ma-brand-text: var(--ma-orange-readable);
+  --ma-performance: var(--ma-green-readable);
+  --ma-focus: var(--ma-orange-light-hover);
+  --ma-shadow-card: var(--ma-shadow-light);
+}

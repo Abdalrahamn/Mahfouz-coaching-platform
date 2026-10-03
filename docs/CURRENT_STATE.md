@@ -48,3 +48,8 @@ Run `npm run lint`, `npm run typecheck`, `npm run test`, and `npm run build` aft
 The locale homepage now composes server feature sections. Shared layout/UI/media owners are explicit; media and navigation maps live in `src/config`. Business facts remain in `src/lib/business.ts`, UI/chrome copy in `src/lib/content.ts`, origin validation in `src/lib/env.ts`, and the theme startup script in `src/lib/theme.ts`. Existing routes, styles, approved business behavior and public image paths are preserved. See `docs/ARCHITECTURE_REVIEW.md` for the move inventory and final verification evidence.
 
 Final verification: lint (zero warnings), typecheck, 5 unit tests, production build, formatter and strict UI audit passed. All 19 browser checks passed against the final production server, including both locales at 200% text size. Screenshots cover both languages and themes; active asset dimensions are verified.
+
+## Portable brand system — October 3, 2026
+
+`brand-system/` is the portable identity package at v1.0.0. It records owner-approved direction and consolidates token values for use outside this application. `src/app/globals.css` imports `brand-system/css/brand.css` and maps application theme roles onto `--ma-*` variables. Open `brand-system/brand-preview.html` directly for the standalone light/dark specimen. The package contains only the approved logo mark and a public coach training photo as examples; it contains no private client originals.
+

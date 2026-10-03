@@ -60,3 +60,10 @@ Premium bilingual site for Abd Alrahman Mahfouz online coaching. English at `/en
 - [x] Responsive image sizes
 - [x] WebP used for page delivery
 - [ ] Production domain still comes from `SITE_URL`
+
+## Portable brand system — October 3, 2026
+
+- [x] Owner-interviewed brand personality and audience priorities
+- [x] Portable `brand-system/` with token source, CSS theme mappings, docs, prompts and browser preview
+- [x] Website theme variables mapped to the portable token layer without changing business behavior
+- [x] Brand preview is independent of Next.js and includes a theme toggle

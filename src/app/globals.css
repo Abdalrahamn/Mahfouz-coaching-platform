@@ -1,42 +1,46 @@
 @import "tailwindcss";
+@import "../../brand-system/css/tokens.css";
+@import "../../brand-system/css/dark-theme.css";
+@import "../../brand-system/css/light-theme.css";
+@import "../../brand-system/css/brand.css";
 @theme inline {
-  --color-background: #05070a;
-  --color-navy: #081526;
-  --color-surface: #0d2138;
-  --color-primary: #ff5a1f;
-  --color-accent: #ff6a24;
-  --color-performance: #11db5b;
-  --color-foreground: #f5f5f2;
-  --color-muted: #98a2b3;
+  --color-background: var(--ma-background);
+  --color-navy: var(--ma-navy);
+  --color-surface: var(--ma-blue);
+  --color-primary: var(--ma-orange);
+  --color-accent: var(--ma-orange-bright);
+  --color-performance: var(--ma-green);
+  --color-foreground: var(--ma-text);
+  --color-muted: var(--ma-text-muted);
   --font-sans: var(--font-body);
 }
 :root {
-  --background: #05070a;
-  --foreground: #f5f5f2;
-  --surface: #0d2138;
-  --surface-secondary: #081526;
-  --surface-elevated: #12263d;
-  --card: #0d2138;
+  --background: var(--ma-background);
+  --foreground: var(--ma-text);
+  --surface: var(--ma-blue);
+  --surface-secondary: var(--ma-navy);
+  --surface-elevated: var(--ma-surface-elevated);
+  --card: var(--ma-surface);
   --muted: #111922;
-  --muted-foreground: #98a2b3;
-  --border: rgb(245 245 242 / 0.13);
-  --border-strong: rgb(245 245 242 / 0.28);
-  --primary: #ff5a1f;
-  --primary-hover: #ff6a24;
-  --primary-foreground: #10141a;
+  --muted-foreground: var(--ma-text-muted);
+  --border: var(--ma-border);
+  --border-strong: var(--ma-border-strong);
+  --primary: var(--ma-brand);
+  --primary-hover: var(--ma-brand-hover);
+  --primary-foreground: var(--ma-black);
   --accent-soft: rgb(255 90 31 / 0.12);
-  --heading: #f5f5f2;
-  --body-text: #f5f5f2;
-  --subtle-text: #98a2b3;
-  --input-background: #0d2138;
-  --input-border: rgb(245 245 242 / 0.2);
-  --focus-ring: #ff6a24;
-  --shadow: 0 12px 32px rgb(0 0 0 / 0.28);
-  --accent-text: var(--color-primary);
-  --performance-text: var(--color-performance);
+  --heading: var(--ma-text);
+  --body-text: var(--ma-text);
+  --subtle-text: var(--ma-text-muted);
+  --input-background: var(--ma-surface);
+  --input-border: var(--ma-border-strong);
+  --focus-ring: var(--ma-focus);
+  --shadow: var(--ma-shadow-card);
+  --accent-text: var(--ma-brand-text);
+  --performance-text: var(--ma-performance);
   --legal-intro-text: #c1c8d1;
-  --section-space: 7rem;
-  --control-radius: 0.25rem;
+  --section-space: var(--ma-space-section);
+  --control-radius: var(--ma-radius-control);
   --display-face: var(--font-display), sans-serif;
   --body-face: var(--font-body), sans-serif;
   color-scheme: dark;
@@ -784,7 +788,7 @@ ul {
   padding: 0;
   border: 0;
   background: transparent;
-  color: #f5f5f2;
+  color: var(--ma-white);
   overflow: hidden;
   direction: ltr;
 }
@@ -1992,7 +1996,7 @@ body:has(dialog[open]) {
   }
 }
 
-/* Four related environments: atmosphere, technical grid, ember, cinematic photography. */
+/* Four related environments: atmosphere, technical grid, restrained ember, cinematic photography. */
 .hero {
   position: relative;
   isolation: isolate;
@@ -2000,7 +2004,7 @@ body:has(dialog[open]) {
   min-height: 760px;
   background:
     radial-gradient(ellipse at 78% 42%, rgb(13 33 56 / 0.95), transparent 54%),
-    linear-gradient(130deg, #05070a 38%, #081526);
+    linear-gradient(130deg, var(--ma-black) 38%, var(--ma-navy));
 }
 .hero::before {
   content: "";
@@ -2059,7 +2063,7 @@ body:has(dialog[open]) {
   left: -15%;
   width: 130%;
   height: 90px;
-  background: linear-gradient(transparent, #05070a);
+  background: linear-gradient(transparent, var(--ma-black));
   pointer-events: none;
 }
 .hero-content {
@@ -2186,7 +2190,7 @@ body:has(dialog[open]) {
   flex: 0 0 calc((100% - 48px) / 3);
   min-width: 0;
   scroll-snap-align: start;
-  background: linear-gradient(145deg, #0d2138, #081526);
+  background: linear-gradient(145deg, var(--ma-blue), var(--ma-navy));
   border: 1px solid var(--border);
   padding: 14px;
   transition: border-color 0.5s;
@@ -2259,7 +2263,7 @@ body:has(dialog[open]) {
     background 0.25s;
 }
 .price-card.recommended {
-  background: linear-gradient(160deg, #0d2138, #05070a 78%);
+  background: linear-gradient(160deg, var(--ma-blue), var(--ma-black) 78%);
 }
 .price-card h3,
 .price-card .button {
@@ -2384,7 +2388,8 @@ body:has(dialog[open]) {
     flex-direction: column;
     padding-top: 390px;
     background:
-      radial-gradient(ellipse at 68% 20%, #0d2138, transparent 52%), #05070a;
+      radial-gradient(ellipse at 68% 20%, var(--ma-blue), transparent 52%),
+      var(--ma-black);
   }
   .hero::after,
   [dir="rtl"] .hero::after {
@@ -2569,37 +2574,37 @@ body:has(dialog[open]) {
   --nav-link: #bec4cd;
 }
 html[data-theme="light"] {
-  --accent-text: #9f300b;
+  --accent-text: var(--ma-orange-readable);
   --legal-intro-text: var(--color-muted);
-  --performance-text: #087b34;
-  --background: #f3f5f8;
-  --foreground: #101820;
-  --surface: #ffffff;
-  --surface-secondary: #e7edf3;
-  --surface-elevated: #ffffff;
-  --card: #ffffff;
-  --muted: #e7edf3;
-  --muted-foreground: #3d4b5c;
-  --border: rgb(16 24 32 / 0.12);
-  --border-strong: rgb(16 24 32 / 0.22);
-  --primary: #ff5a1f;
-  --primary-hover: #e24e16;
-  --primary-foreground: #10141a;
+  --performance-text: var(--ma-green-readable);
+  --background: var(--ma-background);
+  --foreground: var(--ma-text);
+  --surface: var(--ma-surface);
+  --surface-secondary: var(--ma-background-secondary);
+  --surface-elevated: var(--ma-surface-elevated);
+  --card: var(--ma-surface);
+  --muted: var(--ma-background-secondary);
+  --muted-foreground: var(--ma-text-muted);
+  --border: var(--ma-border);
+  --border-strong: var(--ma-border-strong);
+  --primary: var(--ma-brand);
+  --primary-hover: var(--ma-brand-hover);
+  --primary-foreground: var(--ma-black);
   --accent-soft: rgb(255 90 31 / 0.12);
-  --heading: #101820;
-  --body-text: #1c2836;
-  --subtle-text: #3d4b5c;
-  --input-background: #ffffff;
-  --input-border: rgb(16 24 32 / 0.22);
-  --focus-ring: #e24e16;
-  --shadow: 0 10px 28px rgb(16 24 32 / 0.08);
+  --heading: var(--ma-text);
+  --body-text: var(--ma-text-secondary);
+  --subtle-text: var(--ma-text-muted);
+  --input-background: var(--ma-surface);
+  --input-border: var(--ma-border-strong);
+  --focus-ring: var(--ma-focus);
+  --shadow: var(--ma-shadow-card);
   --color-background: var(--background);
-  --color-navy: var(--surface-secondary);
-  --color-surface: var(--surface);
-  --color-primary: var(--primary);
-  --color-accent: var(--primary-hover);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted-foreground);
+  --color-navy: var(--ma-navy);
+  --color-surface: var(--ma-blue);
+  --color-primary: var(--ma-brand);
+  --color-accent: var(--ma-brand-hover);
+  --color-foreground: var(--ma-text);
+  --color-muted: var(--ma-text-muted);
   --header-bg: rgb(243 245 248 / 0.92);
   --nav-link: #243140;
   color-scheme: light;
@@ -2686,8 +2691,29 @@ html[data-theme="light"] .plan-region {
   height: 42%;
   inset-inline-end: 12%;
   top: 28%;
-  background: radial-gradient(circle, rgb(255 90 31 / 0.28), transparent 70%);
+  background: radial-gradient(circle, rgb(255 90 31 / 0.2), transparent 70%);
   animation: ember 12s ease-in-out infinite;
+}
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  width: 82%;
+  height: 76%;
+  inset-inline-end: 0;
+  bottom: 6%;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse,
+    rgb(255 90 31 / 0.22),
+    rgb(255 90 31 / 0.07) 38%,
+    transparent 72%
+  );
+  filter: blur(24px);
+  pointer-events: none;
+}
+.hero-photo > img {
+  position: relative;
+  z-index: 1;
 }
 .hero-grid {
   position: absolute;
@@ -2719,7 +2745,12 @@ html[data-theme="light"] .plan-region {
   top: 0;
   width: 18%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, #ff6a24, transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--ma-orange-bright),
+    transparent
+  );
   animation: energy 11s ease-in-out infinite;
 }
 .hero-content {
@@ -2727,10 +2758,10 @@ html[data-theme="light"] .plan-region {
   z-index: 1;
 }
 .final-section {
-  --color-foreground: #f5f5f2;
-  --color-muted: #98a2b3;
-  --color-background: #05070a;
-  color: #f5f5f2;
+  --color-foreground: var(--ma-white);
+  --color-muted: var(--ma-muted);
+  --color-background: var(--ma-black);
+  color: var(--ma-white);
 }
 .final-section::before {
   content: "";
@@ -2836,14 +2867,14 @@ html[data-theme="light"] .icon-button:hover {
 html[data-theme="light"] .nutrition-section,
 html[data-theme="light"] .process-section,
 html[data-theme="light"] .final-section {
-  --color-foreground: #f5f5f2;
+  --color-foreground: var(--ma-white);
   --color-muted: #c5ced8;
   --muted-foreground: #c5ced8;
-  --color-navy: #0d2138;
-  --color-background: #081526;
+  --color-navy: var(--ma-blue);
+  --color-background: var(--ma-navy);
   --border: rgb(245 245 242 / 0.16);
-  background: #081526;
-  color: #f5f5f2;
+  background: var(--ma-navy);
+  color: var(--ma-white);
 }
 html[data-theme="light"] .nutrition-section p,
 html[data-theme="light"] .process-section p,
@@ -2858,7 +2889,7 @@ html[data-theme="light"] .nutrition-image {
   );
 }
 html[data-theme="light"] .nutrition-image:after {
-  background: linear-gradient(0deg, #081526, transparent 32%);
+  background: linear-gradient(0deg, var(--ma-navy), transparent 32%);
 }
 html[data-theme="light"] .about-image {
   background: radial-gradient(ellipse at 55% 42%, #d5dee8, #f3f5f8 72%);
@@ -2980,5 +3011,20 @@ html[data-theme="light"] .gallery-certificates .media-trigger {
 @media (max-width: 700px) {
   main h2 {
     overflow-wrap: anywhere;
+  }
+}
+
+/* Transparent owner-selected coach integrated into the hero atmosphere. */
+.hero-cutout .hero-photo > img {
+  object-position: center bottom;
+}
+.hero-cutout .hero-floor {
+  z-index: 2;
+  height: 55px;
+}
+@media (max-width: 700px) {
+  .hero-cutout .hero-photo > img {
+    object-position: center top;
+    height: 650px;
   }
 }

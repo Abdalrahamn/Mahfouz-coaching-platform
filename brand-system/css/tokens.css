@@ -1,0 +1,47 @@
+/* Generated mapping from tokens/design-tokens.json. Do not edit palette values here by hand. */
+:root {
+  --ma-black: #05070a;
+  --ma-navy: #081526;
+  --ma-blue: #0d2138;
+  --ma-orange: #ff5a1f;
+  --ma-orange-bright: #ff6a24;
+  --ma-orange-50: #fff2ee; --ma-orange-100: #ffe5dd; --ma-orange-200: #ffcebf; --ma-orange-300: #ffad93; --ma-orange-400: #ff8763; --ma-orange-500: var(--ma-orange); --ma-orange-600: #e14600; --ma-orange-700: #bf3a00; --ma-orange-800: #9e2e00; --ma-orange-900: #7f2300; --ma-orange-950: #5d1700;
+  --ma-orange-rgb: 255 90 31; --ma-orange-hsl: 15.8 100% 56.1%; --ma-orange-oklch: 0.6824 0.2108 37.70;
+  --ma-orange-soft: rgb(255 90 31 / .12); --ma-orange-active: var(--ma-orange-600);
+  --ma-green: #11db5b;
+  --ma-white: #f5f5f2;
+  --ma-muted: #98a2b3;
+  --ma-light-bg: #f3f5f8;
+  --ma-light-elevated: #e7edf3;
+  --ma-light-text: #101820;
+  --ma-light-body: #1c2836;
+  --ma-light-muted: #3d4b5c;
+  --ma-orange-readable: #9f300b;
+  --ma-orange-light-hover: #e24e16;
+  --ma-green-readable: #087b34;
+  --ma-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --ma-latin: "Manrope", Arial, sans-serif;
+  --ma-arabic: "Cairo", Tahoma, sans-serif;
+  --ma-space-2: 2px; --ma-space-4: 4px; --ma-space-8: 8px; --ma-space-12: 12px; --ma-space-16: 16px; --ma-space-20: 20px; --ma-space-24: 24px; --ma-space-32: 32px; --ma-space-40: 40px; --ma-space-48: 48px; --ma-space-64: 64px; --ma-space-80: 80px; --ma-space-96: 96px;
+  --ma-font-display-xl: 64px; --ma-font-display-lg: 48px; --ma-font-h1: 48px; --ma-font-h2: 40px; --ma-font-h3: 20px; --ma-font-body: 16px; --ma-font-body-small: 14px; --ma-font-caption: 12px;
+  --ma-space-section: 112px;
+  --ma-breakpoint-sm: 640px; --ma-breakpoint-md: 768px; --ma-breakpoint-lg: 1024px; --ma-breakpoint-xl: 1280px; --ma-breakpoint-2xl: 1536px;
+  --ma-gutter: 24px;
+  --ma-radius-control: 4px;
+  --ma-radius-lg: 8px;
+  --ma-radius-xl: 12px;
+  --ma-radius-2xl: 16px;
+  --ma-radius-full: 9999px;
+  --ma-shadow-xs: 0 1px 2px rgb(0 0 0 / .12);
+  --ma-shadow-sm: 0 4px 12px rgb(0 0 0 / .16);
+  --ma-shadow-md: 0 12px 32px rgb(0 0 0 / .28);
+  --ma-shadow-lg: 0 20px 48px rgb(0 0 0 / .24);
+  --ma-shadow-xl: 0 24px 64px rgb(0 0 0 / .3);
+  --ma-shadow-brand: 0 0 36px rgb(255 90 31 / .16);
+  --ma-shadow-light: 0 10px 28px rgb(16 24 32 / .08);
+  --ma-motion-fast: 160ms;
+  --ma-motion-normal: 280ms;
+  --ma-motion-slow: 480ms;
+  --ma-ease-standard: cubic-bezier(.2, 0, 0, 1);
+  --ma-ease-exit: cubic-bezier(.4, 0, 1, 1);
+}
