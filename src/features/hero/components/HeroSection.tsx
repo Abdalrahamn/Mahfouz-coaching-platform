@@ -10,7 +10,7 @@ import { HeroReveal } from "@/features/hero/components/HeroReveal";
 export function HeroSection({ locale }: { locale: Locale }) {
   const t = getContent(locale);
   return (
-    <section className="hero" aria-labelledby="hero-title">
+    <section className="hero hero-cutout" aria-labelledby="hero-title">
       <div className="hero-atmosphere" aria-hidden="true">
         <span className="glow-blue" />
         <span className="glow-orange" />

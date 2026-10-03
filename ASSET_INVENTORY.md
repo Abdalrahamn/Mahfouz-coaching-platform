@@ -29,3 +29,7 @@ All 22 supplied images inspected. All originals preserved under ignored, non-pub
 
 ## Privacy
 Seven feedback derivatives are irreversibly cropped/flattened and metadata stripped. Full originals, reference and source contact sheet must never be deployed. No client name is used in filenames, alt text, captions or copy. Crops are excerpts of real feedback, not fabricated testimonials. Transformation masks cover client faces; bodies are unchanged.
+
+## Owner hero image update — October 3, 2026
+
+The owner selected the newly supplied coach image, then requested background removal. The active hero uses `/assets/hero/coach-new-transparent.webp` (597 × 1468, alpha transparency), derived with the image editing tool and trimmed for responsive placement over the separate hero atmosphere. Both locales share it; headlines and actions remain live HTML. The supplied fiery composite is preserved privately. This supersedes the earlier full-composite trial.

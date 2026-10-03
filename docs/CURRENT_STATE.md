@@ -53,3 +53,7 @@ Final verification: lint (zero warnings), typecheck, 5 unit tests, production bu
 
 `brand-system/` is the portable identity package at v1.0.0. It records owner-approved direction and consolidates token values for use outside this application. `src/app/globals.css` imports `brand-system/css/brand.css` and maps application theme roles onto `--ma-*` variables. Open `brand-system/brand-preview.html` directly for the standalone light/dark specimen. The package contains only the approved logo mark and a public coach training photo as examples; it contains no private client originals.
 
+
+## Owner hero image update — October 3, 2026
+
+The owner selected the newly supplied coach image, then requested background removal. The active hero uses `/assets/hero/coach-new-transparent.webp` (597 × 1468, alpha transparency), derived with the image editing tool and trimmed for responsive placement over the separate hero atmosphere. Both locales share it; headlines and actions remain live HTML. The supplied fiery composite is preserved privately. This supersedes the earlier full-composite trial.

@@ -36,7 +36,7 @@ export const content = {
       description:
         "Personalized training and flexible nutrition built around your goals, lifestyle and level. Daily WhatsApp support is included with Daily Coaching.",
       results: "View packages",
-      photo: "Abd Alrahman Mahfouz training in the gym",
+      photo: "Abd Alrahman Mahfouz in a black training vest",
       note: "PERSONAL COACHING. REAL CONNECTION.",
     },
     stats: ["YEARS OF EXPERIENCE", "CLIENT TRANSFORMATIONS", "DAILY FOLLOW-UP"],
@@ -373,7 +373,7 @@ export const content = {
       description:
         "تمرين وتغذية مخصصين ليك حسب هدفك ومستواك وروتين حياتك. المتابعة اليومية على واتساب ضمن باقات المتابعة اليومية.",
       results: "شوف الباقات",
-      photo: "عبدالرحمن محفوظ يتمرن في الجيم",
+      photo: "عبدالرحمن محفوظ يرتدي ملابس تمرين سوداء",
       note: "متابعة شخصية. تواصل حقيقي.",
     },
     stats: ["سنة من الخبرة", "رحلة تحول", "متابعة يومية"],

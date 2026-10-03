@@ -2,9 +2,9 @@ export type MediaAsset = { src: string; width: number; height: number };
 
 export const assets = {
   hero: {
-    src: "/assets/hero/coach-transparent.webp",
-    width: 529,
-    height: 1083,
+    src: "/assets/hero/coach-new-transparent.webp",
+    width: 597,
+    height: 1468,
   },
   about: {
     src: "/assets/coach/coach-about-transparent.webp",

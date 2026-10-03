@@ -208,7 +208,7 @@ test("hero and navigation lead to packages before contextual WhatsApp", async ({
   await expect(page.locator("#pricing #daily-coaching")).toBeInViewport();
   await expect(page.locator(".price-card")).toHaveCount(9);
   expect(await page.locator(".hero-photo img").getAttribute("src")).toContain(
-    "coach-transparent",
+    "coach-new-transparent",
   );
 });
 test("carousel autoplay, pause, arrows, infinite wrap and reduced motion", async ({
