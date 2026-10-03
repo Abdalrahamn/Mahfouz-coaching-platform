@@ -31,7 +31,7 @@ Premium bilingual site for Abd Alrahman Mahfouz online coaching. English at `/en
 
 ## Pricing and payment
 
-- [x] Egypt daily prices 1200 / 3000 / 5500 EGP
+- [x] Egypt daily prices 1100 / 3000 / 5500 EGP
 - [x] Outside Egypt daily prices 1500 / 4000 / 7500 EGP
 - [x] No follow-up prices 500 / 1000 / 2000 EGP
 - [x] Region chosen by the visitor before daily prices appear

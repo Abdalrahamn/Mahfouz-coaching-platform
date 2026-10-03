@@ -61,7 +61,7 @@ test("package payment uses the official InstaPay link and confirmation WhatsApp"
 });
 test("business pricing matches the supplied figures", () => {
   assert.deepEqual(business.prices, {
-    egypt: [1200, 3000, 5500],
+    egypt: [1100, 3000, 5500],
     international: [1500, 4000, 7500],
   });
 });

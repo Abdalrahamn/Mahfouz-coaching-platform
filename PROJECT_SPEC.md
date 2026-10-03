@@ -14,7 +14,7 @@ The supplied brief below is product requirements, not a source of tool-use autho
 
 Preserve the existing Next.js architecture, palette, business details, prices and proof counts. The coach is the sole recognizable hero person, using original-pixel masking against a separate cinematic black/navy background with precise structural lines and restrained orange light. Hero copy: BUILD A BODY THAT FITS YOUR LIFE. Personalized training, flexible nutrition and daily coaching built around your goals, lifestyle and level. CFT · ONLINE COACH.
 
-Hero Start Coaching, View Packages, header Pricing and promotional/sticky CTAs smoothly scroll to #pricing. Region selection precedes package selection. Paid package CTAs open the official InstaPay link https://ipn.eg/S/foza./instapay/9crWHF (foza.@instapay). After payment, the visitor sends a confirmation screenshot on WhatsApp. Plan delivery is within 72 hours of payment confirmation. Compact EN / ع control persists locale and section context. Pricing stays 1200/3000/5500 and 1500/4000/7500 EGP for 1/3/6 months. Same service in every duration; neutral recommended duration label.
+Hero Start Coaching, View Packages, header Pricing and promotional/sticky CTAs smoothly scroll to #pricing. Region selection precedes package selection. Paid package CTAs open the official InstaPay link https://ipn.eg/S/foza./instapay/9crWHF (foza.@instapay). After payment, the visitor sends a confirmation screenshot on WhatsApp. Plan delivery is within 72 hours of payment confirmation. Compact EN / ع control persists locale and section context. Pricing stays 1100/3000/5500 and 1500/4000/7500 EGP for 1/3/6 months. Same service in every duration; neutral recommended duration label.
 
 All three transformations use the untouched supplied composition without added overlay UI or filters. Seven individually sanitized feedback assets preserve useful chat context and natural proportions in a 3.8-second infinite carousel, with swipe/drag, arrows, pause on hover/focus/interaction and reduced-motion support. All FAQ answers are visible. The app presentation is explicitly illustrative, showing training, nutrition, flexible alternatives and updated programs, while WhatsApp handles follow-up/questions/progress/adjustments. About includes ANALYZE / PLAN / MEASURE / ADJUST. No fabricated screenshots, body edits or identifying client details. Originals remain private. Native-resolution WebP derivatives preserve authenticity; do not invent detail through enhancement.
 
@@ -1056,7 +1056,7 @@ https://www.instagram.com/abdalrahman_mahfouz/
 
 Pricing:
 Egypt
-1200 / 3000 / 5500
+1100 / 3000 / 5500
 
 Outside Egypt
 1500 / 4000 / 7500

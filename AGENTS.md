@@ -14,7 +14,7 @@ Do not alter approved prices, payment details, client privacy rules, or transfor
 - NEVER publish private/, originals, contact sheets or unredacted screenshots. Pixel sanitation must be irreversible; CSS masking is inadequate. Preserve originals privately.
 - Real coach photography is website media. Flattened reference is design direction only. Do not reshape bodies.
 - Apply shared tokens, accessible native semantics, visible focus, touch targets and reduced-motion behavior.
-- Prices in EGP: Egypt 1200/3000/5500; outside Egypt 1500/4000/7500 for 1/3/6 months. Region selected by visitor.
+- Prices in EGP: Egypt 1100/3000/5500; outside Egypt 1500/4000/7500 for 1/3/6 months. Region selected by visitor.
 - WhatsApp 201146399576; payment 01146399576; Instagram abdalrahman_mahfouz. Do not implement card checkout.
 - Verify npm run lint, npm run typecheck, npm run test and npm run build; inspect desktop/mobile in both locales.
 - SITE_URL is the owner-supplied production origin for canonical URLs and sitemap. Do not invent a domain or physical gym.
