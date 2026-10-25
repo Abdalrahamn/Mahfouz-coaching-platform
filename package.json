@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --hostname 0.0.0.0",
-    "build": "next build",
-    "start": "next start --hostname 0.0.0.0",
+    "build": "node scripts/build-static.mjs",
+    "start": "node scripts/preview-static.mjs",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test tests/business.test.ts",
@@ -14,25 +14,25 @@
     "assets:organize": "node scripts/organize-assets.mjs"
   },
   "dependencies": {
+    "lucide-react": "latest",
+    "motion": "latest",
     "next": "16.3.8",
     "react": "19.3.0",
-    "react-dom": "19.3.0",
-    "lucide-react": "latest",
-    "motion": "latest"
+    "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "typescript": "latest",
+    "@axe-core/playwright": "latest",
+    "@playwright/test": "latest",
+    "@tailwindcss/postcss": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "tailwindcss": "latest",
-    "@tailwindcss/postcss": "latest",
     "eslint": "latest",
     "eslint-config-next": "16.3.8",
     "prettier": "latest",
+    "sharp": "latest",
+    "tailwindcss": "latest",
     "tsx": "latest",
-    "@playwright/test": "latest",
-    "@axe-core/playwright": "latest",
-    "sharp": "latest"
+    "typescript": "latest"
   }
 }

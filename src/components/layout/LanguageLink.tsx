@@ -1,39 +1,35 @@
 "use client";
 import { getContent } from "@/lib/content";
 import Link from "next/link";
+import { useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import type { Locale } from "@/lib/business";
 
-/**
- * LanguageLink — the compact "EN / ع" control.
- *
- * Rendered twice (header + footer) on every page.
- *
- * What SHOULD happen when it is clicked:
- * 1. The visitor stays exactly where they are on the page (same section).
- * 2. Only the locale segment of the URL changes: /ar/... <-> /en/...
- * 3. The chosen locale is persisted (localStorage + cookie) so the
- *    entry route and the server can restore it on the next visit.
- *
- * WHY THIS HAD A BUG (and how it is fixed):
- * Nav links and CTAs leave hashes like `#pricing` in the URL, and such
- * a stale hash survives in the browser history. The App Router re-applies
- * a hash it finds in the current/history URL when the route changes, so
- * switching language teleported the visitor to that old hash — typically
- * the pricing section near the bottom of the page — regardless of where
- * they were actually reading.
- *
- * The fix, two parts:
- * 1. Strip the stale hash from the address bar (history.replaceState)
- *    BEFORE navigating, so the router has no old hash to re-apply.
- * 2. Navigate with `{ scroll: false }` so the router leaves the scroll
- *    position untouched. Both locales render the same section layout,
- *    so the visitor simply keeps reading the same section in the new
- *    language — no jump to the top, no jump to an old hash.
- */
+/** Restore the visible section across locale layouts with different heights. */
 export function LanguageLink({ locale }: { locale: Locale }) {
   const pathname = usePathname();
   const router = useRouter();
+  useEffect(() => {
+    try {
+      const saved = sessionStorage.getItem("mahfouz-locale-position");
+      if (!saved) return;
+      const position = JSON.parse(saved);
+      if (position.pathname !== pathname) return;
+      sessionStorage.removeItem("mahfouz-locale-position");
+      const frame = requestAnimationFrame(() => {
+        const section = document.getElementById(position.id);
+        if (section)
+          window.scrollTo({
+            top:
+              window.scrollY +
+              section.getBoundingClientRect().top -
+              position.top,
+            behavior: "instant",
+          });
+      });
+      return () => cancelAnimationFrame(frame);
+    } catch {}
+  }, [pathname]);
   return (
     <div
       className="language-switch"
@@ -55,6 +51,50 @@ export function LanguageLink({ locale }: { locale: Locale }) {
             event.preventDefault();
             if (next === locale) return;
 
+            const destination = pathname.replace(
+              /^\/(en|ar)(?=\/|$)/,
+              `/${next}`,
+            );
+            const visibleSection = Array.from(
+              document.querySelectorAll<HTMLElement>("main section[id]"),
+            )
+              .map((node) => {
+                const rect = node.getBoundingClientRect();
+                return {
+                  node,
+                  visible: Math.max(
+                    0,
+                    Math.min(rect.bottom, innerHeight) -
+                      Math.max(rect.top, 100),
+                  ),
+                };
+              })
+              .sort((a, b) => b.visible - a.visible)
+              .find((entry) => entry.visible > 0)?.node;
+            const hashTarget = document.getElementById(
+              window.location.hash.slice(1),
+            );
+            const targetRect = hashTarget?.getBoundingClientRect();
+            const section =
+              hashTarget &&
+              targetRect &&
+              targetRect.top < innerHeight &&
+              targetRect.bottom > 100
+                ? hashTarget
+                : visibleSection;
+            if (section) {
+              try {
+                sessionStorage.setItem(
+                  "mahfouz-locale-position",
+                  JSON.stringify({
+                    pathname: destination,
+                    id: section.id,
+                    top: section.getBoundingClientRect().top,
+                  }),
+                );
+              } catch {}
+            }
+
             // 1. Persist the visitor's language choice.
             try {
               localStorage.setItem("mahfouz-language", next);
@@ -73,13 +113,10 @@ export function LanguageLink({ locale }: { locale: Locale }) {
               );
             }
 
-            // 3. Swap the locale in place. `scroll: false` keeps the
-            //    exact scroll position; the identical section layout
-            //    means the visitor is still in the same section.
-            router.push(
-              pathname.replace(/^\/(en|ar)(?=\/|$)/, `/${next}`),
-              { scroll: false },
-            );
+            // Preserve scroll until the destination restores the visible section.
+            router.push(pathname.replace(/^\/(en|ar)(?=\/|$)/, `/${next}`), {
+              scroll: false,
+            });
           }}
         >
           {next === "en" ? "EN" : "ع"}

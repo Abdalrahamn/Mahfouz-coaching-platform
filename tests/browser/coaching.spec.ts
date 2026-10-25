@@ -23,8 +23,8 @@ for (const locale of ["en", "ar"] as const) {
       ).toBeTruthy();
       await expect(page.locator(".hero-photo img")).toBeVisible();
       await expect(
-        page.locator(".gallery-transformations .media-card"),
-      ).toHaveCount(3);
+        page.locator(".gallery-transformations .media-card:not([aria-hidden])"),
+      ).toHaveCount(6);
       await expect(
         page.locator(".testimonial-card:not([aria-hidden])"),
       ).toHaveCount(7);
@@ -60,7 +60,7 @@ for (const locale of ["en", "ar"] as const) {
     expect(await page.locator(".price bdi").allTextContents()).toEqual(
       locale === "ar"
         ? [
-            "١٬٢٠٠",
+            "١٬١٠٠",
             "٣٬٠٠٠",
             "٥٬٥٠٠",
             "١٬٥٠٠",
@@ -71,7 +71,7 @@ for (const locale of ["en", "ar"] as const) {
             "٢٬٠٠٠",
           ]
         : [
-            "1,200",
+            "1,100",
             "3,000",
             "5,500",
             "1,500",
@@ -92,7 +92,7 @@ for (const locale of ["en", "ar"] as const) {
       page.locator(".gallery-transformations figcaption"),
     ).toHaveCount(0);
     const trigger = page
-      .locator(".gallery-transformations .media-trigger")
+      .locator(".gallery-transformations .text-button")
       .first();
     await trigger.click();
     const dialog = page.locator(".gallery-transformations dialog");
@@ -101,7 +101,9 @@ for (const locale of ["en", "ar"] as const) {
     await page.keyboard.press("Escape");
     await expect(dialog).not.toBeVisible();
     await expect(trigger).toBeFocused();
-    await page.locator(".carousel-footer .text-button").click();
+    await page
+      .locator(".gallery-feedback .carousel-footer .text-button")
+      .click();
     await expect(page.locator(".feedback-lightbox")).toBeVisible();
     await page.keyboard.press("Escape");
   });
@@ -156,6 +158,8 @@ test("language switch and root redirect preserve Arabic preference", async ({
   await expect(page).toHaveURL(/\/ar$/);
   await page.locator('header .language-switch a[lang="en"]').click();
   await expect(page).toHaveURL(/\/en$/);
+  await page.goto("/");
+  await expect(page).toHaveURL(/\/en$/);
 });
 test("public server never serves private originals or references", async ({
   request,
@@ -204,7 +208,7 @@ test("hero and navigation lead to packages before contextual WhatsApp", async ({
   await expect(page).toHaveURL(/#pricing$/);
   await expect(page.locator("#pricing #daily-coaching")).toBeInViewport();
   await page.locator('header .language-switch a[lang="ar"]').click();
-  await expect(page).toHaveURL(/\/ar#pricing$/);
+  await expect(page).toHaveURL(/\/ar\/?$/);
   await expect(page.locator("#pricing #daily-coaching")).toBeInViewport();
   await expect(page.locator(".price-card")).toHaveCount(9);
   expect(await page.locator(".hero-photo img").getAttribute("src")).toContain(
@@ -215,14 +219,17 @@ test("carousel autoplay, pause, arrows, infinite wrap and reduced motion", async
   page,
 }) => {
   await page.goto("/en");
-  await page.locator(".testimonial-track").scrollIntoViewIfNeeded();
+  await page
+    .locator(".gallery-feedback .testimonial-track")
+    .scrollIntoViewIfNeeded();
   await page.mouse.move(0, 0);
-  const indicator = page.locator(".carousel-pagination");
+  const indicator = page.locator(".gallery-feedback .carousel-pagination");
   await expect(indicator).toHaveAttribute("aria-label", "1 / 7");
   await expect(indicator).toHaveAttribute("aria-label", "2 / 7", {
     timeout: 6000,
   });
   await page
+    .locator(".gallery-feedback")
     .getByRole("button", { name: "Pause carousel", exact: true })
     .click();
   const frozen = await indicator.getAttribute("aria-label");
@@ -241,7 +248,9 @@ test("carousel autoplay, pause, arrows, infinite wrap and reduced motion", async
   await expect(indicator).toHaveAttribute("aria-label", "2 / 7");
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.reload();
-  await page.locator(".testimonial-track").scrollIntoViewIfNeeded();
+  await page
+    .locator(".gallery-feedback .testimonial-track")
+    .scrollIntoViewIfNeeded();
   await page.mouse.move(0, 0);
   await page.waitForTimeout(4200);
   await expect(indicator).toHaveAttribute("aria-label", "1 / 7");
@@ -256,13 +265,19 @@ test("mobile native touch swipe preserves mixed feedback proportions", async ({
   });
   const page = await context.newPage();
   await page.goto("/ar");
-  await page.locator(".testimonial-track").scrollIntoViewIfNeeded();
+  await page
+    .locator(".gallery-feedback .testimonial-track")
+    .scrollIntoViewIfNeeded();
   await expect
     .poll(() =>
-      page.locator(".testimonial-track").evaluate((track) => track.scrollLeft),
+      page
+        .locator(".gallery-feedback .testimonial-track")
+        .evaluate((track) => track.scrollLeft),
     )
     .toBeGreaterThan(0);
-  const box = await page.locator(".testimonial-track").boundingBox();
+  const box = await page
+    .locator(".gallery-feedback .testimonial-track")
+    .boundingBox();
   const client = await context.newCDPSession(page);
   const y = box!.y + 150;
   await client.send("Input.dispatchTouchEvent", {
@@ -280,10 +295,9 @@ test("mobile native touch swipe preserves mixed feedback proportions", async ({
     type: "touchEnd",
     touchPoints: [],
   });
-  await expect(page.locator(".carousel-pagination")).not.toHaveAttribute(
-    "aria-label",
-    "1 / 7",
-  );
+  await expect(
+    page.locator(".gallery-feedback .carousel-pagination"),
+  ).not.toHaveAttribute("aria-label", "1 / 7");
   expect(
     await page
       .locator(".testimonial-card:not([aria-hidden]) img")
@@ -300,4 +314,32 @@ test("mobile native touch swipe preserves mixed feedback proportions", async ({
       ),
   ).toBeTruthy();
   await context.close();
+});
+
+test("Arabic and dark defaults; language switches preserve theme without React issues", async ({
+  page,
+}) => {
+  const issues: string[] = [];
+  page.on("console", (message) => {
+    if (message.type() === "error") issues.push(message.text());
+  });
+  page.on("pageerror", (error) => issues.push(error.message));
+  await page.goto("/");
+  await expect(page).toHaveURL(/\/ar$/);
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  await expect(page.locator("h1")).toHaveText("ابني جسميسهلحياتك.");
+  await page.locator(".theme-toggle").click();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  for (const locale of ["en", "ar", "en", "ar"]) {
+    await page.locator(`header .language-switch a[lang="${locale}"]`).click();
+    await expect(page).toHaveURL(new RegExp(`/${locale}$`));
+    await expect(page.locator("html")).toHaveAttribute(
+      "dir",
+      locale === "ar" ? "rtl" : "ltr",
+    );
+    await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  }
+  await page.reload();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  expect(issues).toEqual([]);
 });

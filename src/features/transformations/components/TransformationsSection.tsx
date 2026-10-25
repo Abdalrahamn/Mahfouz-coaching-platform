@@ -1,7 +1,7 @@
 import { getContent } from "@/lib/content";
 import { type Locale } from "@/lib/business";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { MediaGallery } from "@/components/media/MediaGallery";
+import { ProofCarousel } from "@/components/media/ProofCarousel";
 
 export function TransformationsSection({ locale }: { locale: Locale }) {
   const t = getContent(locale);
@@ -29,7 +29,7 @@ export function TransformationsSection({ locale }: { locale: Locale }) {
           </div>
           <p>{t.results.text}</p>
         </div>
-        <MediaGallery locale={locale} kind="transformations" />
+        <ProofCarousel locale={locale} kind="transformations" />
         <p className="section-note">{t.results.note}</p>
       </div>
     </section>

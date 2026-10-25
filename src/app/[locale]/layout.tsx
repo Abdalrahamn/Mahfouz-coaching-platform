@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { isLocale } from "@/lib/business";
 import { display, body, arabic } from "@/lib/fonts";
 import { themeBootScript } from "@/lib/theme";
@@ -18,12 +19,17 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
+      data-theme="dark"
       dir={locale === "ar" ? "rtl" : "ltr"}
       className={`${display.variable} ${body.variable} ${arabic.variable}`}
       suppressHydrationWarning
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
+        <Script
+          id="mahfouz-theme-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: themeBootScript }}
+        />
       </head>
       <body>{children}</body>
     </html>

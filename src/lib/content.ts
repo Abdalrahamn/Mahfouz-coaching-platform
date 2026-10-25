@@ -75,7 +75,7 @@ export const content = {
         "Adjustments as your needs change",
       ],
       caption: "BUILT AROUND YOUR REAL LIFE",
-      photo: "Mahfouz in a gym wearing an olive training top",
+      photo: "Mahfouz wearing an olive training top and white shorts",
     },
     app: {
       eyebrow: "YOUR PLAN, ALWAYS WITH YOU",
@@ -98,6 +98,11 @@ export const content = {
       note: "Individual results vary. Progress depends on adherence and individual circumstances.",
       alt: "Supplied before-and-after client transformation, identity concealed",
       enlarge: "Enlarge transformation",
+      carousel: "Transformation gallery",
+      previous: "Previous transformation",
+      next: "Next transformation",
+      pause: "Pause transformations",
+      play: "Resume transformations",
     },
     feedback: {
       eyebrow: "IN THEIR OWN WORDS",
@@ -142,7 +147,8 @@ export const content = {
       engineering: "ENGINEERING MINDSET.\nAPPLIED TO PHYSIQUE TRANSFORMATION.",
       body: "My software engineering background brings structure to coaching. We analyze your starting point, plan around your life, measure progress and adjust as you develop.",
       method: ["ANALYZE", "PLAN", "MEASURE", "ADJUST"],
-      photo: "Mahfouz standing in a gym beside dumbbells",
+      photo:
+        "Mahfouz viewed from behind in a white training vest and grey shorts",
       credentials: [
         ["IASST · Certified Fitness Trainer", "July 2026"],
         [
@@ -369,7 +375,7 @@ export const content = {
       eyebrow: "هدفك. حياتك. خطتك.",
       name: "عبدالرحمن محفوظ",
       role: "مدرب لياقة معتمد · متابعة أونلاين",
-      headline: ["ابني جسم", "يناسب", "حياتك."],
+      headline: ["ابني جسم", "يسهل", "حياتك."],
       description:
         "تمرين وتغذية مخصصين ليك حسب هدفك ومستواك وروتين حياتك. المتابعة اليومية على واتساب ضمن باقات المتابعة اليومية.",
       results: "شوف الباقات",
@@ -412,7 +418,7 @@ export const content = {
         "تعديلات مع تغير احتياجاتك",
       ],
       caption: "معمول على حياتك",
-      photo: "محفوظ في الجيم يرتدي ملابس تمرين باللون الزيتي",
+      photo: "محفوظ يرتدي ملابس تمرين باللون الزيتي وشورت أبيض",
     },
     app: {
       eyebrow: "خطتك معاك في كل مكان",
@@ -435,6 +441,11 @@ export const content = {
       note: "النتائج بتختلف من شخص للتاني، وبتعتمد على الالتزام والظروف الفردية.",
       alt: "صورة تحول حقيقية قبل وبعد مع إخفاء هوية العميل",
       enlarge: "تكبير صورة التحول",
+      carousel: "صور التحولات",
+      previous: "التحول السابق",
+      next: "التحول التالي",
+      pause: "إيقاف التحولات",
+      play: "استكمال التحولات",
     },
     feedback: {
       eyebrow: "بكلامهم هم",
@@ -473,7 +484,7 @@ export const content = {
       engineering: "عقلية هندسية. في خدمة تحول جسمك.",
       body: "خلفيتي كمهندس برمجيات بتأثر على أسلوبي: تحليل، تخطيط، قياس وتعديل مستمر. جسمك وهدفك ونمط حياتك هم أساس الخطة، بدل ما نطبق نفس النظام على كل الناس.",
       method: ["نحلل", "نخطط", "نقيس", "نعدل"],
-      photo: "محفوظ يقف في الجيم بجانب الأوزان",
+      photo: "محفوظ من الخلف يرتدي فانلة تمرين بيضاء وشورت رمادي",
       credentials: [
         ["IASST · مدرب لياقة بدنية معتمد", "يوليو 2026"],
         ["FitXpert · شهادة إنجاز", "مبادرة صلاح سليم · 15 أبريل 2025"],

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteOrigin } from "@/lib/env";
+export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   const origin = siteOrigin();
   if (!origin) return [];

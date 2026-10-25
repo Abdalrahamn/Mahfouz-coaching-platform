@@ -5,7 +5,7 @@ export default function EntryLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="ar" dir="rtl" data-theme="dark">
       <body>{children}</body>
     </html>
   );

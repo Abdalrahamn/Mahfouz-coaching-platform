@@ -4,15 +4,15 @@ Bilingual English/Arabic personal coaching website built with Next.js App Router
 
 ## Run
 
-Requires Node.js 20.9+. Run `npm ci`, then `npm run dev`. Open http://localhost:3000. Routes: `/en`, `/ar`, and each locale's `/terms`, `/privacy`, `/disclaimer`. Root defaults to English and respects the saved language preference cookie.
+Use Node.js 22 (see `.node-version`). Run `npm ci`, then `npm run dev`. Open http://localhost:3000. Routes: `/en`, `/ar`, and each locale's `/terms`, `/privacy`, `/disclaimer`. Root defaults to Arabic and respects the saved language preference cookie.
 
 ## Verify
 
-`npm run lint`, `npm run typecheck`, `npm run test`, `npm run build`. Browser checks: `npm run test:e2e` (install Chromium with `npx playwright install chromium` once). Production: `npm run start`.
+`npm run lint`, `npm run typecheck`, `npm run test`, `npm run build`. Browser checks: `npm run test:e2e` (install Chromium with `npx playwright install chromium` once). Static production preview: `npm run start` after building.
 
 ## Production origin
 
-Copy `.env.example` to `.env.local` and set `SITE_URL` to the real owned production origin. Canonical, hreflang, absolute social image URLs and sitemap are derived from that value. Without it, no invented canonical domain is emitted and the sitemap is empty. The site needs no database, account system or payment API. Paid package links open the official InstaPay URL; payment confirmation and onboarding happen on WhatsApp.
+For development, copy `.env.example` to `.env.local`. For production builds, export `SITE_URL` in the shell or configure it in Cloudflare build settings. Set it to the owner-approved production origin. Canonical, hreflang, absolute social image URLs and sitemap are derived from that value. Without it, no invented canonical domain is emitted and the sitemap is empty. The site needs no database, account system or payment API. Paid package links open the official InstaPay URL; payment confirmation and onboarding happen on WhatsApp.
 
 ## Content and media
 
@@ -29,3 +29,9 @@ Legal pages communicate the owner's supplied service, refund and health terms. B
 Routes compose server-rendered sections under `src/features`. Interactive leaves remain client components. Application chrome lives in `src/components/layout`, business-agnostic primitives in `src/components/ui`, and the shared proof gallery in `src/components/media`. Shared modules do not import features. Copy stays in `src/lib/content.ts`; business facts stay in `src/lib/business.ts`; `src/config` owns media and navigation maps. Import explicit modules through `@/`; avoid barrels and empty placeholder directories.
 
 See `docs/ARCHITECTURE_REVIEW.md` for the final tree, move inventory, verification and remaining debt. Existing public asset URLs are deliberately preserved.
+
+## Cloudflare Pages
+
+Create a separate Git-connected Pages application for this repository; leave `kelimeler` unchanged. Use project name `mahfouz-coaching`, branch `main`, build command `npm run build`, output `out`, and `SITE_URL=https://mahfouz-coaching.pages.dev`. Confirm the actual allocated hostname at deployment. Push reviewed updates to `main` to trigger subsequent builds. The build uses local licensed fonts and exports only active delivery images. No database or Worker runtime is required.
+
+The build script works around a Next.js loader bug for local directory names containing apostrophes by building an isolated source copy and returning the generated output. It does not copy private originals or local environment files. Use exported environment values for production builds. See `docs/CLOUDFLARE_DEPLOYMENT_PLAN.md` for verification and release details.

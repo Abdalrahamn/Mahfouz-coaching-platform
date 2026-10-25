@@ -1,6 +1,6 @@
 "use client";
 import { Moon, Sun } from "lucide-react";
-import { useSyncExternalStore } from "react";
+import { useLayoutEffect, useSyncExternalStore } from "react";
 import { getContent } from "@/lib/content";
 import type { Locale } from "@/lib/business";
 function subscribe(onStoreChange: () => void) {
@@ -15,6 +15,13 @@ function currentTheme() {
   return document.documentElement.dataset.theme === "light" ? "light" : "dark";
 }
 export function ThemeToggle({ locale }: { locale: Locale }) {
+  useLayoutEffect(() => {
+    let theme = "dark";
+    try {
+      if (localStorage.getItem("mahfouz-theme") === "light") theme = "light";
+    } catch {}
+    document.documentElement.dataset.theme = theme;
+  }, [locale]);
   const theme = useSyncExternalStore(subscribe, currentTheme, () => "dark");
   const dark = theme === "dark";
   return (
