@@ -123,3 +123,7 @@ Saved both received pairs separately in ignored private/transformations/pairs/pa
 Applied the restored original template to pair-002 and added transformation-06.webp as the sixth independent poster. Replaced only poster 05's rectangular markers with permanent opaque gold dry-brush slashes, delivered as transformation-05-brush.webp. Other supplied masks/emoji preserved. Both pairs remain separately archived as unchanged originals; repeated attachments verified by SHA-256.
 
 Checks for new poster: lint, typecheck and unit command passed. Both locales at 1280px and 390px show six independent posters and include poster 06. Production build failed fetching Barlow Condensed, Cairo and Manrope from Google Fonts due network connectivity.
+
+## Package payment steps — October 25, 2026
+
+Each package card now shows the two payment steps in order: pay with InstaPay, then send the screenshot on WhatsApp. The WhatsApp link opens a prefilled message for that card’s plan, region when it applies, duration, and price. The shared confirmation link under the grid remains.

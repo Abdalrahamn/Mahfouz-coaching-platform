@@ -45,7 +45,8 @@ No follow-up includes:
 - Method: InstaPay
 - Official link: https://ipn.eg/S/foza./instapay/9crWHF
 - Identifier: foza.@instapay
-- Every paid package CTA uses that link and opens in a new tab
+- Every paid package card shows two steps: pay through that InstaPay link in a new tab, then send the confirmation screenshot on WhatsApp
+- The WhatsApp link on each card opens a prefilled message naming that package, region when it applies, duration, and price
 - After payment, the visitor sends a confirmation screenshot on WhatsApp
 - WhatsApp: +20 114 639 9576 (`https://wa.me/201146399576`)
 - Plan delivery: within 72 hours after payment confirmation

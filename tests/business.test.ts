@@ -58,6 +58,16 @@ test("package payment uses the official InstaPay link and confirmation WhatsApp"
     decodeURIComponent(paymentConfirmationLink("ar")),
     /تأكيد الدفع/,
   );
+  const selected = new URL(
+    paymentConfirmationLink("ar", {
+      plan: "daily",
+      region: "egypt",
+      months: 1,
+    }),
+  );
+  const selectedText = selected.searchParams.get("text") ?? "";
+  assert.match(selectedText, /1100/);
+  assert.match(selectedText, /داخل مصر/);
 });
 test("business pricing matches the supplied figures", () => {
   assert.deepEqual(business.prices, {

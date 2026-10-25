@@ -1,45 +1,57 @@
 "use client";
 import { Moon, Sun } from "lucide-react";
-import { useLayoutEffect, useSyncExternalStore } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { getContent } from "@/lib/content";
 import type { Locale } from "@/lib/business";
-function subscribe(onStoreChange: () => void) {
-  const observer = new MutationObserver(onStoreChange);
-  observer.observe(document.documentElement, {
-    attributes: true,
-    attributeFilter: ["data-theme"],
-  });
-  return () => observer.disconnect();
+
+type Theme = "light" | "dark";
+
+function storedTheme(): Theme {
+  try {
+    return localStorage.getItem("mahfouz-theme") === "light" ? "light" : "dark";
+  } catch {
+    return "dark";
+  }
 }
-function currentTheme() {
-  return document.documentElement.dataset.theme === "light" ? "light" : "dark";
-}
+
 export function ThemeToggle({ locale }: { locale: Locale }) {
-  useLayoutEffect(() => {
-    let theme = "dark";
+  const chosen = useRef<Theme | null>(null);
+  const [theme, setTheme] = useState<Theme>("dark");
+  const apply = (next: Theme) => {
+    chosen.current = next;
+    document.documentElement.dataset.theme = next;
     try {
-      if (localStorage.getItem("mahfouz-theme") === "light") theme = "light";
+      localStorage.setItem("mahfouz-theme", next);
     } catch {}
-    document.documentElement.dataset.theme = theme;
+    setTheme(next);
+  };
+  useLayoutEffect(() => {
+    const next = chosen.current ?? storedTheme();
+    document.documentElement.dataset.theme = next;
+    setTheme(next);
+    const node = document.documentElement;
+    const observer = new MutationObserver(() => {
+      const keep = chosen.current ?? storedTheme();
+      if (node.dataset.theme !== keep) node.dataset.theme = keep;
+    });
+    observer.observe(node, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+    return () => observer.disconnect();
   }, [locale]);
-  const theme = useSyncExternalStore(subscribe, currentTheme, () => "dark");
   const dark = theme === "dark";
   return (
     <button
       type="button"
       className="icon-button theme-toggle"
+      aria-pressed={!dark}
       aria-label={
         dark
           ? getContent(locale).chrome.lightTheme
           : getContent(locale).chrome.darkTheme
       }
-      onClick={() => {
-        const next = dark ? "light" : "dark";
-        document.documentElement.dataset.theme = next;
-        try {
-          localStorage.setItem("mahfouz-theme", next);
-        } catch {}
-      }}
+      onClick={() => apply(dark ? "light" : "dark")}
     >
       {dark ? <Moon size={18} /> : <Sun size={18} />}
     </button>

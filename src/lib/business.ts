@@ -10,6 +10,7 @@ export const business = {
   whatsapp: "201146399576",
   payment: "01146399576",
   instagram: "https://www.instagram.com/abdalrahman_mahfouz/",
+  facebook: "https://www.facebook.com/abdalrahman.mahfouz.374601/",
   instagramHandle: "@abdalrahman_mahfouz",
   instapay: "https://ipn.eg/S/foza./instapay/9crWHF",
   instapayId: "foza.@instapay",

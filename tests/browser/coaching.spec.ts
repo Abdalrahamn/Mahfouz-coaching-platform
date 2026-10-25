@@ -48,12 +48,33 @@ for (const locale of ["en", "ar"] as const) {
     ).toHaveCount(0);
     await expect(page.locator("#daily-coaching")).toBeVisible();
     await expect(page.locator("#no-follow-up")).toBeVisible();
-    const priceLinks = await page
-      .locator(".price-card a")
-      .evaluateAll((links) => links.map((a) => a.getAttribute("href")!));
-    expect(priceLinks).toHaveLength(9);
-    for (const href of priceLinks)
-      expect(href).toBe("https://ipn.eg/S/foza./instapay/9crWHF");
+    const cards = page.locator(".price-card");
+    await expect(cards).toHaveCount(9);
+    for (let i = 0; i < 9; i += 1) {
+      const links = cards.nth(i).locator("a");
+      await expect(links).toHaveCount(2);
+      await expect(links.nth(0)).toHaveAttribute(
+        "href",
+        "https://ipn.eg/S/foza./instapay/9crWHF",
+      );
+      await expect(links.nth(1)).toHaveAttribute(
+        "href",
+        /wa\.me\/201146399576/,
+      );
+    }
+    await expect(
+      page.getByRole("link", {
+        name: locale === "ar" ? "ادفع بإنستا باي" : "Pay with InstaPay",
+      }),
+    ).toHaveCount(9);
+    await expect(
+      page.getByRole("link", {
+        name:
+          locale === "ar"
+            ? "ابعت السكرين شوت على واتساب"
+            : "Send the screenshot on WhatsApp",
+      }),
+    ).toHaveCount(10);
     await expect(page.locator(".pay-id")).toHaveText("foza.@instapay");
     const confirm = page.locator(".payment-followup a");
     await expect(confirm).toHaveAttribute("href", /wa\.me\/201146399576/);

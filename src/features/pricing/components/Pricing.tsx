@@ -32,6 +32,10 @@ function PlanCards({
     <div className="pricing-grid">
       {business.durations.map((months, i) => {
         const recommended = offer === "daily" && i === 1;
+        const selection =
+          offer === "daily" && region
+            ? ({ plan: "daily", region, months } as const)
+            : ({ plan: "self", months } as const);
         return (
           <article
             key={`${offer}-${region ?? "same"}-${months}`}
@@ -76,14 +80,31 @@ function PlanCards({
                 );
               })}
             </ul>
-            <a
-              className={`button ${recommended ? "" : "button-outline"}`}
-              href={business.instapay}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t.choose}
-            </a>
+            <div className="price-actions">
+              <a
+                className={`button ${recommended ? "" : "button-outline"}`}
+                href={business.instapay}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="step-index" aria-hidden="true">
+                  1
+                </span>
+                {t.choose}
+              </a>
+              <p className="price-next">{t.thenSend}</p>
+              <a
+                className="button button-outline"
+                href={paymentConfirmationLink(locale, selection)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="step-index" aria-hidden="true">
+                  2
+                </span>
+                {t.sendShot}
+              </a>
+            </div>
           </article>
         );
       })}

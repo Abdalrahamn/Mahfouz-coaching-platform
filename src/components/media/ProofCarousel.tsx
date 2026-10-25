@@ -12,7 +12,8 @@ import {
   AUTOPLAY_INTERVAL,
   INTERACTION_HOLD,
   SCROLL_SETTLE,
-} from "@/features/testimonials/testimonials.constants";
+  SLIDE_MS,
+} from "@/components/media/proofCarousel.constants";
 export function ProofCarousel({
   locale,
   kind,
@@ -39,6 +40,8 @@ export function ProofCarousel({
   const holdUntil = useRef(0);
   const drag = useRef<{ x: number; left: number; moved: boolean } | null>(null);
   const activeRef = useRef(0);
+  const glide = useRef<number | null>(null);
+  const glideTarget = useRef<number | null>(null);
   const step = useCallback(() => {
     const el = track.current;
     return el
@@ -46,16 +49,86 @@ export function ProofCarousel({
           (el.children[0] as HTMLElement).offsetLeft
       : 0;
   }, []);
+  const stopGlide = useCallback(() => {
+    if (glide.current) cancelAnimationFrame(glide.current);
+    glide.current = null;
+    glideTarget.current = null;
+    track.current?.classList.remove("is-gliding");
+  }, []);
+  const park = useCallback(() => {
+    const el = track.current;
+    const size = step();
+    if (!el || !size) return;
+    const position = Math.round(el.scrollLeft / size);
+    if (position >= CLONES && position < CLONES + COUNT) return;
+    const logical = (((position - CLONES) % COUNT) + COUNT) % COUNT;
+    const left = (CLONES + logical) * size;
+    if (Math.abs(el.scrollLeft - left) > 1)
+      el.scrollTo({ left, behavior: "instant" });
+  }, [COUNT, step]);
+  const glideTo = useCallback(
+    (left: number) => {
+      const el = track.current;
+      if (!el) return;
+      stopGlide();
+      const finish = () => {
+        stopGlide();
+        park();
+      };
+      if (reduced || Math.abs(left - el.scrollLeft) < 1) {
+        el.scrollTo({ left, behavior: "instant" });
+        finish();
+        return;
+      }
+      const from = el.scrollLeft;
+      const delta = left - from;
+      const start = performance.now();
+      glideTarget.current = left;
+      el.classList.add("is-gliding");
+      const tick = (now: number) => {
+        const progress = Math.min(1, (now - start) / SLIDE_MS);
+        const eased =
+          progress < 0.5
+            ? 4 * progress * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+        el.scrollLeft = from + delta * eased;
+        if (progress < 1) glide.current = requestAnimationFrame(tick);
+        else {
+          el.scrollLeft = left;
+          finish();
+        }
+      };
+      glide.current = requestAnimationFrame(tick);
+    },
+    [park, reduced, stopGlide],
+  );
   const advance = useCallback(
     (direction: number) => {
       const el = track.current;
-      if (el)
-        el.scrollBy({
-          left: direction * step(),
-          behavior: reduced ? "instant" : "smooth",
-        });
+      const size = step();
+      if (!el || !size) return;
+      stopGlide();
+      const max = Math.max(
+        0,
+        Math.round((el.scrollWidth - el.clientWidth) / size),
+      );
+      let position = Math.round(el.scrollLeft / size);
+      if (
+        position < CLONES ||
+        position >= CLONES + COUNT ||
+        position + direction < 0 ||
+        position + direction > max
+      ) {
+        const logical = (((position - CLONES) % COUNT) + COUNT) % COUNT;
+        position = CLONES + logical;
+        const left = position * size;
+        if (Math.abs(el.scrollLeft - left) > 1)
+          el.scrollTo({ left, behavior: "instant" });
+      }
+      holdUntil.current = Date.now() + INTERACTION_HOLD;
+      glideTo((position + direction) * size);
     },
-    [reduced, step],
+    [glideTo, step, COUNT, stopGlide],
   );
   useEffect(() => {
     const el = track.current;
@@ -77,8 +150,9 @@ export function ProofCarousel({
       resize.disconnect();
       observer.disconnect();
       if (settle.current) clearTimeout(settle.current);
+      stopGlide();
     };
-  }, [step, COUNT]);
+  }, [step, COUNT, stopGlide]);
   useEffect(() => {
     if (reduced || paused || hovered || focused || reading || !visible) return;
     const timer = setInterval(() => {
@@ -97,9 +171,7 @@ export function ProofCarousel({
     setActive(logical);
     if (settle.current) clearTimeout(settle.current);
     settle.current = setTimeout(() => {
-      const position = Math.round(el.scrollLeft / size);
-      if (position < CLONES || position >= CLONES + COUNT)
-        el.scrollTo({ left: (CLONES + logical) * size, behavior: "instant" });
+      if (!glide.current) park();
     }, SCROLL_SETTLE);
   };
   const read = () => setReading(true);
@@ -114,118 +186,110 @@ export function ProofCarousel({
         <span className="utility">
           {feedback ? t.feedback.message : t.results.carousel}
         </span>
-        <div>
-          <button
-            className="icon-button"
-            aria-label={copy.previous}
-            onClick={() => advance(-1)}
-          >
-            {locale === "ar" ? <ChevronRight /> : <ChevronLeft />}
-          </button>
-          <button
-            className="icon-button"
-            aria-label={paused ? copy.play : copy.pause}
-            aria-pressed={paused}
-            onClick={() => setPaused(!paused)}
-          >
-            {paused ? <Play /> : <Pause />}
-          </button>
-          <button
-            className="icon-button"
-            aria-label={copy.next}
-            onClick={() => advance(1)}
-          >
-            {locale === "ar" ? <ChevronLeft /> : <ChevronRight />}
-          </button>
-        </div>
       </div>
-      <div
-        ref={track}
-        className="testimonial-track"
-        role="group"
-        dir="ltr"
-        onScroll={onScroll}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        onFocusCapture={() => setFocused(true)}
-        onBlurCapture={(event) => {
-          if (!event.currentTarget.contains(event.relatedTarget))
-            setFocused(false);
-        }}
-        onWheel={() => {
-          holdUntil.current = Date.now() + INTERACTION_HOLD;
-        }}
-        onPointerDown={(event) => {
-          holdUntil.current = Date.now() + INTERACTION_HOLD;
-          if (event.pointerType !== "mouse") return;
-          drag.current = {
-            x: event.clientX,
-            left: event.currentTarget.scrollLeft,
-            moved: false,
-          };
-        }}
-        onPointerMove={(event) => {
-          if (!drag.current) return;
-          const delta = event.clientX - drag.current.x;
-          if (Math.abs(delta) > 6) {
-            drag.current.moved = true;
-            event.currentTarget.setPointerCapture(event.pointerId);
-            event.currentTarget.scrollLeft = drag.current.left - delta;
-          }
-        }}
-        onPointerUp={(event) => {
-          holdUntil.current = Date.now() + INTERACTION_HOLD;
-          if (drag.current?.moved) {
-            event.currentTarget.scrollTo({
-              left:
+      <div className="carousel-stage">
+        <button
+          type="button"
+          className="icon-button carousel-arrow carousel-arrow-prev"
+          aria-label={copy.previous}
+          onClick={() => advance(-1)}
+        >
+          <ChevronLeft />
+        </button>
+        <button
+          type="button"
+          className="icon-button carousel-arrow carousel-arrow-next"
+          aria-label={copy.next}
+          onClick={() => advance(1)}
+        >
+          <ChevronRight />
+        </button>
+        <div
+          ref={track}
+          className="testimonial-track"
+          role="group"
+          dir="ltr"
+          onScroll={onScroll}
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+          onFocusCapture={() => setFocused(true)}
+          onBlurCapture={(event) => {
+            if (!event.currentTarget.contains(event.relatedTarget))
+              setFocused(false);
+          }}
+          onWheel={() => {
+            holdUntil.current = Date.now() + INTERACTION_HOLD;
+          }}
+          onPointerDown={(event) => {
+            holdUntil.current = Date.now() + INTERACTION_HOLD;
+            stopGlide();
+            if (event.pointerType !== "mouse") return;
+            drag.current = {
+              x: event.clientX,
+              left: event.currentTarget.scrollLeft,
+              moved: false,
+            };
+          }}
+          onPointerMove={(event) => {
+            if (!drag.current) return;
+            const delta = event.clientX - drag.current.x;
+            if (Math.abs(delta) > 6) {
+              drag.current.moved = true;
+              event.currentTarget.setPointerCapture(event.pointerId);
+              event.currentTarget.scrollLeft = drag.current.left - delta;
+            }
+          }}
+          onPointerUp={(event) => {
+            holdUntil.current = Date.now() + INTERACTION_HOLD;
+            if (drag.current?.moved)
+              glideTo(
                 Math.round(event.currentTarget.scrollLeft / step()) * step(),
-              behavior: reduced ? "instant" : "smooth",
-            });
-          }
-          drag.current = null;
-        }}
-        onPointerCancel={() => {
-          drag.current = null;
-        }}
-        onKeyDown={(event) => {
-          if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
-            event.preventDefault();
-            advance(event.key === "ArrowRight" ? 1 : -1);
-          }
-        }}
-        tabIndex={0}
-        aria-label={feedback ? t.feedback.message : t.results.carousel}
-      >
-        {slides.map((asset, index) => {
-          const duplicate = index < CLONES || index >= CLONES + COUNT;
-          return (
-            <figure
-              className={`${feedback ? "testimonial-card" : "transformation-slide media-card"} ${(((index - CLONES) % COUNT) + COUNT) % COUNT === active ? "is-current" : ""}`}
-              key={index}
-              aria-hidden={duplicate || undefined}
-              dir={locale === "ar" ? "rtl" : "ltr"}
-            >
-              <div
-                className={
-                  feedback ? "testimonial-image" : "transformation-image"
-                }
+              );
+            drag.current = null;
+          }}
+          onPointerCancel={() => {
+            drag.current = null;
+          }}
+          onKeyDown={(event) => {
+            if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+              event.preventDefault();
+              advance(event.key === "ArrowRight" ? 1 : -1);
+            }
+          }}
+          tabIndex={0}
+          aria-label={feedback ? t.feedback.message : t.results.carousel}
+        >
+          {slides.map((asset, index) => {
+            const duplicate = index < CLONES || index >= CLONES + COUNT;
+            return (
+              <figure
+                className={`${feedback ? "testimonial-card" : "transformation-slide media-card"} ${(((index - CLONES) % COUNT) + COUNT) % COUNT === active ? "is-current" : ""}`}
+                key={index}
+                aria-hidden={duplicate || undefined}
+                dir={locale === "ar" ? "rtl" : "ltr"}
               >
-                <Image
-                  {...asset}
-                  alt={duplicate ? "" : `${copy.alt} ${index - CLONES + 1}`}
-                  sizes="(max-width:700px) 86vw, (max-width:1000px) 45vw, 380px"
-                  quality={90}
-                  draggable={false}
-                />
-              </div>
-              {feedback && (
-                <figcaption>
-                  <span className="utility">{t.feedback.label}</span>
-                </figcaption>
-              )}
-            </figure>
-          );
-        })}
+                <div
+                  className={
+                    feedback ? "testimonial-image" : "transformation-image"
+                  }
+                >
+                  <Image
+                    {...asset}
+                    alt={duplicate ? "" : `${copy.alt} ${index - CLONES + 1}`}
+                    sizes="(max-width:700px) 86vw, (max-width:1000px) 45vw, 380px"
+                    quality={90}
+                    draggable={false}
+                  />
+                </div>
+                {feedback && (
+                  <figcaption>
+                    <span className="utility">{t.feedback.label}</span>
+                  </figcaption>
+                )}
+              </figure>
+            );
+          })}
+        </div>
       </div>
       <div className="carousel-footer">
         <div
@@ -238,7 +302,16 @@ export function ProofCarousel({
             <span key={index} className={index === active ? "active" : ""} />
           ))}
         </div>
-        <button className="text-button" onClick={read}>
+        <button
+          type="button"
+          className="icon-button"
+          aria-label={paused ? copy.play : copy.pause}
+          aria-pressed={paused}
+          onClick={() => setPaused((value) => !value)}
+        >
+          {paused ? <Play /> : <Pause />}
+        </button>
+        <button type="button" className="text-button" onClick={read}>
           {openLabel} <Expand size={16} />
         </button>
       </div>

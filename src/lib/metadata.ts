@@ -37,9 +37,9 @@ export function metadataFor(
         ? {
             images: [
               {
-                url: `${origin}/assets/hero/coach-training.webp`,
-                width: 960,
-                height: 1280,
+                url: `${origin}/assets/hero/og-image.jpg`,
+                width: 1200,
+                height: 630,
                 alt: t.hero.photo,
               },
             ],
@@ -51,7 +51,7 @@ export function metadataFor(
       title: title ?? t.seo.title,
       description: description ?? t.seo.description,
       ...(origin
-        ? { images: [`${origin}/assets/hero/coach-training.webp`] }
+        ? { images: [`${origin}/assets/hero/og-image.jpg`] }
         : {}),
     },
     icons: {
