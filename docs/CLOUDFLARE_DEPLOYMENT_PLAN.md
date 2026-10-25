@@ -131,3 +131,22 @@ Implemented static export, browser-side entry redirect preserving the language c
 Lint, TypeScript, five unit tests, and the complete production static export passed. Browser verification and live deployment results will be recorded below. No guarantee of zero future failures is implied.
 
 Verification update: the production export succeeds with the final local-font and media-pruning configuration. Lint, typecheck, and all five unit tests pass. English/Arabic mobile and desktop visuals were inspected; six accessibility/reflow checks passed. Carousel autoplay/pause/wrap, reduced motion, touch swipe, payment links/copying, legal routes, and private-path rejection passed. Obsolete browser selectors and the old 1,200 EGP expectation were corrected to match the existing approved 1,100 EGP code; business prices were not changed. A locale-switch section-position regression was identified and fixed before release; final regression verification is in progress.
+
+## 9. Successful production release
+
+Cloudflare confirmed successful publication on October 25, 2026.
+
+- Production website: https://mahfouz-coaching.pages.dev/
+- English: https://mahfouz-coaching.pages.dev/en
+- Arabic: https://mahfouz-coaching.pages.dev/ar
+- New independent Pages application: `mahfouz-coaching`.
+- Deployed source commit: `673d86bf7189886b69a237c6250e610cd863797e`.
+- Immutable deployment: https://d272f5e9.mahfouz-coaching.pages.dev/
+- Automatic deployments from this repository's `main` branch are enabled.
+- Existing `kelimeler` application was not renamed, reconfigured, or redeployed by this work.
+
+Final verification: lint, typecheck, all five unit tests, production build, and all 20 coaching browser checks passed against the static production output. Nine further checks passed against the live HTTPS origin, including English/Arabic at 375, 768 and 1280 pixels, accessibility/reflow, saved-language entry behavior, theme persistence, and rejection of private source paths. The live website was opened and visibly verified in the owner's Google Chrome. A generic Python HTTP client received 403 responses, while Chrome and the live Playwright checks succeeded; raw-client responses were not treated as visitor counts or proof of application failure.
+
+Browser tests now target the current carousel controls, approved 1,100 EGP price, and preservation of the pricing section across locales instead of an exact heading offset or stale URL hash. The separate older `production-qa.spec.ts` suite still contains outdated assumptions such as English being the fresh-visit default; it was not represented as a passing release suite.
+
+For documentation/test-only commits, the official `[CF-Pages-Skip]` commit prefix can avoid an unnecessary Pages rebuild. Normal source pushes without a skip prefix continue to publish automatically. See https://developers.cloudflare.com/pages/configuration/git-integration/github-integration/.
