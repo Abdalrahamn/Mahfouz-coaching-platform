@@ -67,3 +67,7 @@ Premium bilingual site for Abd Alrahman Mahfouz online coaching. English at `/en
 - [x] Portable `brand-system/` with token source, CSS theme mappings, docs, prompts and browser preview
 - [x] Website theme variables mapped to the portable token layer without changing business behavior
 - [x] Brand preview is independent of Next.js and includes a theme toggle
+
+## Transformation carousel — October 4, 2026
+
+Owner added a fourth transformation. Active public derivative `transformation-04.webp` (941 × 1672) has a permanent opaque face mask on the before portrait; supplied composition and body proportions otherwise retained. Original preserved privately. Four transformations now use the same carousel component and 3800ms interval as feedback: three visible above 1000px, two through 601–1000px, one at 600px and below. Pause/resume, arrows, swipe/drag, looping, reduced-motion and enlargement remain available; controls stay outside images. This owner instruction supersedes the previous three-image count.

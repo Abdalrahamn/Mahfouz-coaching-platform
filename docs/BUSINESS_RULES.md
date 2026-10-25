@@ -65,3 +65,9 @@ WhatsApp remains the channel for questions, payment confirmation, and coaching c
 - Seven sanitized feedback images; client names, photos, phone numbers, and usernames stay removed
 - Two credentials: IASST and FitXpert
 - No invented ratings, discounts, scarcity, client names, or transformation statistics
+
+## Owner face-marker rule — October 4, 2026
+
+Only add a small permanent opaque gold eye band (#EFC52B) to a visible, uncovered client face. If a face already has an emoji, stripe or any covering (including a phone), preserve it without adding another marker. If the face is missing, cropped out, hidden or not visible, add nothing. Do not mark the coach. Inspect each supplied Before/After independently; never apply bands blindly. This supersedes earlier instructions to mark every face with the same color.
+
+Owner brush-marker update — October 5, 2026: for uncovered visible client eyes, use an opaque gold dry-brush slash rising from lower-left to upper-right, with tapered broken bristle edges matching the supplied poster 04. Never use a plain rectangular block. Preserve existing emoji/markers/phone coverage and skip absent/hidden faces. Original photographs remain untouched privately.
