@@ -37,7 +37,7 @@ export function metadataFor(
         ? {
             images: [
               {
-                url: `${origin}/assets/hero/og-image.jpg`,
+                url: `${origin}/assets/hero/og-share.jpg`,
                 width: 1200,
                 height: 630,
                 alt: t.hero.photo,
@@ -51,7 +51,7 @@ export function metadataFor(
       title: title ?? t.seo.title,
       description: description ?? t.seo.description,
       ...(origin
-        ? { images: [`${origin}/assets/hero/og-image.jpg`] }
+        ? { images: [`${origin}/assets/hero/og-share.jpg`] }
         : {}),
     },
     icons: {
