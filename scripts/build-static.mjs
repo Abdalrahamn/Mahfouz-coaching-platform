@@ -84,7 +84,11 @@ try {
       const file = path.join(entry.parentPath, entry.name);
       const url =
         "/assets/" + path.relative(assetsRoot, file).split(path.sep).join("/");
-      if (!allowed.has(url) && !url.startsWith("/assets/branding/"))
+      if (
+        !allowed.has(url) &&
+        !url.startsWith("/assets/branding/") &&
+        !url.startsWith("/assets/cursors/")
+      )
         rmSync(file);
     }
     for (const family of ["barlow-condensed", "manrope", "cairo"]) {
