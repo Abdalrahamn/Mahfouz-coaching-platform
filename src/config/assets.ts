@@ -47,6 +47,21 @@ export const assets = {
       width: 941,
       height: 1672,
     },
+    {
+      src: "/assets/transformations/transformation-07-brush-60.webp",
+      width: 941,
+      height: 1672,
+    },
+    {
+      src: "/assets/transformations/transformation-08-brush-60f.webp",
+      width: 941,
+      height: 1672,
+    },
+    {
+      src: "/assets/transformations/transformation-09-brush-60d.webp",
+      width: 941,
+      height: 1672,
+    },
   ],
   feedback: [
     [710, 1236],

@@ -45,7 +45,7 @@
 
 احتفظ بالامتداد والبايتات الأصلية دون تعديل أو قص أو علامات؛ أي نسخ مموهة أو مقصوصة توضع منفصلة في `processed/`. استخدم رقم زوج جديد بلا أسماء عملاء، ولا تستبدل ملفات زوج سابق. تغيير أو حذف تمبليت لا يغيّر هذه المكتبة. عند تغيير التصميم، ارجع للأصول المستقلة وطبّق قصًا مناسبًا وقاعدة الوجه من جديد، ثم احفظ بوسترًا جديدًا. ملفات المكتبة خاصة ولا تُنشر في public أو Git.
 
-الزوجان المستلمان حتى الآن محفوظان: `pair-001` مرتبط بالبوستر 05، و`pair-002` مرتبط بالبوستر 06.
+الأزواج المستلمة حتى الآن محفوظة: `pair-001` مرتبط بالبوستر 05، و`pair-002` مرتبط بالبوستر 06، و`pair-003` مرتبط بالبوستر 07، و`pair-004` مرتبط بالبوستر 08، و`pair-005` مرتبط بالبوستر 09.
 
 ## الحفظ والإضافة
 
@@ -71,3 +71,5 @@
 Owner brush-marker update — October 5, 2026: for uncovered visible client eyes, use an opaque gold dry-brush slash rising from lower-left to upper-right, with tapered broken bristle edges matching the supplied poster 04. Never use a plain rectangular block. Preserve existing emoji/markers/phone coverage and skip absent/hidden faces. Original photographs remain untouched privately.
 
 تحديث حجم العلامة: 5 أكتوبر 2026 — تكبير فرشة تغطية العينين بنحو 60% حول مركزها، مع الحفاظ على الميل والحواف وقاعدة الوجوه الظاهرة فقط.
+
+Owner marker-shape rule — October 26, 2026: the face marker is always the gold dry-brush slash over the eyes. The genital marker is an opaque gold (#EFC52B) round circle, placed only over the genital area, never a slash or block. If the genital area is not visible in the frame (cropped, hidden by a banner or out of frame), add nothing. Inspect each Before/After independently. Original photographs remain untouched privately.

@@ -127,3 +127,17 @@ Checks for new poster: lint, typecheck and unit command passed. Both locales at 
 ## Package payment steps — October 25, 2026
 
 Each package card now shows the two payment steps in order: pay with InstaPay, then send the screenshot on WhatsApp. The WhatsApp link opens a prefilled message for that card’s plan, region when it applies, duration, and price. The shared confirmation link under the grid remains.
+
+## Seventh transformation — October 26, 2026
+
+Added pair-003 on the original gold template as `transformation-07-brush-60.webp` (941 × 1672), the same height as the other gold posters. Untouched originals are in `private/transformations/pairs/pair-003/`. The before face is outside the frame, so it has no marker. The after face keeps the gold dry-brush eye slash. The lower block is a short owner-supplied line, from 85 kg to 60 kg, instead of the large prompt. Earlier posters are unchanged.
+
+## Front and side 35 kg posters — October 26, 2026
+
+Added pair-004 (front) as `transformation-08-brush-60f.webp` and pair-005 (side) as `transformation-09-brush-60d.webp`, both 941 × 1672 on the original gold template. Untouched originals are in `private/transformations/pairs/pair-004/` and `pair-005/`. Every visible uncovered eye has a gold dry-brush slash. Each visible client boxer front also has a larger opaque gold dry-brush slash over the crotch. Phones in the after photos stay as they are. Both lower blocks say نزلنا 35 كيلو. The front before frame includes both arms and both hands inside the tilted frame. Both after frames are pulled back so the smaller size is visible, and the side before profile is centered. Earlier posters are unchanged.
+
+## Genital circle marker — October 26, 2026
+
+Owner marker-shape rule — October 26, 2026: the face marker is always the gold dry-brush slash over the eyes. The genital marker is an opaque gold (#EFC52B) round circle, placed only over the genital area, never a slash or block. If the genital area is not visible in the frame (cropped, hidden by a banner or out of frame), add nothing. Inspect each Before/After independently. Original photographs remain untouched privately.
+
+Applied to posters 08 (`transformation-08-brush-60f.webp`, circles on both before and after) and 09 (`transformation-09-brush-60d.webp`, circle on after only; the before crotch is not visible).
