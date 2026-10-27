@@ -141,3 +141,75 @@ Added pair-004 (front) as `transformation-08-brush-60f.webp` and pair-005 (side)
 Owner marker-shape rule — October 26, 2026: the face marker is always the gold dry-brush slash over the eyes. The genital marker is an opaque gold (#EFC52B) round circle, placed only over the genital area, never a slash or block. If the genital area is not visible in the frame (cropped, hidden by a banner or out of frame), add nothing. Inspect each Before/After independently. Original photographs remain untouched privately.
 
 Applied to posters 08 (`transformation-08-brush-60f.webp`, circles on both before and after) and 09 (`transformation-09-brush-60d.webp`, circle on after only; the before crotch is not visible).
+
+## Tenth transformation — October 26, 2026
+
+Added `transformation-10.webp` (941 × 1672), using pair-006 on the original gold template. First attachment is Before, second is After. Original bytes and SHA-256 metadata remain private in `private/transformations/pairs/pair-006/`. Both eye regions are out of frame; no face markers. Visible clothed genital regions have permanent opaque gold circles. Original body proportions, coach, copy, arrow and footer preserved. Added to the shared locale carousel without replacing earlier posters.
+
+Validation for poster 10: lint, typecheck, all five unit tests and the production static build passed. English/Arabic carousel reviewed at 1280px and 390px with no horizontal overflow; poster 10 is included. Private source files are Git-ignored.
+
+## Eleventh transformation — October 26, 2026
+
+Split the supplied flattened comparison into lossless Before/After crops and composed `transformation-11.webp` (941 × 1672) on the approved gold template. Combined original bytes, separate crops, hashes and crop metadata are retained privately in pair-007. Existing face clouds preserved; old labels, logo, watermark and identifiers excluded from final photo crops. Source body pixels retained with no reshaping. Added as an independent poster to both locales.
+
+Poster 11 verification: lint, typecheck, five unit tests, production build and diff whitespace checks passed. Both locales at 390px/1280px load the new poster, without horizontal overflow. Private originals are Git-ignored.
+
+## Posters 12 and 13 — October 26, 2026
+
+Split each of two supplied comparisons into a separate Before/After pair and composed independent gold posters `transformation-12.webp` and `transformation-13.webp`, both 941 × 1672. Untouched combined originals and lossless separate crops with hashes and crop coordinates remain private in pair-008 and pair-009. Existing privacy clouds and phones preserved. Final photo crops exclude old labels, logo, duration banners and weight badges. Source pixels and body proportions preserved. Added both posters to the shared carousel, retaining previous entries.
+
+## Header wordmark returns to top — October 26, 2026
+
+The MAHFOUZ header wordmark links to the locale homepage top. On the homepage, activation explicitly scrolls to zero (smooth unless reduced motion is enabled), including repeated activation after scrolling down. It closes the mobile navigation. Other routes retain normal navigation to the locale homepage. Shared layout supplies the native top anchor.
+
+Final verification: lint, typecheck, all five unit tests, static production build and whitespace checks passed. Browser verification passed in both locales at 390px and 1280px: new posters included, repeated header activation returns to scrollY zero, mobile menu closes, no horizontal overflow. Private combined originals byte-match the received files and remain ignored by Git.
+
+## Posters 14 and 15 — October 26, 2026
+
+Added two independent gold-template posters, `transformation-14.webp` and `transformation-15.webp` (941 × 1672). Combined original bytes and lossless separate Before/After crops retained in private pair-010 and pair-011 with hashes and crop metadata. First pair preserves existing privacy clouds. Second before uses an opaque gold dry-brush eye marker; after preserves phone coverage with no added marker. Old logo, captions and labels excluded from photo crops. Body proportions and source pixels retained. Both included in the shared carousel.
+
+Posters 14/15 verification: lint, typecheck, all five unit tests and production build passed. Both locales reviewed at 390px/1280px; carousel controls now wrap to accommodate fifteen posters without horizontal overflow. Existing header return-to-top and mobile menu checks passed. Source byte equality and Git ignore status verified for both received originals.
+
+## Calm transformation footers — October 27, 2026
+
+All 15 active posters use new `-calm-v2.webp` assets. Removed the large promotional lower block and replaced it with the TRANSFORMATION title and a small DM. Old rendered versions archived privately. Last two posters recomposed from unchanged combined originals with more distant framing; red-shirt before uses a smaller permanent dry-brush eye marker, phone-covered after unchanged. Updated media dimensions in config. Owner rule persisted in AGENTS.md, template docs and the active personal template instructions.
+
+Calm-footer verification: all 15 configured dimensions match delivered files; lint, typecheck, all five tests, production build and whitespace checks passed. English/Arabic desktop 1280px and mobile 390px inspected with current posters, no horizontal overflow and working carousel/top navigation. Existing originals and archived posters remain private. The previous dense reference footer is explicitly superseded by the owner rule.
+
+## Posters 16 and 17 — October 27, 2026
+
+Added two independent calm-template posters (941 × 1400). Pair-012 uses the far-left Before and far-right After panels of the three-panel original; middle panel is excluded by explicit owner instruction. Both uncovered profile eyes have small gold dry-brush marks. Pair-013 preserves the existing meme face coverings; no added eye markers. Visible After genital region has an opaque gold circle. Original combined bytes and lossless selected panel crops remain private with hashes and crop metadata. Old captions, logo, watermark and lower meme excluded. TRANSFORMATION and small DM footer retained.
+
+Posters 16/17 verified: lint, typecheck, five unit tests, production build and whitespace checks passed. English/Arabic at 390px and 1280px show the new posters without horizontal overflow; repeated top navigation still passes. Both combined originals byte-match received files and are Git-ignored. Production preview is running on port 3000; Codex browser opening requested.
+
+## Browser comment corrections — October 27, 2026
+
+Side-view poster 16 moved to fourth in the shared carousel. Posters 16/17 now use `-calm-v2.webp` files with proportional cover crops filling both tilted photo polygons. Poster 17 before is moved upward and its green-tinted after is slightly closer. Owner-requested gold circles cover faces, including the supplied meme faces in poster 17. Circle preference and full-frame rules persisted in AGENTS, template docs and the active personal template. Private originals preserved; previous deliveries archived.
+
+## Protected numeric-result posters restored — October 27, 2026
+
+Owner clarified that numeric-result posters are exempt from calm-footer changes. Restored 01 (86 to 70 kg), 07 (85 to 60 kg / 25 kg), 08 and 09 (35 kg) byte-for-byte from private pre-calm deliveries. New public filenames end in `-results-restored.webp`; original dimensions, source-photo pixels, masks, result captions and footer artwork are retained. Posters 07/08/09 again display their original gold-brush «ابعتلي DM». Other posters keep their current presentation, including poster 16 in fourth position and revised full-frame posters 16/17. Updated pair metadata and persisted the exception in project/template instructions.
+
+Numeric restoration verified: lint, typecheck, five unit tests, production build and whitespace checks passed. The four delivered preview files byte-match the pre-calm archive. English/Arabic at 390px and 1280px verified with numeric posters present, no horizontal overflow, and side-view poster 16 still fourth. Preview running on port 3000.
+
+## Numeric opt-in and approved brush DM clarification — October 27, 2026
+
+Owner clarified that numbers are opt-in for the particular posters he selects. Existing approved numeric deliveries remain protected. DM on the yellow-gold brush is approved and retained; the calm-footer rule must not remove that treatment. This clarification changes persistent instructions only; delivered poster pixels and carousel order remain unchanged.
+
+## Completed DM brush footers — October 27, 2026
+
+Replaced tiny plain DM footers on the 13 ordinary posters with larger black DM on a broad gold dry-brush stroke. New `-dm-brush-v3.webp` deliveries complete the full portrait height and align with the taller numeric posters. Source photo/coach areas are retained; archived prior deliveries remain private. Four protected numeric posters remain byte-identical to their approved restoration. Poster 16 remains fourth. The fuller brush-footer rule is now persistent.
+
+Completed-footer validation: lint, typecheck, all five tests, production build, asset dimension checks and whitespace checks passed. Both locales at 390px/1280px visually reviewed on ordinary posters, fourth-position poster 16 and poster 17; no horizontal overflow/page errors. Numeric posters remain byte-identical to their archives. Preview continues on port 3000.
+
+## Owner result-copy additions and eighteenth poster — October 27, 2026
+
+Added pair-014 as independent poster 18 with owner-supplied 97 → 79 kg / 18 kg copy. Untouched received images, hashes and dimensions are retained privately; no visible faces or genital regions need markers. Source photos use proportional full-frame crops. Browser comment amendments: poster 16 Before circle radius 35 → 38 native pixels; poster 13 gets 90 → 65 kg / 25 kg and better body shape; poster 14 gets +5 kg and better muscle shape; front-view poster 08 gets the owner-supplied no-sagging line beneath the retained 35 kg result. Changed existing image areas are lossless; earlier deliveries archived privately. Explicit approvals persisted in pair metadata and template/project instructions. 18 posters total; poster 16 remains fourth.
+
+Owner-edit validation: lint, typecheck, all five unit tests, production build and whitespace checks passed. The upper photo/title areas of posters 13/14 and the existing photo/results area of 08 match their previous decoded pixels exactly. Poster 16's changes are confined to the enlarged selected face circle. New original bytes match received attachments and are Git-ignored. Both locales at 390px/1280px inspected for all five affected posters with no overflow/page errors; 18 images loaded and poster 16 remains fourth. Preview running on port 3000.
+
+## Final gallery order for commit — October 27, 2026
+
+Owner selected the woman transformation with 90 → 65 kg / 25 kg result as fourth. Posters 04, 06 and 08 remain first, second and third. Poster 13 moves from its former position to fourth; all other entries retain relative order. This supersedes the earlier fourth-position selection for poster 16, which is now fifth. Shared config applies to English and Arabic. The owner requested committing and pushing the completed project changes.
+
+Final commit validation: lint, typecheck, all five tests, production build and whitespace checks passed. English/Arabic at 390px/1280px verified first three posters unchanged and poster 13 fourth, with poster 16 following it. Active public files only are included; unused working derivatives archived privately and all private originals remain Git-ignored.

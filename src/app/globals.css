@@ -2342,6 +2342,7 @@ html[dir="rtl"] .price-next {
 }
 .carousel-footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
@@ -2349,6 +2350,8 @@ html[dir="rtl"] .price-next {
 }
 .carousel-pagination {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
   gap: 8px;
 }
 .carousel-pagination span {

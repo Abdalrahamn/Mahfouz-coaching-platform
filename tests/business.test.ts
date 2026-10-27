@@ -76,7 +76,7 @@ test("business pricing matches the supplied figures", () => {
   });
 });
 test("only the expected privacy-safe proof assets are public", () => {
-  assert.equal(assets.transformations.length, 9);
+  assert.equal(assets.transformations.length, 18);
   assert.equal(assets.feedback.length, 7);
   assert.equal(assets.certificates.length, 2);
   for (const asset of [

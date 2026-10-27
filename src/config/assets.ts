@@ -18,47 +18,92 @@ export const assets = {
   },
   transformations: [
     {
-      src: "/assets/transformations/transformation-01-existing-mask.webp",
+      src: "/assets/transformations/transformation-04-existing-mask-dm-brush-v3.webp",
+      width: 941,
+      height: 1672,
+    },
+    {
+      src: "/assets/transformations/transformation-06-brush-60-dm-brush-v3.webp",
+      width: 941,
+      height: 1672,
+    },
+    {
+      src: "/assets/transformations/transformation-08-results-v4.webp",
+      width: 941,
+      height: 1672,
+    },
+    {
+      src: "/assets/transformations/transformation-13-results-v4.webp",
+      width: 941,
+      height: 1672,
+    },
+    {
+      src: "/assets/transformations/transformation-16-dm-brush-v4.webp",
+      width: 941,
+      height: 1672,
+    },
+    {
+      src: "/assets/transformations/transformation-01-existing-mask-results-restored.webp",
       width: 720,
       height: 1280,
     },
     {
-      src: "/assets/transformations/transformation-02.webp",
+      src: "/assets/transformations/transformation-02-dm-brush-v3.webp",
       width: 719,
       height: 1280,
     },
     {
-      src: "/assets/transformations/transformation-03-existing-mask.webp",
+      src: "/assets/transformations/transformation-03-existing-mask-dm-brush-v3.webp",
       width: 720,
       height: 1280,
     },
     {
-      src: "/assets/transformations/transformation-04-existing-mask.webp",
+      src: "/assets/transformations/transformation-05-brush-60-dm-brush-v3.webp",
       width: 941,
       height: 1672,
     },
     {
-      src: "/assets/transformations/transformation-05-brush-60.webp",
+      src: "/assets/transformations/transformation-07-brush-60-results-restored.webp",
       width: 941,
       height: 1672,
     },
     {
-      src: "/assets/transformations/transformation-06-brush-60.webp",
+      src: "/assets/transformations/transformation-09-brush-60d-results-restored.webp",
       width: 941,
       height: 1672,
     },
     {
-      src: "/assets/transformations/transformation-07-brush-60.webp",
+      src: "/assets/transformations/transformation-10-dm-brush-v3.webp",
       width: 941,
       height: 1672,
     },
     {
-      src: "/assets/transformations/transformation-08-brush-60f.webp",
+      src: "/assets/transformations/transformation-11-dm-brush-v3.webp",
       width: 941,
       height: 1672,
     },
     {
-      src: "/assets/transformations/transformation-09-brush-60d.webp",
+      src: "/assets/transformations/transformation-12-dm-brush-v3.webp",
+      width: 941,
+      height: 1672,
+    },
+    {
+      src: "/assets/transformations/transformation-14-results-v4.webp",
+      width: 941,
+      height: 1672,
+    },
+    {
+      src: "/assets/transformations/transformation-15-dm-brush-v3.webp",
+      width: 941,
+      height: 1672,
+    },
+    {
+      src: "/assets/transformations/transformation-17-dm-brush-v3.webp",
+      width: 941,
+      height: 1672,
+    },
+    {
+      src: "/assets/transformations/transformation-18-results.webp",
       width: 941,
       height: 1672,
     },

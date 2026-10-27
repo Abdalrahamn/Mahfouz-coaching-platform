@@ -59,3 +59,43 @@ Only add a small permanent opaque gold eye band (#EFC52B) to a visible, uncovere
 ## Before/After poster alignment — October 4, 2026
 
 Owner requested corrected photo placement in poster 05. Both source-pixel photos now fill the whole framed regions; old client remnants are removed. The arrow is a foreground layer above the photos, with clear Before/After labels at their bottom. Coach and remaining composition use original pixels. Delivery uses `transformation-05-refined.webp`; the gold personal template reference and preview were updated. Existing other posters and carousel behavior remain unchanged.
+
+## Tenth transformation — October 26, 2026
+
+Added `transformation-10.webp` (941 × 1672), using pair-006 on the original gold template. First attachment is Before, second is After. Original bytes and SHA-256 metadata remain private in `private/transformations/pairs/pair-006/`. Both eye regions are out of frame; no face markers. Visible clothed genital regions have permanent opaque gold circles. Original body proportions, coach, copy, arrow and footer preserved. Added to the shared locale carousel without replacing earlier posters.
+
+## Eleventh transformation — October 26, 2026
+
+Split the supplied flattened comparison into lossless Before/After crops and composed `transformation-11.webp` (941 × 1672) on the approved gold template. Combined original bytes, separate crops, hashes and crop metadata are retained privately in pair-007. Existing face clouds preserved; old labels, logo, watermark and identifiers excluded from final photo crops. Source body pixels retained with no reshaping. Added as an independent poster to both locales.
+
+## Posters 12 and 13 — October 26, 2026
+
+Split each of two supplied comparisons into a separate Before/After pair and composed independent gold posters `transformation-12.webp` and `transformation-13.webp`, both 941 × 1672. Untouched combined originals and lossless separate crops with hashes and crop coordinates remain private in pair-008 and pair-009. Existing privacy clouds and phones preserved. Final photo crops exclude old labels, logo, duration banners and weight badges. Source pixels and body proportions preserved. Added both posters to the shared carousel, retaining previous entries.
+
+## Posters 14 and 15 — October 26, 2026
+
+Added two independent gold-template posters, `transformation-14.webp` and `transformation-15.webp` (941 × 1672). Combined original bytes and lossless separate Before/After crops retained in private pair-010 and pair-011 with hashes and crop metadata. First pair preserves existing privacy clouds. Second before uses an opaque gold dry-brush eye marker; after preserves phone coverage with no added marker. Old logo, captions and labels excluded from photo crops. Body proportions and source pixels retained. Both included in the shared carousel.
+
+## Calm transformation footers — October 27, 2026
+
+All 15 active posters use new `-calm-v2.webp` assets. Removed the large promotional lower block and replaced it with the TRANSFORMATION title and a small DM. Old rendered versions archived privately. Last two posters recomposed from unchanged combined originals with more distant framing; red-shirt before uses a smaller permanent dry-brush eye marker, phone-covered after unchanged. Updated media dimensions in config. Owner rule persisted in AGENTS.md, template docs and the active personal template instructions.
+
+## Posters 16 and 17 — October 27, 2026
+
+Added two independent calm-template posters (941 × 1400). Pair-012 uses the far-left Before and far-right After panels of the three-panel original; middle panel is excluded by explicit owner instruction. Both uncovered profile eyes have small gold dry-brush marks. Pair-013 preserves the existing meme face coverings; no added eye markers. Visible After genital region has an opaque gold circle. Original combined bytes and lossless selected panel crops remain private with hashes and crop metadata. Old captions, logo, watermark and lower meme excluded. TRANSFORMATION and small DM footer retained.
+
+## Browser comment corrections — October 27, 2026
+
+Side-view poster 16 moved to fourth in the shared carousel. Posters 16/17 now use `-calm-v2.webp` files with proportional cover crops filling both tilted photo polygons. Poster 17 before is moved upward and its green-tinted after is slightly closer. Owner-requested gold circles cover faces, including the supplied meme faces in poster 17. Circle preference and full-frame rules persisted in AGENTS, template docs and the active personal template. Private originals preserved; previous deliveries archived.
+
+## Protected numeric-result posters restored — October 27, 2026
+
+Owner clarified that numeric-result posters are exempt from calm-footer changes. Restored 01 (86 to 70 kg), 07 (85 to 60 kg / 25 kg), 08 and 09 (35 kg) byte-for-byte from private pre-calm deliveries. New public filenames end in `-results-restored.webp`; original dimensions, source-photo pixels, masks, result captions and footer artwork are retained. Posters 07/08/09 again display their original gold-brush «ابعتلي DM». Other posters keep their current presentation, including poster 16 in fourth position and revised full-frame posters 16/17. Updated pair metadata and persisted the exception in project/template instructions.
+
+## Completed DM brush footers — October 27, 2026
+
+Replaced tiny plain DM footers on the 13 ordinary posters with larger black DM on a broad gold dry-brush stroke. New `-dm-brush-v3.webp` deliveries complete the full portrait height and align with the taller numeric posters. Source photo/coach areas are retained; archived prior deliveries remain private. Four protected numeric posters remain byte-identical to their approved restoration. Poster 16 remains fourth. The fuller brush-footer rule is now persistent.
+
+## Owner result-copy additions and eighteenth poster — October 27, 2026
+
+Added pair-014 as independent poster 18 with owner-supplied 97 → 79 kg / 18 kg copy. Untouched received images, hashes and dimensions are retained privately; no visible faces or genital regions need markers. Source photos use proportional full-frame crops. Browser comment amendments: poster 16 Before circle radius 35 → 38 native pixels; poster 13 gets 90 → 65 kg / 25 kg and better body shape; poster 14 gets +5 kg and better muscle shape; front-view poster 08 gets the owner-supplied no-sagging line beneath the retained 35 kg result. Changed existing image areas are lossless; earlier deliveries archived privately. Explicit approvals persisted in pair metadata and template/project instructions. 18 posters total; poster 16 remains fourth.

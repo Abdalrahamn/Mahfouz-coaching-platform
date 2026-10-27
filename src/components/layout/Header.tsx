@@ -56,7 +56,25 @@ export function Header({ locale }: { locale: Locale }) {
     <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
       <div className="header-inner container">
         <Link
-          href={`/${locale}`}
+          href={`/${locale}#top`}
+          onClick={(event) => {
+            setOpen(false);
+            if (window.location.pathname.replace(/\/$/, "") !== `/${locale}`)
+              return;
+            event.preventDefault();
+            window.history.replaceState(
+              window.history.state,
+              "",
+              `/${locale}#top`,
+            );
+            window.scrollTo({
+              top: 0,
+              behavior: window.matchMedia("(prefers-reduced-motion: reduce)")
+                .matches
+                ? "instant"
+                : "smooth",
+            });
+          }}
           className="wordmark"
           aria-label={t.chrome.home}
           dir="ltr"

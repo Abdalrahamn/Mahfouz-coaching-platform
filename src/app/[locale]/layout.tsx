@@ -31,7 +31,7 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: themeBootScript }}
         />
       </head>
-      <body>{children}</body>
+      <body id="top">{children}</body>
     </html>
   );
 }

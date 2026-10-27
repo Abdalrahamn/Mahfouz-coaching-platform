@@ -73,3 +73,31 @@ Owner brush-marker update — October 5, 2026: for uncovered visible client eyes
 تحديث حجم العلامة: 5 أكتوبر 2026 — تكبير فرشة تغطية العينين بنحو 60% حول مركزها، مع الحفاظ على الميل والحواف وقاعدة الوجوه الظاهرة فقط.
 
 Owner marker-shape rule — October 26, 2026: the face marker is always the gold dry-brush slash over the eyes. The genital marker is an opaque gold (#EFC52B) round circle, placed only over the genital area, never a slash or block. If the genital area is not visible in the frame (cropped, hidden by a banner or out of frame), add nothing. Inspect each Before/After independently. Original photographs remain untouched privately.
+
+## Owner calm-footer rule — October 27, 2026
+
+This supersedes all older instructions to preserve the promotional footer or enlarged face marks. Every transformation poster, existing or new, keeps the comparison dominant and a clear TRANSFORMATION title. Remove «عايز تعمل تحول زي ده», «جاهز تبدأ تغييرك», large DM ME / FOR ONLINE COACHING panels, extra promotional lines and decorative CTA boxes. Use only a small, quiet DM below the title, with generous breathing room and no invented claims. Do not preserve the obsolete footer merely because it appears in a retained template reference. Use the active `*-calm-v2.webp` media as the footer direction. Keep the source photos, original body proportions, coach and privacy rules. For new photos, use a comfortable crop rather than a tight zoom; uncovered visible eyes get a modest opaque gold dry-brush slash that covers the eyes without covering most of the face. Existing phone/emoji coverage stays untouched. Inspect each photograph independently. Untouched originals remain private.
+
+## Owner round-face-marker and full-frame rule — October 27, 2026
+
+The owner now prefers modest opaque gold (#EFC52B) circles for visible uncovered client faces. This supersedes older requirements that the face marker must always be a dry-brush slash. Keep existing phone/emoji coverage unless the owner explicitly asks to replace or additionally cover it; the owner specifically requested circular coverage for the supplied meme portraits in poster 17. Do not mark the coach. Genital markers remain circles only over visible genital regions. Never alter private originals. Each source photo must cover the complete tilted photo polygon, including its upper-right and lower-left corners: use proportional cover cropping, never contain padding or blank margins. Inspect each crop independently and adjust vertical placement; keep the calm TRANSFORMATION + small DM footer. Poster 16 (the side-view pair) is fourth in the shared carousel by owner selection.
+
+## Owner numeric-results exception — October 27, 2026
+
+Preserve all existing owner-approved numeric-result posters exactly as delivered before the calm-footer edit. This is an explicit exception to the calm TRANSFORMATION + small DM rule: never remove, rewrite, shrink away or replace approved weight/result captions, including «نزلنا 35 كيلو», «نزلنا 25 كيلو», «من 85 إلى 60 كجم», or the original 86-to-70 kg result. Retain their original footer styling and the supplied gold-brush «ابعتلي DM» treatment. Posters 01, 07, 08 and 09 have been restored byte-for-byte from the pre-calm archive as `*-results-restored.webp`; do not apply new face-marker, crop or footer restyling to these protected historical posters without explicit owner instruction. Preserve existing source pixels and privacy marks. Other posters and future posters without approved numeric copy keep the calm footer. Do not invent new numbers or claims.
+
+## Owner clarification: numeric copy is opt-in; brush DM is approved — October 27, 2026
+
+Add numeric results only to a specific poster when the owner explicitly requests or supplies those numbers. The currently approved numeric posters remain protected. Do not make numeric-result text the default for other posters. The small DM / «ابعتلي DM» over a yellow-gold brush stroke is approved and must be retained wherever present; the calm-footer rule does not require removing this brush treatment. Keep the existing delivered posters unchanged for this clarification. Continue to omit the large promotional question and oversized CTA panels from ordinary posters.
+
+## Owner completed-poster DM footer — October 27, 2026
+
+Ordinary posters must look complete through the bottom of the canvas. Use a clearly legible larger black DM centered on a wide yellow-gold dry-brush stroke, with balanced padding; do not leave a tiny plain DM or a large unused lower area. Active ordinary posters use `-dm-brush-v3.webp` at the full portrait height (941 × 1672 for the gold template; 719/720 × 1280 for legacy variants). This supersedes the tiny-DM treatment. Keep TRANSFORMATION above the footer, source people pixels, privacy masks and the selected carousel order. Add numeric result copy only when explicitly supplied/requested for that poster; protected numeric-result posters 01/07/08/09 and their original brush footers remain unchanged.
+
+## Explicit result-copy approvals — October 27, 2026
+
+Preserve these poster-specific owner-approved additions; they are not general claims: poster 13 «من 90 إلى 65 كيلو» / «نزلنا 25 كيلو مع شكل جسم أحسن»; poster 14 «زدنا 5 كيلو» / «وشكل عضلات أحسن»; poster 08 keeps «نزلنا 35 كيلو» and adds «+ من غير ترهلات نهائيًا»; new poster 18 «من 97 إلى 79 كيلو» / «نزلنا 18 كيلو». Poster 16 Before face-circle radius increased from 35 to 38 native poster pixels by explicit request; After circle unchanged. Numeric-copy protection applies to all owner-approved result captions, including new approvals, rather than only the original 01/07/08/09 list. Source bodies and private originals remain unchanged.
+
+## Latest owner gallery order — October 27, 2026
+
+Keep the first three gallery entries unchanged: posters 04, 06 and 08. Place poster 13 (the 90 → 65 kg / 25 kg woman transformation) fourth, then retain every other poster in its existing relative order. This supersedes the earlier instruction that poster 16 must be fourth; poster 16 now follows poster 13. Apply the same shared order in both locales.
