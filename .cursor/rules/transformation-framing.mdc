@@ -1,0 +1,18 @@
+---
+description: Preserve the original transformation template while fitting and centering supplied people without gaps.
+globs: "{public/assets/transformations/**,private/templates/mahfouz-transformations/**,docs/TRANSFORMATION_TEMPLATE.md,src/config/assets.ts}"
+alwaysApply: false
+---
+
+# Preserve the original transformation template
+
+- Never resize, replace or redraw the approved tilted frames, borders, coach, background, arrow, labels or title. The owner explicitly rejected the v6 adaptive-frame experiment.
+- Adjust only the photos inside those same frames. Image content meets each border and fills all corners; do not leave contain padding, a matte, blank strips or an inset photo aperture.
+- Keep the supplied main person complete and centered. Crop empty background only; never stretch a body, cut arms/hands/hair/legs to force a ratio, or generate anatomy.
+- Use the supplied photograph naturally. Do not add, extend, clone, blur, tile or generate background pixels. Zoom/crop only for the specific photo the owner explicitly requests; do not generalize that request to other photos. Retain the prior delivered framing rather than introducing a new fitting treatment.
+- Original missing anatomy or graphics covering a body are source limitations. Preserve them honestly; never reconstruct hidden pixels.
+- Preserve existing privacy coverage, approved numeric captions and gallery order. Numbers are owner-approved per poster only.
+- Inspect all four corners, border contact, whole visible main person, centering and privacy at native resolution, then review mobile/desktop in both locales.
+- Current fixed-template reference: private/templates/mahfouz-transformations/restore-template-and-centre-v8.mjs. Per-pair coordinates are examples, not defaults.
+
+- October 28: owner rejected shrinking photos with template-colored sides. The v10 contain/matte experiment is reverted; do not reuse it or repeat that treatment.

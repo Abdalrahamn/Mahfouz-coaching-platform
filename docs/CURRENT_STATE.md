@@ -213,3 +213,39 @@ Owner-edit validation: lint, typecheck, all five unit tests, production build an
 Owner selected the woman transformation with 90 → 65 kg / 25 kg result as fourth. Posters 04, 06 and 08 remain first, second and third. Poster 13 moves from its former position to fourth; all other entries retain relative order. This supersedes the earlier fourth-position selection for poster 16, which is now fifth. Shared config applies to English and Arabic. The owner requested committing and pushing the completed project changes.
 
 Final commit validation: lint, typecheck, all five tests, production build and whitespace checks passed. English/Arabic at 390px/1280px verified first three posters unchanged and poster 13 fourth, with poster 16 following it. Active public files only are included; unused working derivatives archived privately and all private originals remain Git-ignored.
+
+## Posters 19 and 20 — October 27, 2026
+
+Added two independent source-pixel posters with complete gold-brush DM footers (941 × 1672). Pair-015 preserves the received combined rear-view comparison and lossless separate panel crops; no face markers on rear-facing subjects. Pair-016 preserves the two independent received originals (kitchen Before, gym After); only the uncovered After face has an opaque gold circle. Crops exclude old logos/captions and fill the tilted frames proportionally without body reshaping. No numeric claims added. All originals, hashes and crop metadata remain private. Existing 18 posters and first-four ordering retained.
+
+Owner requested wider framing before delivery: rear pair uses broader independent source crops; gym After is pulled back to include more of the body. Kitchen Before already uses full source height and cannot reveal body pixels absent from the supplied photograph. Lint, typecheck, five unit tests and production build passed; originals remain ignored/private. Production preview started on port 3000 and Codex browser opening requested.
+
+## Transformation frame audit — October 27, 2026
+
+Inspected all 20 active posters individually at photo-frame resolution. Corrected contain-padding defects in poster 14 (approved +5 kg result) and poster 15 (red shirt): photos now proportionally cover the complete tilted polygons, including their top-right and bottom-left corners. Coach, labels, approved numeric copy, footer, order and existing privacy marks are retained; decoded pixels outside the photo area are unchanged. Active derivatives use `-frame-v5.webp`; previous versions and per-poster audit notes are retained privately.
+
+Other frames are filled. Several supplied photos are already cropped at the head or torso; poster 20's kitchen Before is a landscape torso original, so further zooming out inside the unchanged portrait frame would require blank padding or invented image content. It remains at the widest proportional cover crop available from the source. Private originals remain untouched and excluded from publication.
+
+## Four additional transformations — October 27, 2026
+
+Added posters 21–24 from four consecutive Before/After attachment pairs. Poster-specific owner-approved copy: 21/23 «زيادة 15 كيلو»; 22 «زيادة 10 كيلو»; 24 «وسط أصغر» / «وجسم عضلي مختلف». Shared gallery now has 24 posters with all previous entries/order preserved. Photos use proportional cover inside complete tilted frames; source bodies are unchanged. Private originals and hashes are retained as pairs 017–020. Existing emoji/phone coverage preserved; uncovered client faces and visible background faces in poster 21 are permanently sanitized. No masks on rear-facing or cropped-out faces. Gold brush DM/result footers follow the approved style.
+
+## Owner frame geometry and caption revisions
+
+Applied four browser comments by visual identity (carousel DOM includes loop clones): poster 03 gains «زيادة 20 كيلو» / «مع عضلات أكتر»; poster 07 is rebuilt from the privately retained sources with complete visible people, retaining the exact 85→60 / 25 kg footer; poster 14 After is pulled back with full source photo fitting and the +5 kg caption retained; poster 15 gains the explicitly supplied 22 kg result and same-shirt/same-place/body-and-mind slogan. The three fitted posters now draw each border directly on a proportionally scaled photograph instead of applying an inset fixed-polygon cover crop. Existing source logos/text that obscure source body pixels remain source limitations; no hidden anatomy is reconstructed.
+
+Active revised media use owner-frame-v6 (07/14/15) and results-v6 (03). The permanent no-gap/full-supplied-person rule is recorded in AGENTS.md, docs/TRANSFORMATION_TEMPLATE.md, `.cursor/rules/transformation-framing.mdc`, and the personal Mahfouz Transformation skill. Private originals remain unchanged; old posters are archived privately. Shared gallery count/order remain 24.
+
+## Owner correction: original template restored
+
+The owner rejected the agent's adaptive-frame interpretation. Posters 07/14/15 again use the original approved template layout; poster 15 keeps the approved 22 kg/same-shirt result footer. The v6 adaptive-frame rule is retracted in project and personal-template instructions. Poster 22 Before now shows the complete visible main person; posters 08/16 Before are recentered inside their original frames. The existing After photographs and approved footer copy remain unchanged for these three targeted Before revisions. Active revised paths end in original-template-v8. Shared order/count remain 24. Untouched originals remain private.
+
+## Natural-photo correction
+
+Removed the agent-added background extensions from active poster 08 and poster 22 by restoring their natural pre-extension derivatives. Poster 16 keeps the explicitly requested source crop/centering and privacy circle, with the added wall patch removed. Approved template/captions and existing After images remain. Natural-photo/no-background-addition guidance now supersedes both adaptive frames and source-background extension. A placement preference was requested for tall images such as poster 22 Before: complete image with visible template side space versus fixed-frame cover crop. No artificial fit is authorized as a default.
+
+
+October 28 owner rollback: removed the rejected natural-contain-v10 treatment from all 11 affected gallery posters. Restored their exact preceding asset bytes and paths, preserving all captions, templates and order. Rejected derivatives retained privately only; originals untouched.
+
+
+October 28 photo-specific owner revision: poster 22 Before widened using the complete source width (720 × 899 crop at y=215) inside its unchanged tilted frame. No padding, background extension or body distortion. Original emoji and source caption retained. After, coach, borders and approved 10 kg result/footer unchanged pixel-for-pixel. Active asset: transformation-22-before-wider-v11.webp. This zoom instruction applies only to this Before.

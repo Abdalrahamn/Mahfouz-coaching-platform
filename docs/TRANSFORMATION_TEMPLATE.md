@@ -101,3 +101,36 @@ Preserve these poster-specific owner-approved additions; they are not general cl
 ## Latest owner gallery order — October 27, 2026
 
 Keep the first three gallery entries unchanged: posters 04, 06 and 08. Place poster 13 (the 90 → 65 kg / 25 kg woman transformation) fourth, then retain every other poster in its existing relative order. This supersedes the earlier instruction that poster 16 must be fourth; poster 16 now follows poster 13. Apply the same shared order in both locales.
+
+## Four owner-supplied result pairs — October 27, 2026
+
+Posters 21–24 are independent additions from eight attachments, paired consecutively with Before first and After second. Owner-approved captions: 21 and 23 «زيادة 15 كيلو»; 22 «زيادة 10 كيلو»; 24 «وسط أصغر» / «وجسم عضلي مختلف». These are poster-specific approvals, not default claims. Preserve these captions and the brush DM footer. Untouched pairs are privately archived as pair-017 through pair-020; composition/crop/privacy coordinates and SHA-256 hashes are recorded in each pair.json. Append to the shared gallery without changing the first 20 entries. Existing emoji/phone coverage remains; uncovered visible client faces receive permanent gold circles; rear-facing or cropped-out faces receive none.
+
+## Retracted agent interpretation: adaptive frames (rejected by the owner)
+
+This explicitly supersedes the older fixed-polygon cover-crop requirement whenever it would cut a person. Each photograph and its border must share exactly the same geometry and transform: no empty strip, contain matte, inset photo polygon or unfilled corner between them. Inspect all four corners and edges at native resolution. When source aspect ratios differ, adapt the frame dimensions to the proportionally scaled photograph; do not force a person into a fixed aspect ratio. Preserve every visible supplied body part, including hair, arms, hands and feet when present. Crop only background. Never stretch bodies, generate missing anatomy, or conceal an impossible fit with padding. Do not retain an old frame behind a newly sized frame.
+
+Existing source crops and baked-in graphics that obscure people remain source limitations; never invent the covered pixels. Background-only badges may be replaced using background pixels from that same source, without touching a person. Preserve existing emoji/phone/privacy coverings, approved captions, coach, arrow, TRANSFORMATION title and gallery order. Original pairs stay untouched privately. See `.cursor/rules/transformation-framing.mdc` and the proportional-frame implementation `private/templates/mahfouz-transformations/owner-frame-and-copy-v6.mjs`.
+
+Owner-approved comment revisions: poster 03 «زيادة 20 كيلو» / «مع عضلات أكتر»; poster 07 reframe the 85→60 comparison while preserving its existing result footer; poster 14 pull After back and correct frame fit while preserving «زدنا 5 كيلو»; poster 15 «نزلنا 22 كيلو» / «وبقى إنسان جديد», with «نفس التيشيرت ونفس المكان» / «بس شخص بجسم وعقل مختلف». These numbers/slogans apply only to these named posters.
+
+
+## Latest owner correction: restore and preserve the original template
+
+The owner rejected the agent's changes to frame shapes/dimensions. The adaptive-frame section above records an agent interpretation and is NOT an active owner rule. Restore the original tilted borders and template artwork in posters 07/14/15, while retaining approved result captions. Never change frame shapes, sizes, coach, background, arrow, labels or TRANSFORMATION title merely to fit a new photo. Work only inside the original frames: scale proportionally, center the main person, crop empty background, and fill to the actual border edges. Preserve every visible supplied part of the person; never stretch or invent anatomy. Where needed, extend verified source background-only pixels without duplicating body pixels, streaks or conspicuous seams. Source-missing parts and source graphics covering a person remain limitations.
+
+Current owner comments: poster 22 Before must show the full visible main person; poster 08 Before and poster 16 Before must be centered. These changes preserve the original template and existing After photos/approved footers. The active fixed-template implementation is `private/templates/mahfouz-transformations/restore-template-and-centre-v8.mjs`; rejected v6/v7 frame/placement drafts are not template references. Original source bytes remain private.
+
+## Latest owner rule: natural supplied photographs, no added background
+
+The owner rejected the agent's source-background extensions as well. Use each supplied photograph naturally, with no added, cloned, stretched, blurred, tiled or generated background. Apply a zoom/crop only to the specific photograph the owner asks to bring closer or pull back; never make that a general treatment for other photos. Required privacy marks and expressly approved poster/result copy remain. The original template and frame geometry stay fixed.
+
+The earlier full-photo/template-colored-side choice is superseded by the owner’s October 28 rejection; retain the prior delivered framing. Do not silently choose either, add a background, reshape bodies or change the frames. Previously recorded background-extension techniques are retracted, not approved defaults. Current natural-source implementation: private/templates/mahfouz-transformations/natural-photos-v9.mjs.
+
+
+## Latest owner rejection: no shrinking with template-colored padding — October 28, 2026
+
+The owner rejected the contain/matte experiment and superseded the earlier choice of full photos with template-colored sides. Restore the exact posters active before natural-contain-v10, preserving their existing template, privacy marks, approved result text and gallery order. Never shrink photographs and fill around them with template-colored space. Do not introduce new backgrounds, frame changes or automatic reframing experiments. Preserve the prior delivered framing; make photo-specific zoom changes only when expressly requested. The rejected v10 drafts are private history, not active media or a template reference.
+
+
+October 28 photo-specific owner revision: poster 22 Before widened using the complete source width (720 × 899 crop at y=215) inside its unchanged tilted frame. No padding, background extension or body distortion. Original emoji and source caption retained. After, coach, borders and approved 10 kg result/footer unchanged pixel-for-pixel. Active asset: transformation-22-before-wider-v11.webp. This zoom instruction applies only to this Before.

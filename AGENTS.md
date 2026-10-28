@@ -66,3 +66,12 @@ Preserve these poster-specific owner-approved additions; they are not general cl
 ## Latest owner gallery order — October 27, 2026
 
 Keep the first three gallery entries unchanged: posters 04, 06 and 08. Place poster 13 (the 90 → 65 kg / 25 kg woman transformation) fourth, then retain every other poster in its existing relative order. This supersedes the earlier instruction that poster 16 must be fourth; poster 16 now follows poster 13. Apply the same shared order in both locales.
+
+## Latest owner rule: preserve the exact transformation template
+
+Keep the existing coach, background, tilted frames, border geometry, arrow, labels and TRANSFORMATION title. The owner explicitly rejected resizing/replacing frames or changing template style. Adjust only photograph scale, position and safe background cropping inside the original frames. No gap, matte or unfilled corner between the photograph and its border. Preserve every visible supplied part of the main person; never stretch bodies or generate anatomy. Use each supplied photograph naturally: no added/extended/cloned/blurred/tiled/generated background. Zoom/crop only for the specific photo explicitly requested. Retain the prior delivered framing instead of introducing a different fitting treatment. Keep approved result copy and privacy marks. See docs/TRANSFORMATION_TEMPLATE.md and `.cursor/rules/transformation-framing.mdc`.
+
+
+## Latest owner rejection: no shrinking with template-colored padding — October 28, 2026
+
+The owner rejected the contain/matte experiment and superseded the earlier choice of full photos with template-colored sides. Restore the exact posters active before natural-contain-v10, preserving their existing template, privacy marks, approved result text and gallery order. Never shrink photographs and fill around them with template-colored space. Do not introduce new backgrounds, frame changes or automatic reframing experiments. Preserve the prior delivered framing; make photo-specific zoom changes only when expressly requested. The rejected v10 drafts are private history, not active media or a template reference.

@@ -38,7 +38,7 @@ export const assets = {
       height: 1672,
     },
     {
-      src: "/assets/transformations/transformation-16-dm-brush-v4.webp",
+      src: "/assets/transformations/transformation-16-natural-v9.webp",
       width: 941,
       height: 1672,
     },
@@ -53,7 +53,7 @@ export const assets = {
       height: 1280,
     },
     {
-      src: "/assets/transformations/transformation-03-existing-mask-dm-brush-v3.webp",
+      src: "/assets/transformations/transformation-03-results-v6.webp",
       width: 720,
       height: 1280,
     },
@@ -63,7 +63,7 @@ export const assets = {
       height: 1672,
     },
     {
-      src: "/assets/transformations/transformation-07-brush-60-results-restored.webp",
+      src: "/assets/transformations/transformation-07-original-template-v8.webp",
       width: 941,
       height: 1672,
     },
@@ -88,12 +88,12 @@ export const assets = {
       height: 1672,
     },
     {
-      src: "/assets/transformations/transformation-14-results-v4.webp",
+      src: "/assets/transformations/transformation-14-original-template-v8.webp",
       width: 941,
       height: 1672,
     },
     {
-      src: "/assets/transformations/transformation-15-dm-brush-v3.webp",
+      src: "/assets/transformations/transformation-15-original-template-v8.webp",
       width: 941,
       height: 1672,
     },
@@ -104,6 +104,36 @@ export const assets = {
     },
     {
       src: "/assets/transformations/transformation-18-results.webp",
+      width: 941,
+      height: 1672,
+    },
+    {
+      src: "/assets/transformations/transformation-19-dm-brush.webp",
+      width: 941,
+      height: 1672,
+    },
+    {
+      src: "/assets/transformations/transformation-20-dm-brush.webp",
+      width: 941,
+      height: 1672,
+    },
+    {
+      src: "/assets/transformations/transformation-21-results.webp",
+      width: 941,
+      height: 1672,
+    },
+    {
+      src: "/assets/transformations/transformation-22-before-wider-v11.webp",
+      width: 941,
+      height: 1672,
+    },
+    {
+      src: "/assets/transformations/transformation-23-results.webp",
+      width: 941,
+      height: 1672,
+    },
+    {
+      src: "/assets/transformations/transformation-24-results.webp",
       width: 941,
       height: 1672,
     },
