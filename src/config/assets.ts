@@ -137,6 +137,11 @@ export const assets = {
       width: 941,
       height: 1672,
     },
+    {
+      src: "/assets/transformations/transformation-25-after-fit-v4.webp",
+      width: 941,
+      height: 1672,
+    },
   ],
   feedback: [
     [710, 1236],
