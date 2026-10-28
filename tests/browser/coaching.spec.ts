@@ -74,10 +74,10 @@ for (const locale of ["en", "ar"] as const) {
             ? "ابعت السكرين شوت على واتساب"
             : "Send the screenshot on WhatsApp",
       }),
-    ).toHaveCount(10);
+    ).toHaveCount(9);
     await expect(page.locator(".pay-id")).toHaveText("foza.@instapay");
-    const confirm = page.locator(".payment-followup a");
-    await expect(confirm).toHaveAttribute("href", /wa\.me\/201146399576/);
+    await expect(page.locator(".payment-followup")).toHaveCount(0);
+    await expect(page.locator(".payment-section")).toContainText("72");
     expect(await page.locator(".price bdi").allTextContents()).toEqual(
       locale === "ar"
         ? [
@@ -103,9 +103,9 @@ for (const locale of ["en", "ar"] as const) {
             "2,000",
           ],
     );
-    await expect(page.locator(".faq-list article")).toHaveCount(10);
-    await expect(page.locator(".faq-list details")).toHaveCount(0);
-    await expect(page.locator(".faq-list article p").first()).toBeVisible();
+    await expect(page.locator(".faq-list details")).toHaveCount(10);
+    await page.locator(".faq-list summary").first().click();
+    await expect(page.locator(".faq-list details p").first()).toBeVisible();
     await expect(
       page.locator(".gallery-transformations .expand-badge"),
     ).toHaveCount(0);

@@ -51,17 +51,11 @@ export const content = {
           "Personalized training",
           "Built around your goal, level, schedule and equipment. Refined as you progress.",
         ],
-        [
-          "Flexible nutrition",
-          "A structured plan with food alternatives that work with your preferences and daily life.",
-        ],
-        [
-          "Daily follow-up",
-          "Included with Daily Coaching: direct WhatsApp support and accountability. Replies generally within hours.",
-        ],
+        ["Flexible nutrition", "Food choices that fit your routine."],
+        ["Daily follow-up", "Direct WhatsApp support with Daily Coaching."],
         [
           "Your coaching app",
-          "Training and nutrition in one place. Your personal coach stays a WhatsApp message away.",
+          "Your training and nutrition, together on your phone.",
         ],
       ],
     },
@@ -81,7 +75,7 @@ export const content = {
       eyebrow: "YOUR PLAN, ALWAYS WITH YOU",
       title: "ONE PLAN.\nRIGHT IN YOUR POCKET.",
       text: "Your personalized training and nutrition are delivered through a dedicated mobile coaching app. Access your training and nutrition plans in one place, and keep your routine clear.",
-      note: "On Daily Coaching, WhatsApp is your direct channel with Mahfouz for daily follow-up, questions and progress. The No Follow-Up plan uses the same app with monthly updates and no daily coaching messages.",
+      note: "App access is included with both coaching options.",
       items: [
         "Your training program",
         "Your nutrition plan",
@@ -123,12 +117,12 @@ export const content = {
       title: "A CLEAR PATH FORWARD.",
       items: [
         [
-          "Choose your coaching period",
-          "Select the duration that fits your goal.",
+          "Choose your package",
+          "Choose your coaching type, region where applicable and duration.",
         ],
         [
-          "Start on WhatsApp",
-          "We discuss your needs and collect your details privately.",
+          "Pay and confirm on WhatsApp",
+          "Pay through InstaPay, then send the confirmation screenshot and discuss your details privately on WhatsApp.",
         ],
         [
           "Receive your personal plan",
@@ -136,7 +130,7 @@ export const content = {
         ],
         [
           "Keep moving forward",
-          "Daily Coaching includes WhatsApp follow-up and adjustments as you progress. The No Follow-Up plan includes monthly updates without daily coaching messages.",
+          "Follow your plan, with updates included in your selected package.",
         ],
       ],
     },
@@ -169,6 +163,12 @@ export const content = {
         "Personalized training and nutrition delivered through the coaching app, with flexible food alternatives and monthly plan updates, without daily WhatsApp coaching.",
       ],
       regions: ["Inside Egypt", "Outside Egypt"],
+      accordion: {
+        from: "From",
+        monthly: "per month",
+        show: "Click to view packages",
+        selfTitle: "Training & nutrition without daily follow-up",
+      },
       duration: ["1 month", "3 months", "6 months"],
       period: [
         "Build your foundation",
@@ -196,11 +196,8 @@ export const content = {
       thenSend: "Next step",
       sendShot: "Send the screenshot on WhatsApp",
       payVia: "Payment via InstaPay",
-      afterPay:
-        "After paying through InstaPay, send a screenshot of the payment confirmation on WhatsApp so we can start setting up your coaching plan.",
       delivery:
         "Your personalized plan will be delivered within 72 hours after payment confirmation.",
-      confirm: "Send the screenshot on WhatsApp",
       note: "All prices are in Egyptian Pounds. Packages can be renewed. No Follow-Up prices are the same inside and outside Egypt.",
     },
     payment: {
@@ -210,7 +207,7 @@ export const content = {
       copy: "Copy number",
       copied: "Number copied",
       failed: "Copy unavailable. Select and copy the number below.",
-      note: "Payments are non-refundable after enrollment, except where applicable law requires otherwise.",
+      note: "Payments are non-refundable after enrollment.",
     },
     faq: {
       eyebrow: "BEFORE WE GET STARTED",
@@ -222,19 +219,19 @@ export const content = {
         ],
         [
           "How does daily follow-up work?",
-          "Daily WhatsApp follow-up is included with Daily Coaching. We communicate on WhatsApp, and replies are generally within hours. The No Follow-Up plan does not include daily coaching messages.",
+          "Daily Coaching includes WhatsApp support, with replies generally within hours. No Follow-Up excludes daily messages.",
         ],
         [
           "Where do I find my training and nutrition plan?",
-          "Both plans are delivered through a dedicated mobile coaching app, included with your coaching.",
+          "In the coaching app, included with your package.",
         ],
         [
           "Is the diet strict?",
-          "The approach is flexible nutrition: multiple food alternatives and practical choices, while keeping the structure your goal needs.",
+          "Flexible food alternatives, within a structured plan for your goal.",
         ],
         [
           "How often is my plan updated?",
-          "Daily Coaching plans are adjusted according to your progress and needs. No Follow-Up plans include monthly plan adjustments.",
+          "Daily Coaching: as progress and needs require. No Follow-Up: monthly.",
         ],
         [
           "Can I renew my package?",
@@ -246,7 +243,7 @@ export const content = {
         ],
         [
           "What is the refund policy?",
-          "Payments are non-refundable after enrollment, except where applicable law requires otherwise.",
+          "Payments are non-refundable after enrollment.",
         ],
         [
           "How can I pay?",
@@ -288,10 +285,7 @@ export const content = {
             "Enrollment and payment",
             "Choose your duration and region, then contact Mahfouz on WhatsApp. Final payment coordination, confirmation and onboarding take place privately on WhatsApp. Prices are in Egyptian Pounds; packages can be renewed by agreement.",
           ],
-          [
-            "Refunds",
-            "Payments are non-refundable after enrollment, except where applicable law requires otherwise.",
-          ],
+          ["Refunds", "Payments are non-refundable after enrollment."],
           [
             "Individual progress",
             "Results vary between people and depend on adherence, training, nutrition and individual circumstances. No particular result is guaranteed.",
@@ -396,18 +390,9 @@ export const content = {
           "تمرين مخصص ليك",
           "حسب هدفك ومستواك ووقتك والأجهزة المتاحة، مع تعديلات حسب تقدمك.",
         ],
-        [
-          "تغذية مرنة",
-          "نظام منظم فيه بدائل من الأكل اللي بتحبه ويناسب روتينك اليومي.",
-        ],
-        [
-          "متابعة يومية",
-          "ضمن المتابعة اليومية: تواصل مباشر على واتساب ودعم يساعدك تلتزم. الرد عادةً خلال ساعات.",
-        ],
-        [
-          "تطبيق المتابعة",
-          "التمرين والتغذية في مكان واحد. والتواصل الشخصي مع كابتنك على واتساب.",
-        ],
+        ["تغذية مرنة", "اختيارات أكل تناسب روتينك."],
+        ["متابعة يومية", "تواصل مباشر على واتساب ضمن باقات المتابعة اليومية."],
+        ["تطبيق المتابعة", "تمرينك وتغذيتك معاك على موبايلك."],
       ],
     },
     nutrition: {
@@ -426,7 +411,7 @@ export const content = {
       eyebrow: "خطتك معاك في كل مكان",
       title: "خطة واحدة.\nعلى موبايلك.",
       text: "تستلم برنامج التمرين ونظام التغذية المخصص ليك على تطبيق متابعة. تتابع تمارينك وخطتك وتحافظ على روتين واضح.",
-      note: "في المتابعة اليومية، واتساب هو قناة التواصل المباشر مع محفوظ للأسئلة والتقدم. الاشتراك بدون متابعة بيستخدم نفس التطبيق مع تعديلات شهرية، بدون رسائل متابعة يومية.",
+      note: "استخدام التطبيق ضمن نوعَي الاشتراك.",
       items: [
         "برنامج التمرين",
         "نظام التغذية",
@@ -467,16 +452,16 @@ export const content = {
       eyebrow: "من أول رسالة",
       title: "طريق واضح لقدام.",
       items: [
-        ["اختار مدة المتابعة", "اختار المدة اللي تناسب هدفك."],
-        ["ابدأ على واتساب", "نتكلم عن احتياجاتك ونجمع تفاصيلك بشكل خاص."],
+        ["اختار باقتك", "حدد نوع الاشتراك والمنطقة لو مطلوبة والمدة المناسبة."],
+        [
+          "ادفع وأكّد على واتساب",
+          "ادفع بإنستاباي، وبعدها ابعت السكرين شوت ونتكلم عن تفاصيلك بشكل خاص على واتساب.",
+        ],
         [
           "استلم خطتك الشخصية",
           "بعد تأكيد الدفع، بنجهز برنامجك المخصص وبتستلمه خلال 72 ساعة.",
         ],
-        [
-          "كمّل بتقدم مستمر",
-          "المتابعة اليومية تشمل واتساب وتعديلات حسب تقدمك. الاشتراك بدون متابعة يشمل تعديلات شهرية بدون تواصل يومي.",
-        ],
+        ["كمّل بتقدم مستمر", "طبّق خطتك، مع التعديلات المشمولة في باقتك."],
       ],
     },
     about: {
@@ -504,6 +489,12 @@ export const content = {
         "برنامج تدريب وتغذية مخصص ليك على تطبيق المتابعة، مع بدائل أكل مرنة وتعديلات شهرية على الخطة، بدون متابعة يومية على واتساب.",
       ],
       regions: ["داخل مصر", "خارج مصر"],
+      accordion: {
+        from: "يبدأ من",
+        monthly: "شهريًا",
+        show: "اضغط لعرض الباقات",
+        selfTitle: "برنامج تمرين وتغذية بدون متابعة يومية",
+      },
       duration: ["شهر واحد", "3 شهور", "6 شهور"],
       period: ["ابدأ صح", "كمّل وثبّت روتينك", "خلّي التمرين عادة"],
       recommended: "مدة مقترحة",
@@ -527,10 +518,7 @@ export const content = {
       thenSend: "الخطوة الجاية",
       sendShot: "ابعت السكرين شوت على واتساب",
       payVia: "ادفع بأمان عن طريق InstaPay",
-      afterPay:
-        "بعد الدفع عن طريق InstaPay، ابعت Screenshot لتأكيد الدفع على واتساب علشان نبدأ تجهيز اشتراكك.",
       delivery: "وبتستلم خطتك خلال 72 ساعة من تأكيد الدفع.",
-      confirm: "ابعت السكرين شوت على واتساب",
       note: "كل الأسعار بالجنيه المصري. تقدر تجدد باقتك. أسعار بدون متابعة واحدة داخل مصر وخارجها.",
     },
     payment: {
@@ -540,7 +528,7 @@ export const content = {
       copy: "انسخ الرقم",
       copied: "تم نسخ الرقم",
       failed: "النسخ مش متاح. اختار الرقم وانسخه يدويًا.",
-      note: "المدفوعات غير قابلة للاسترداد بعد الاشتراك، إلا في الحالات التي يفرض فيها القانون خلاف ذلك.",
+      note: "المدفوعات غير قابلة للاسترداد بعد الاشتراك.",
     },
     faq: {
       eyebrow: "قبل ما نبدأ",
@@ -552,19 +540,16 @@ export const content = {
         ],
         [
           "المتابعة اليومية بتكون إزاي؟",
-          "المتابعة اليومية على واتساب ضمن باقات المتابعة اليومية. الرد عادةً خلال ساعات. الاشتراك بدون متابعة مش بيشمل رسائل يومية.",
+          "على واتساب ضمن باقات المتابعة اليومية، والرد عادةً خلال ساعات. بدون متابعة مش بيشمل رسائل يومية.",
         ],
         [
           "هلاقي برنامج التمرين ونظام التغذية فين؟",
-          "الاتنين على تطبيق مخصص للمتابعة، واستخدامه ضمن باقتك.",
+          "على تطبيق المتابعة، واستخدامه ضمن باقتك.",
         ],
-        [
-          "هل الدايت فيه حرمان؟",
-          "النظام مرن، فيه بدائل أكل كتير واختيارات عملية، مع التنظيم اللي يناسب هدفك.",
-        ],
+        ["هل الدايت فيه حرمان؟", "فيه بدائل أكل مرنة، ضمن نظام منظم لهدفك."],
         [
           "الخطة بتتحدث كل قد إيه؟",
-          "باقات المتابعة اليومية تتعدل حسب تقدمك واحتياجك. الاشتراك بدون متابعة يشمل تعديلات شهرية على الخطة.",
+          "المتابعة اليومية: حسب تقدمك واحتياجك. بدون متابعة: تعديلات شهرية.",
         ],
         [
           "ينفع أجدد الباقة؟",
@@ -574,10 +559,7 @@ export const content = {
           "لو عندي إصابة أو حالة طبية؟",
           "لازم تستشير الطبيب أو المختص الطبي المؤهل وتستمر تحت إشرافه. المتابعة مش تشخيص أو علاج طبي.",
         ],
-        [
-          "إيه سياسة الاسترداد؟",
-          "المدفوعات غير قابلة للاسترداد بعد الاشتراك، إلا في الحالات التي يفرض فيها القانون خلاف ذلك.",
-        ],
+        ["إيه سياسة الاسترداد؟", "المدفوعات غير قابلة للاسترداد بعد الاشتراك."],
         [
           "أقدر أدفع إزاي؟",
           "عن طريق إنستاباي أو المحافظ النقدية المدعومة. تنسيق الدفع وتأكيده بيكون على واتساب.",
@@ -618,10 +600,7 @@ export const content = {
             "الاشتراك والدفع",
             "اختار المدة والمنطقة وتواصل مع محفوظ على واتساب. تنسيق الدفع وتأكيده وبدء المتابعة بيكونوا بشكل خاص على واتساب. الأسعار بالجنيه المصري ويمكن تجديد الباقة بالاتفاق.",
           ],
-          [
-            "الاسترداد",
-            "المدفوعات غير قابلة للاسترداد بعد الاشتراك، إلا في الحالات التي يفرض فيها القانون خلاف ذلك.",
-          ],
+          ["الاسترداد", "المدفوعات غير قابلة للاسترداد بعد الاشتراك."],
           [
             "التقدم الفردي",
             "النتائج تختلف من شخص للتاني، وبتعتمد على الالتزام والتمرين والتغذية والظروف الفردية. مفيش ضمان لنتيجة معينة.",

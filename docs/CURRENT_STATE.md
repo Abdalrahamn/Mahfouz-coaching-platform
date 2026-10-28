@@ -261,3 +261,31 @@ Poster 25 copy correction: owner removed «بس» and requested «مع شكل ع
 Poster 25 After correction: the owner repeatedly identified this specific After and required the complete received photograph, including the cropped arm. Active path is now transformation-25-full-after-v3.webp. This photo alone uses the full source with proportional scaling inside the unchanged gold frame; remaining aperture shows navy, without added photo background or body reconstruction. No other poster is refitted. The full uncropped source includes the complete supplied arm/hand; the source itself crops the upper face. Previous delivery is private history. Captions and coach retained.
 
 Poster 25 fit correction: owner rejected the navy space around the full After photo and required it to fit the poster. Active media is transformation-25-after-fit-v4.webp. After again proportionally covers the unchanged gold aperture, without padding; its full-height source window is shifted right (x=260, y=0, 881×1154) to retain the lowered right arm. Source bodies, approved caption and gallery order retained. The rejected v3 contain delivery is private history and must not be reused. User's latest instruction prioritizes a filled frame; do not describe this cover crop as the complete original photograph.
+
+## Manual pricing accordions — October 28, 2026
+
+Owner rejected the interactive package selector; it was fully reverted. Inside Egypt and Outside Egypt now use native, keyboard-accessible details/summary accordions, initially closed and sharing a name so opening one closes the other. No Follow-Up stays expanded with its existing three cards. No country detection, pricing, payment-link or media changes. The same structure serves both locales without additional client JavaScript.
+
+Validation: lint, typecheck, five unit tests and production build passed. Arabic/English at 390px and 1280px passed opening/closing, keyboard activation, exclusive region expansion, static No Follow-Up visibility and no horizontal overflow. Local static preview remains on http://localhost:3000/ar#pricing; no deployment performed.
+
+## Owner pricing accordion defaults and hints — October 28, 2026
+
+Inside Egypt now opens by default. Outside Egypt and No Follow-Up start closed; all three share one native disclosure group so opening any closes the other two. No Follow-Up summary reads training and nutrition without daily follow-up. Outside Egypt and No Follow-Up summaries display their existing one-month starting prices (1,500 and 500 EGP) and a localized click-to-view hint, hidden while expanded. No geolocation or business-price changes.
+
+Validation: lint, typecheck, five unit tests and production build passed. Arabic/English at 390px and 1280px passed initial states, keyboard toggling, exclusive opening, visible cards, official payment URLs and no horizontal overflow/page errors. Preview remains local on port 3000. The app browser opening was queued; automated browser checks and screenshot verified the built preview.
+
+## FAQ accordions and repetition review — October 28, 2026
+
+Owner requested opening/closing FAQ answers, superseding the old always-visible requirement. All ten existing questions now use native details/summary with a separate exclusive group, initially closed. Answers, business facts and all pricing accordion behavior remain intact. Redundancy review identified repeated payment instructions, nutrition benefits, app delivery and daily-support descriptions across service sections/cards/FAQ. Recommended consolidating payment explanation and shortening repeated benefits, while keeping service, coach and proof sections visible; no copy consolidation or section deletion applied yet.
+
+FAQ validation: lint, typecheck, five unit tests and production build passed. Arabic/English at 390px and 1280px passed keyboard opening, one answer expanded at a time, independent pricing state, no horizontal overflow/page errors and scoped axe WCAG A/AA checks. Local preview: http://localhost:3000/ar#faq. No other section content removed.
+
+## Owner refund copy revision — October 28, 2026
+
+Owner explicitly requested the short refund statement without the previous exception clause. Updated the existing Arabic/English refund text consistently in FAQ, payment note and terms: payments are non-refundable after enrollment. The proposed duplicate payment-followup block remains intact; a screenshot was provided for owner review before any removal.
+
+## Owner-approved repetition cleanup — October 28, 2026
+
+Applied the reviewed recommendations after owner approval. Removed the duplicate payment-followup block and its generic confirmation action. The existing payment section now holds the InstaPay identifier and 72-hour delivery note; all nine contextual package payment/WhatsApp actions remain unchanged. Shortened benefit descriptions, replaced the app's repeated plan comparison with an app-access note, clarified pay-then-confirm ordering in the process section, shortened its fourth step, and condensed four FAQ answers without removing questions. English and Arabic updated together. Existing prices, refund copy, media, accordions, privacy and service distinctions are retained.
+
+Validation: lint, typecheck, five unit tests and production build passed. Arabic/English at 390px/1280px verified one payment identifier, delivery and payment number retained, no duplicate payment block, all nine official payment/contextual confirmation pairs, ten FAQs, default Egypt accordion, revised process text and no horizontal overflow/page errors. Preview remains local; no deployment performed.

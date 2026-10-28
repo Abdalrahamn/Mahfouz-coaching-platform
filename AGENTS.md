@@ -75,3 +75,7 @@ Keep the existing coach, background, tilted frames, border geometry, arrow, labe
 ## Latest owner rejection: no shrinking with template-colored padding — October 28, 2026
 
 The owner rejected the contain/matte experiment and superseded the earlier choice of full photos with template-colored sides. Restore the exact posters active before natural-contain-v10, preserving their existing template, privacy marks, approved result text and gallery order. Never shrink photographs and fill around them with template-colored space. Do not introduce new backgrounds, frame changes or automatic reframing experiments. Preserve the prior delivered framing; make photo-specific zoom changes only when expressly requested. The rejected v10 drafts are private history, not active media or a template reference.
+
+## Owner FAQ accordion update — October 28, 2026
+
+FAQ questions now use native details/summary accordions, initially closed with one answer open at a time. This explicit owner instruction supersedes the earlier requirement that every FAQ answer remain always visible. Keep every existing answer and localized copy; pricing accordions remain a separate disclosure group. Other content sections stay visible unless the owner requests a change.

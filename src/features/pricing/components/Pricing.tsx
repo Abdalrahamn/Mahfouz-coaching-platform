@@ -1,4 +1,4 @@
-import { Check, Info, X } from "lucide-react";
+import { Check, ChevronDown, X } from "lucide-react";
 import {
   business,
   paymentConfirmationLink,
@@ -123,46 +123,67 @@ export function Pricing({ locale }: { locale: Locale }) {
           <p>{t.offerText[0]}</p>
         </header>
         {regions.map((region) => (
-          <div key={region} className="plan-region">
-            <h4>{t.regions[region === "egypt" ? 0 : 1]}</h4>
-            <PlanCards
-              locale={locale}
-              offer="daily"
-              region={region}
-              prices={business.prices[region]}
-            />
-          </div>
+          <details
+            key={region}
+            className="plan-region region-accordion"
+            name="pricing-region"
+            open={region === "egypt"}
+          >
+            <summary>
+              <div className="accordion-label">
+                <h4>{t.regions[region === "egypt" ? 0 : 1]}</h4>
+                {region === "international" && (
+                  <p className="accordion-hint">
+                    {t.accordion.from}{" "}
+                    <bdi>
+                      {formatPrice(locale, business.prices.international[0])}
+                    </bdi>{" "}
+                    {t.currency} {t.accordion.monthly}
+                    <span className="accordion-show">
+                      {" "}
+                      · {t.accordion.show}
+                    </span>
+                  </p>
+                )}
+              </div>
+              <ChevronDown size={22} aria-hidden="true" />
+            </summary>
+            <div className="region-accordion-content">
+              <PlanCards
+                locale={locale}
+                offer="daily"
+                region={region}
+                prices={business.prices[region]}
+              />
+            </div>
+          </details>
         ))}
       </section>
-      <section
-        className="plan-group plan-group-self"
-        aria-labelledby="no-follow-up"
+      <details
+        className="plan-group-self plan-region region-accordion self-accordion"
+        name="pricing-region"
       >
-        <header className="plan-group-heading">
-          <h3 id="no-follow-up">{t.offerTitles[1]}</h3>
+        <summary>
+          <div className="accordion-label">
+            <h3 id="no-follow-up">{t.accordion.selfTitle}</h3>
+            <p className="accordion-hint">
+              {t.accordion.from}{" "}
+              <bdi>{formatPrice(locale, business.selfPrices[0])}</bdi>{" "}
+              {t.currency} {t.accordion.monthly}
+              <span className="accordion-show"> · {t.accordion.show}</span>
+            </p>
+          </div>
+          <ChevronDown size={22} aria-hidden="true" />
+        </summary>
+        <div className="region-accordion-content">
           <p>{t.offerText[1]}</p>
-        </header>
-        <PlanCards locale={locale} offer="self" prices={business.selfPrices} />
-      </section>
-      <div className="payment-followup">
-        <p className="pay-via">
-          <Info size={16} aria-hidden="true" />
-          <span>
-            {t.payVia}
-            <bdi className="pay-id">{business.instapayId}</bdi>
-          </span>
-        </p>
-        <p>{t.afterPay}</p>
-        <p>{t.delivery}</p>
-        <a
-          className="button button-outline"
-          href={paymentConfirmationLink(locale)}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {t.confirm}
-        </a>
-      </div>
+          <PlanCards
+            locale={locale}
+            offer="self"
+            prices={business.selfPrices}
+          />
+        </div>
+      </details>
       <p className="section-note">{t.note}</p>
     </div>
   );
