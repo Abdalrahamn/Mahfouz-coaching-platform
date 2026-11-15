@@ -39,6 +39,7 @@ export default async function Home({
     "@context": "https://schema.org",
     "@type": "Person",
     name: business.name,
+    alternateName: getContent("ar").hero.name,
     jobTitle: t.chrome.jobTitle,
     sameAs: [business.instagram],
     ...(origin ? { url: `${origin}/${locale}` } : {}),

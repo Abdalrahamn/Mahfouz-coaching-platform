@@ -34,7 +34,7 @@ export const content = {
       role: "CFT · ONLINE COACH",
       headline: ["BUILD A BODY", "THAT FITS", "YOUR LIFE."],
       description:
-        "Personalized training and flexible nutrition built around your goals, lifestyle and level. Daily WhatsApp support is included with Daily Coaching.",
+        "Online fitness coaching in Egypt and abroad, with a personalized workout plan and flexible nutrition. Choose a plan with or without daily WhatsApp follow-up.",
       results: "View packages",
       photo: "Abd Alrahman Mahfouz in a black training vest",
       note: "PERSONAL COACHING. REAL CONNECTION.",
@@ -268,9 +268,9 @@ export const content = {
       back: "Back to home",
     },
     seo: {
-      title: "Mahfouz | Personalized Online Fitness Coaching",
+      title: "Abd Alrahman Mahfouz | Online Fitness Coach in Egypt",
       description:
-        "Online fitness coaching with Abd Alrahman Mahfouz. Personalized training, flexible nutrition, daily WhatsApp support and a dedicated coaching app. Coaching inside and outside Egypt.",
+        "Train online with Abd Alrahman Mahfouz in Egypt or abroad. Get a personalized workout and nutrition plan, with daily WhatsApp follow-up available.",
     },
     legal: {
       terms: {
@@ -373,7 +373,7 @@ export const content = {
       role: "مدرب لياقة معتمد · متابعة أونلاين",
       headline: ["ابني جسم", "يسهل", "حياتك."],
       description:
-        "تمرين وتغذية مخصصين ليك حسب هدفك ومستواك وروتين حياتك. المتابعة اليومية على واتساب ضمن باقات المتابعة اليومية.",
+        "تدريب أونلاين داخل مصر وخارجها، مع خطة تمرين ونظام تغذية مرن حسب هدفك. اختار باقة بمتابعة يومية على واتساب أو من غير متابعة يومية.",
       results: "شوف الباقات",
       photo: "عبدالرحمن محفوظ يرتدي ملابس تمرين سوداء",
       note: "متابعة شخصية. تواصل حقيقي.",
@@ -583,9 +583,9 @@ export const content = {
       back: "ارجع للرئيسية",
     },
     seo: {
-      title: "محفوظ | متابعة لياقة بدنية أونلاين",
+      title: "كوتش عبدالرحمن محفوظ | تدريب أونلاين وتغذية رياضية في مصر",
       description:
-        "متابعة أونلاين مع عبدالرحمن محفوظ: تمرين مخصص، تغذية مرنة، دعم يومي على واتساب وتطبيق متابعة. باقات داخل مصر وخارجها.",
+        "تدريب أونلاين مع كوتش عبدالرحمن محفوظ داخل مصر وخارجها. خطة تمرين ونظام تغذية مخصصين ليك، مع اختيار المتابعة اليومية على واتساب.",
     },
     legal: {
       terms: {
