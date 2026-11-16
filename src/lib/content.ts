@@ -267,6 +267,35 @@ export const content = {
       copyright: "Online Fitness Coaching. All rights reserved.",
       back: "Back to home",
     },
+    coachingGuide: {
+      link: "Online coaching prices and package guide",
+      title: "Online coaching prices in Egypt",
+      intro:
+        "Compare Abd Alrahman Mahfouz’s online fitness coaching packages by price, duration and level of support. Both options include a personalized workout and flexible nutrition plan in the coaching app.",
+      priceHeading: "Package prices in Egyptian pounds",
+      packageHeading: "Package",
+      prices: [
+        "Daily follow-up in Egypt",
+        "Daily follow-up outside Egypt",
+        "Without daily follow-up",
+      ],
+      durations: ["1 month", "3 months", "6 months"],
+      sections: [
+        [
+          "Which package should I choose?",
+          "Choose daily follow-up if you want to discuss your progress and ask questions on WhatsApp as you train. If you prefer to follow a plan independently, the package without daily follow-up still includes the personalized plans, app access and monthly adjustments.",
+        ],
+        [
+          "What changes between one, three and six months?",
+          "The features of each package stay the same across its durations. Choose the support you want first, then pick how long you want it for. Daily follow-up prices depend on whether you’re inside or outside Egypt. The package without daily follow-up has the same prices in both regions.",
+        ],
+        [
+          "What happens after I subscribe?",
+          "Choose your package and duration, then pay through InstaPay and send the payment confirmation on WhatsApp. You’ll discuss your details privately with the coach and receive your personalized plan within 72 hours after payment confirmation.",
+        ],
+      ],
+      coachLink: "Meet your coach and view his credentials",
+    },
     seo: {
       title: "Abd Alrahman Mahfouz | Online Fitness Coach in Egypt",
       description:
@@ -581,6 +610,35 @@ export const content = {
       links: ["الشروط", "الخصوصية", "تنويه التدريب والصحة"],
       copyright: "متابعة لياقة أونلاين. جميع الحقوق محفوظة.",
       back: "ارجع للرئيسية",
+    },
+    coachingGuide: {
+      link: "دليل أسعار وباقات التدريب الأونلاين",
+      title: "أسعار التدريب الأونلاين في مصر",
+      intro:
+        "قارن باقات التدريب الأونلاين مع كابتن عبدالرحمن محفوظ حسب السعر والمدة وطريقة المتابعة. في النوعين هتستلم برنامج تمرين ونظام تغذية مرن مخصصين ليك على تطبيق المتابعة.",
+      priceHeading: "أسعار الباقات بالجنيه المصري",
+      packageHeading: "الباقة",
+      prices: [
+        "متابعة يومية داخل مصر",
+        "متابعة يومية خارج مصر",
+        "من غير متابعة يومية",
+      ],
+      durations: ["شهر", "٣ شهور", "٦ شهور"],
+      sections: [
+        [
+          "أختار أنهي نوع متابعة؟",
+          "اختار المتابعة اليومية لو عايز تتكلم مع الكابتن على واتساب عن تقدّمك وتسأله وإنت بتطبّق الخطة. لو بتحب تتمرّن باستقلالية، باقة من غير متابعة يومية برضه فيها الخطط المخصصة والتطبيق، مع تعديلات شهرية.",
+        ],
+        [
+          "إيه اللي بيتغيّر بين شهر و٣ شهور و٦ شهور؟",
+          "المزايا بتفضل نفسها لكل مدة داخل نفس نوع الاشتراك. اختار طريقة المتابعة الأول، وبعدها المدة اللي تناسبك. سعر المتابعة اليومية بيختلف حسب إنت داخل مصر ولا خارجها. سعر الباقة من غير متابعة يومية واحد في الحالتين.",
+        ],
+        [
+          "إيه اللي بيحصل بعد الاشتراك؟",
+          "اختار باقتك ومدتها، وادفع عن طريق إنستاباي وابعت تأكيد الدفع على واتساب. بتتكلم مع الكابتن عن تفاصيلك بشكل خاص، وبتستلم خطتك المخصصة خلال ٧٢ ساعة من تأكيد الدفع.",
+        ],
+      ],
+      coachLink: "اتعرف على كابتن محفوظ وشوف شهاداته",
     },
     seo: {
       title: "كوتش عبدالرحمن محفوظ | تدريب أونلاين وتغذية رياضية في مصر",

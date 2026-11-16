@@ -19,6 +19,7 @@ export const sectionIds = [
 ];
 
 export const legalSlugs = ["terms", "privacy", "disclaimer"] as const;
+export const coachingGuidePath = "/online-coaching-prices";
 export type LegalSlug = (typeof legalSlugs)[number];
 export function isLegalSlug(slug: string): slug is LegalSlug {
   return legalSlugs.some((value) => value === slug);

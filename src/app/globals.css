@@ -533,7 +533,7 @@ ul {
   gap: 2rem;
   align-items: flex-end;
 }
-.split-intro > p {
+.split-intro > :is(p, .coaching-intro-copy) {
   max-width: 350px;
   font-size: 0.9rem;
   line-height: 1.8;
@@ -1423,6 +1423,37 @@ html[dir="rtl"] .price-next {
 .legal-page > .button {
   margin-top: 3rem;
 }
+.coaching-guide-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--accent-text);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.coaching-guide-prices {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+  color: var(--legal-intro-text);
+}
+.coaching-guide-prices :is(th, td) {
+  padding: 0.7rem clamp(0.22rem, 1.5vw, 1rem);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+.coaching-guide-prices th:first-child {
+  text-align: start;
+}
+.coaching-guide-coach {
+  margin-top: 3rem;
+}
+.coaching-guide-coach img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--control-radius);
+}
 [dir="rtl"] {
   --body-face: var(--font-arabic), sans-serif;
   --display-face: var(--font-arabic), sans-serif;
@@ -1729,7 +1760,7 @@ html[dir="rtl"] .price-next {
   .split-intro {
     display: block;
   }
-  .split-intro > p {
+  .split-intro > :is(p, .coaching-intro-copy) {
     margin-top: 1.5rem;
     max-width: 100%;
     font-size: 0.9rem;

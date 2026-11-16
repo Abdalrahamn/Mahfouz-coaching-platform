@@ -1,4 +1,6 @@
 import { Dumbbell, Utensils, MessageCircle, Smartphone } from "lucide-react";
+import Link from "next/link";
+import { coachingGuidePath } from "@/config/navigation";
 import { getContent } from "@/lib/content";
 import { type Locale } from "@/lib/business";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -13,7 +15,15 @@ export function CoachingSection({ locale }: { locale: Locale }) {
           <Eyebrow>{t.coaching.eyebrow}</Eyebrow>
           <h2>{t.coaching.title}</h2>
         </div>
-        <p>{t.coaching.description}</p>
+        <div className="coaching-intro-copy">
+          <p>{t.coaching.description}</p>
+          <Link
+            href={`/${locale}${coachingGuidePath}`}
+            className="coaching-guide-link"
+          >
+            {t.coachingGuide.link}
+          </Link>
+        </div>
       </div>
       <div className="benefit-grid">
         {t.coaching.features.map(([title, description], i) => {
