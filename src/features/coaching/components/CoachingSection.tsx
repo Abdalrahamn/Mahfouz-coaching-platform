@@ -1,5 +1,4 @@
 import { Dumbbell, Utensils, MessageCircle, Smartphone } from "lucide-react";
-import Link from "next/link";
 import { coachingGuidePath } from "@/config/navigation";
 import { getContent } from "@/lib/content";
 import { type Locale } from "@/lib/business";
@@ -17,12 +16,12 @@ export function CoachingSection({ locale }: { locale: Locale }) {
         </div>
         <div className="coaching-intro-copy">
           <p>{t.coaching.description}</p>
-          <Link
+          <a
             href={`/${locale}${coachingGuidePath}`}
             className="coaching-guide-link"
           >
             {t.coachingGuide.link}
-          </Link>
+          </a>
         </div>
       </div>
       <div className="benefit-grid">
