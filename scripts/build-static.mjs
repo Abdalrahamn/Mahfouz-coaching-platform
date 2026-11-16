@@ -87,8 +87,7 @@ try {
       if (
         !allowed.has(url) &&
         !url.startsWith("/assets/branding/") &&
-        !url.startsWith("/assets/cursors/") &&
-        url !== "/assets/hero/og-share.jpg"
+        !url.startsWith("/assets/cursors/")
       )
         rmSync(file);
     }

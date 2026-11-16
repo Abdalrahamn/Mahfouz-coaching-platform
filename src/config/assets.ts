@@ -6,6 +6,11 @@ export const assets = {
     width: 597,
     height: 1468,
   },
+  coachShare: {
+    src: "/assets/hero/og-share.jpg",
+    width: 1200,
+    height: 630,
+  },
   about: {
     src: "/assets/coach/coach-about-new-transparent.webp",
     width: 728,

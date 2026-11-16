@@ -1,4 +1,8 @@
+import { metadataFor } from "@/lib/metadata";
 import "../globals.css";
+
+export const metadata = metadataFor("ar");
+
 export default function EntryLayout({
   children,
 }: {

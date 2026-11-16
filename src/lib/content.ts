@@ -43,9 +43,9 @@ export const content = {
     daily: "Every day",
     coaching: {
       eyebrow: "MORE THAN A TRAINING PLAN",
-      title: "YOUR GOAL.\nA COMPLETE SYSTEM.",
+      title: "ONLINE FITNESS COACHING\nIN EGYPT",
       description:
-        "The structure you need. The flexibility life demands. A coach with you through the process.",
+        "Train with Abd Alrahman Mahfouz, a certified online fitness coach. Get a workout plan for your goal and equipment, a flexible nutrition plan, and the option of daily WhatsApp follow-up.",
       features: [
         [
           "Personalized training",
@@ -382,9 +382,9 @@ export const content = {
     daily: "كل يوم",
     coaching: {
       eyebrow: "أكتر من جدول تمرين",
-      title: "هدفك.\nنظام متكامل ليك.",
+      title: "تدريب لياقة أونلاين\nفي مصر",
       description:
-        "تنظيم يساعدك تتقدم، ومرونة تناسب حياتك. وكابتن معاك طول الطريق.",
+        "اتمرّن مع كابتن عبدالرحمن محفوظ، مدرب لياقة بدنية معتمد. هتستلم برنامج تمرين يناسب هدفك والأجهزة المتاحة، ونظام تغذية مرن، وتقدر تختار متابعة يومية على واتساب.",
       features: [
         [
           "تمرين مخصص ليك",

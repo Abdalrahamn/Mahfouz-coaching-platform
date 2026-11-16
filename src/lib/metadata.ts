@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { assets } from "@/config/assets";
 import type { Locale } from "@/lib/business";
 import { siteOrigin } from "@/lib/env";
 import { getContent } from "@/lib/content";
@@ -11,6 +12,7 @@ export function metadataFor(
   const t = getContent(locale);
   const origin = siteOrigin();
   const url = origin ? `${origin}/${locale}${path}` : undefined;
+  const coachImage = origin ? `${origin}${assets.coachShare.src}` : undefined;
   return {
     title: title ? `${title} | MAHFOUZ` : t.seo.title,
     description: description ?? t.seo.description,
@@ -33,13 +35,13 @@ export function metadataFor(
       alternateLocale: locale === "ar" ? "en_US" : "ar_EG",
       siteName: "MAHFOUZ",
       url,
-      ...(origin
+      ...(coachImage
         ? {
             images: [
               {
-                url: `${origin}/assets/hero/og-share.jpg`,
-                width: 1200,
-                height: 630,
+                url: coachImage,
+                width: assets.coachShare.width,
+                height: assets.coachShare.height,
                 alt: t.hero.photo,
               },
             ],
@@ -50,8 +52,8 @@ export function metadataFor(
       card: "summary_large_image",
       title: title ?? t.seo.title,
       description: description ?? t.seo.description,
-      ...(origin
-        ? { images: [`${origin}/assets/hero/og-share.jpg`] }
+      ...(coachImage
+        ? { images: [{ url: coachImage, alt: t.hero.photo }] }
         : {}),
     },
     icons: {
@@ -70,6 +72,10 @@ export function metadataFor(
       ],
       apple: "/assets/branding/apple-touch-icon.png",
     },
-    robots: { index: true, follow: true },
+    robots: {
+      index: true,
+      follow: true,
+      ...(!path ? { "max-image-preview": "large" } : {}),
+    },
   };
 }
