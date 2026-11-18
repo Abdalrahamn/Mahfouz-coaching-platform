@@ -8,7 +8,7 @@
     "start": "node scripts/preview-static.mjs",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "test": "node --import tsx --test tests/business.test.ts",
+    "test": "node --import tsx --test tests/*.test.ts",
     "test:e2e": "playwright test",
     "format:check": "prettier --check src tests *.json *.mjs",
     "assets:organize": "node scripts/organize-assets.mjs"

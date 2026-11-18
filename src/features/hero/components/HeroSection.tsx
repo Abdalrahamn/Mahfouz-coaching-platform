@@ -36,6 +36,7 @@ export function HeroSection({ locale }: { locale: Locale }) {
             {t.hero.headline.map((line, i) => (
               <span key={line} className={i === 2 ? "text-orange" : ""}>
                 {line}
+                {i < t.hero.headline.length - 1 ? " " : ""}
               </span>
             ))}
           </h1>
