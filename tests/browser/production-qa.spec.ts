@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
-test("English is the default; valid saved languages are respected", async ({
+test("Arabic is the default; valid saved languages are respected", async ({
   page,
   context,
 }) => {
@@ -17,7 +17,7 @@ test("English is the default; valid saved languages are respected", async ({
       ]);
     await page.goto("/");
     await expect(page).toHaveURL(
-      new RegExp(`/${preference === "ar" ? "ar" : "en"}$`),
+      new RegExp(`/${preference === "en" ? "en" : "ar"}$`),
     );
   }
 });

@@ -31,7 +31,7 @@ export const content = {
     hero: {
       eyebrow: "YOUR GOAL. YOUR LIFE. YOUR PLAN.",
       name: "ABD ALRAHMAN MAHFOUZ",
-      role: "CFT · ONLINE COACH",
+      role: "CFT · ONLINE FITNESS COACH",
       headline: ["BUILD A BODY", "THAT FITS", "YOUR LIFE."],
       description:
         "Online fitness coaching in Egypt and abroad, with a personalized workout plan and flexible nutrition. Choose a plan with or without daily WhatsApp follow-up.",
@@ -42,7 +42,7 @@ export const content = {
     stats: ["YEARS OF EXPERIENCE", "CLIENT TRANSFORMATIONS", "DAILY FOLLOW-UP"],
     daily: "Every day",
     coaching: {
-      eyebrow: "MORE THAN A TRAINING PLAN",
+      eyebrow: "YOUR ONLINE PERSONAL TRAINER",
       title: "ONLINE FITNESS COACHING\nIN EGYPT",
       description:
         "Train with Abd Alrahman Mahfouz, a certified online fitness coach. Get a workout plan for your goal and equipment, a flexible nutrition plan, and the option of daily WhatsApp follow-up.",
@@ -135,7 +135,7 @@ export const content = {
       ],
     },
     about: {
-      eyebrow: "MEET YOUR COACH",
+      eyebrow: "MEET COACH ABD ALRAHMAN MAHFOUZ",
       title: "EXPERIENCE IN THE GYM.\nPRECISION IN THE PLAN.",
       text: "I’m Abd Alrahman Mahfouz, a Certified Fitness Trainer with more than 15 years of hands-on training experience and a contribution to 300+ client transformations.",
       engineering: "ENGINEERING MINDSET.\nAPPLIED TO PHYSIQUE TRANSFORMATION.",
@@ -155,7 +155,7 @@ export const content = {
     pricing: {
       eyebrow: "INVEST IN YOUR NEXT VERSION",
       title: "YOUR COACHING.\nYOUR TIMEFRAME.",
-      text: "Two ways to work together. Daily WhatsApp coaching, or a personalized plan without daily follow-up.",
+      text: "Online coaching packages in Egypt and abroad: daily WhatsApp coaching, or a personalized workout and nutrition plan without daily follow-up.",
       offers: ["Daily coaching", "No follow-up"],
       offerTitles: ["Daily WhatsApp coaching", "No follow-up plan"],
       offerText: [
@@ -211,7 +211,7 @@ export const content = {
     },
     faq: {
       eyebrow: "BEFORE WE GET STARTED",
-      title: "YOUR QUESTIONS, ANSWERED.",
+      title: "YOUR ONLINE COACHING QUESTIONS, ANSWERED.",
       items: [
         [
           "Is coaching suitable for beginners?",
@@ -281,6 +281,10 @@ export const content = {
       ],
       durations: ["1 month", "3 months", "6 months"],
       sections: [
+        [
+          "How do I choose an online personal trainer in Egypt?",
+          "Review the coach’s credentials, how the workout and nutrition plans are personalized, and what support your package includes. You can view Mahfouz’s supplied certificates and client transformations on the homepage, then compare daily WhatsApp coaching with the plan without daily follow-up.",
+        ],
         [
           "Which package should I choose?",
           "Choose daily follow-up if you want to discuss your progress and ask questions on WhatsApp as you train. If you prefer to follow a plan independently, the package without daily follow-up still includes the personalized plans, app access and monthly adjustments.",
@@ -399,7 +403,7 @@ export const content = {
     hero: {
       eyebrow: "هدفك. حياتك. خطتك.",
       name: "عبدالرحمن محفوظ",
-      role: "مدرب لياقة معتمد · متابعة أونلاين",
+      role: "مدرب لياقة معتمد · كوتش أونلاين",
       headline: ["ابني جسم", "يسهل", "حياتك."],
       description:
         "تدريب أونلاين داخل مصر وخارجها، مع خطة تمرين ونظام تغذية مرن حسب هدفك. اختار باقة بمتابعة يومية على واتساب أو من غير متابعة يومية.",
@@ -410,10 +414,10 @@ export const content = {
     stats: ["سنة من الخبرة", "رحلة تحول", "متابعة يومية"],
     daily: "كل يوم",
     coaching: {
-      eyebrow: "أكتر من جدول تمرين",
-      title: "تدريب لياقة أونلاين\nفي مصر",
+      eyebrow: "أونلاين كوتشينج مع كابتن محفوظ",
+      title: "تدريب أونلاين في مصر\nبخطة مخصصة ليك",
       description:
-        "اتمرّن مع كابتن عبدالرحمن محفوظ، مدرب لياقة بدنية معتمد. هتستلم برنامج تمرين يناسب هدفك والأجهزة المتاحة، ونظام تغذية مرن، وتقدر تختار متابعة يومية على واتساب.",
+        "لو بتدور على مدرب أونلاين في مصر، اتمرّن مع كابتن عبدالرحمن محفوظ، مدرب لياقة بدنية معتمد. برنامج تمرين حسب هدفك ومستواك والأجهزة المتاحة، ونظام تغذية مرن، مع اختيار المتابعة اليومية على واتساب.",
       features: [
         [
           "تمرين مخصص ليك",
@@ -494,7 +498,7 @@ export const content = {
       ],
     },
     about: {
-      eyebrow: "اعرف كابتنك",
+      eyebrow: "اعرف كابتن عبد الرحمن محفوظ",
       title: "خبرة في التدريب.\nدقة في التخطيط.",
       text: "أنا عبدالرحمن محفوظ، مدرب لياقة بدنية معتمد. عندي أكتر من 15 سنة خبرة عملية في التدريب ومجال الـFitness، وساهمت في أكتر من 300 رحلة تحول.",
       engineering: "عقلية هندسية. في خدمة تحول جسمك.",
@@ -510,7 +514,7 @@ export const content = {
     pricing: {
       eyebrow: "استثمر في نفسك",
       title: "متابعتك.\nبالمدة اللي تناسبك.",
-      text: "طريقتين للاشتراك. متابعة يومية على واتساب، أو برنامج مخصص بدون متابعة يومية.",
+      text: "باقات تدريب أونلاين في مصر وخارجها: تمرين وتغذية مخصصين ليك، بمتابعة يومية على واتساب أو بدون متابعة يومية.",
       offers: ["متابعة يومية", "بدون متابعة"],
       offerTitles: ["متابعة يومية على واتساب", "اشتراك بدون متابعة"],
       offerText: [
@@ -561,7 +565,7 @@ export const content = {
     },
     faq: {
       eyebrow: "قبل ما نبدأ",
-      title: "إجابات على أسئلتك.",
+      title: "أسئلتك عن الأونلاين كوتشينج.",
       items: [
         [
           "هل المتابعة مناسبة للمبتدئين؟",
@@ -615,7 +619,7 @@ export const content = {
       link: "دليل أسعار وباقات التدريب الأونلاين",
       title: "أسعار التدريب الأونلاين في مصر",
       intro:
-        "قارن باقات التدريب الأونلاين مع كابتن عبدالرحمن محفوظ حسب السعر والمدة وطريقة المتابعة. في النوعين هتستلم برنامج تمرين ونظام تغذية مرن مخصصين ليك على تطبيق المتابعة.",
+        "بتقارن أسعار الأونلاين كوتشينج؟ شوف باقات التدريب الأونلاين مع كابتن عبدالرحمن محفوظ حسب السعر والمدة وطريقة المتابعة. في النوعين هتستلم برنامج تمرين ونظام تغذية مرن مخصصين ليك على تطبيق المتابعة.",
       priceHeading: "أسعار الباقات بالجنيه المصري",
       packageHeading: "الباقة",
       prices: [
@@ -625,6 +629,10 @@ export const content = {
       ],
       durations: ["شهر", "٣ شهور", "٦ شهور"],
       sections: [
+        [
+          "إزاي تختار كابتن أونلاين في مصر؟",
+          "راجع شهادات الكابتن، وطريقة تخصيص برنامج التمرين ونظام التغذية، والمتابعة اللي بتشملها الباقة. تقدر تشوف شهادات كابتن محفوظ وصور تحولات العملاء على الرئيسية، وبعدها تقارن بين المتابعة اليومية على واتساب والبرنامج من غير متابعة يومية.",
+        ],
         [
           "أختار أنهي نوع متابعة؟",
           "اختار المتابعة اليومية لو عايز تتكلم مع الكابتن على واتساب عن تقدّمك وتسأله وإنت بتطبّق الخطة. لو بتحب تتمرّن باستقلالية، باقة من غير متابعة يومية برضه فيها الخطط المخصصة والتطبيق، مع تعديلات شهرية.",
@@ -641,9 +649,9 @@ export const content = {
       coachLink: "اتعرف على كابتن محفوظ وشوف شهاداته",
     },
     seo: {
-      title: "كوتش عبدالرحمن محفوظ | تدريب أونلاين وتغذية رياضية في مصر",
+      title: "كابتن عبدالرحمن محفوظ | مدرب أونلاين في مصر",
       description:
-        "تدريب أونلاين مع كوتش عبدالرحمن محفوظ داخل مصر وخارجها. خطة تمرين ونظام تغذية مخصصين ليك، مع اختيار المتابعة اليومية على واتساب.",
+        "أونلاين كوتشينج مع كابتن عبدالرحمن محفوظ: تدريب أونلاين في مصر وخارجها، برنامج تمرين ونظام تغذية مخصصين ليك، وباقات بمتابعة يومية على واتساب أو بدونها.",
     },
     legal: {
       terms: {

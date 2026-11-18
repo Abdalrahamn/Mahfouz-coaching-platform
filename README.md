@@ -35,3 +35,11 @@ See `docs/ARCHITECTURE_REVIEW.md` for the final tree, move inventory, verificati
 Create a separate Git-connected Pages application for this repository; leave `kelimeler` unchanged. Use project name `mahfouz-coaching`, branch `main`, build command `npm run build`, output `out`, and `SITE_URL=https://mahfouz-coaching.pages.dev`. Confirm the actual allocated hostname at deployment. Push reviewed updates to `main` to trigger subsequent builds. The build uses local licensed fonts and exports only active delivery images. No database or Worker runtime is required.
 
 The build script works around a Next.js loader bug for local directory names containing apostrophes by building an isolated source copy and returning the generated output. It does not copy private originals or local environment files. Use exported environment values for production builds. See `docs/CLOUDFLARE_DEPLOYMENT_PLAN.md` for verification and release details.
+
+
+## Search visibility handoff — 18 November 2026
+
+Start with [the dated SEO investigation and keyword map](docs/SEARCH_VISIBILITY_AUDIT_2026-11-18.md), then continue [the search visibility checklist](docs/SEARCH_VISIBILITY_TODO.md). The report distinguishes live Google Search Console findings, public HTTP checks, integrated Web Search observations, and untested AI recommendation surfaces. It also records the Arabic default, the separate English `x-default` hint, owner-requested keywords, implementation scope, verification and next actions. Do not report integrated search discovery as proof of Google indexing or a top ranking.
+
+
+The owner-requested implementation backlog is [SEO and GEO readiness plan](docs/SEO_GEO_READINESS_PLAN.md). It defines 18 prioritized work items with acceptance criteria, distinguishes controllable release quality from external indexing/ranking outcomes, and identifies which checks have not yet been performed. Start with R01–R03; do not treat the plan itself as completed work.
