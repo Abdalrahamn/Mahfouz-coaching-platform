@@ -301,3 +301,14 @@ Validation: lint, typecheck, all five unit tests, static production build with t
 
 
 Fresh Google-side sitemap live inspection at 20:16:53 Cairo on November 18 succeeded (Google Inspection Tool smartphone, crawl allowed Yes, fetch Successful, indexing allowed Yes). Submitted-sitemap processing still needs follow-up; this is not homepage indexing or proof that the previous report error is resolved. Cloudflare dashboard confirms production branch/origin/build settings, with no settings changes.
+
+
+## Authorized publication and sequential search work — November 18, 2026
+
+Owner authorized pushing the local changes, verifying the public site and continuing the readiness backlog. Keyword update `93ac9e6` was pushed to main; Cloudflare Pages confirmed success at 19:32:45 UTC (21:32:45 Cairo), deployment `5c93cfc1-2097-491e-95c7-567d75f4bca3`. Public HTTP confirmed the new copy on both homepages and pricing guides.
+
+Follow-up public crawl covered all ten sitemap pages and 52 unique internal linked/image/icon references. Inspected pages passed status, unique title, single h1, canonical, language/direction and robots checks. One poster request was reset transiently and succeeded on targeted retry; no media changed. Missing routes/private-folder entry points returned 404. Sitemap returned valid well-formed XML with ten unique URLs and allowed crawling; submitted-sitemap processing remains unresolved.
+
+Fixed a text-extraction issue where hero heading lines joined without spaces, preserving the visual span layout and approved wording. Added four focused search configuration tests and included all unit-test files in npm run test; all nine tests, lint, typecheck and the production build passed. Build-output extraction confirms complete English/Arabic heading strings. Source commit `c23622e` was pushed; Cloudflare Pages confirmed success at 19:46:11 UTC (21:46:11 Cairo), deployment `ff3c9a1c-4a00-491e-a438-7186a54c8dce`.
+
+Current limitation: Chrome disappeared from available browser tools; explicit Chrome navigation and an in-app fallback also failed. No fresh Search Console/Bing submission or browser visual pass is claimed in this follow-up. PageSpeed API requests returned daily-quota HTTP 429; no speed score was obtained. The expected general daily-reset time is November 19 at 10:00 Cairo, not a guaranteed quota-availability time. See `docs/SEO_GEO_EXECUTION_2026-11-18.md` for task-by-task status and next actions.

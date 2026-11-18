@@ -43,3 +43,6 @@ Start with [the dated SEO investigation and keyword map](docs/SEARCH_VISIBILITY_
 
 
 The owner-requested implementation backlog is [SEO and GEO readiness plan](docs/SEO_GEO_READINESS_PLAN.md). It defines 18 prioritized work items with acceptance criteria, distinguishes controllable release quality from external indexing/ranking outcomes, and identifies which checks have not yet been performed. Start with R01–R03; do not treat the plan itself as completed work.
+
+
+For the latest completed actions and provider/tool limitations, read [the execution log](docs/SEO_GEO_EXECUTION_2026-11-18.md). The initial keyword update is deployed and verified; the earlier audit's local-only statements describe its earlier observation time. `npm run test` now includes dedicated search metadata/sitemap/robots regression checks.
