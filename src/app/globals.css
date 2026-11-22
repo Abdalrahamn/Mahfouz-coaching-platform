@@ -3498,3 +3498,43 @@ html:not([data-theme="light"]) .site-footer::before {
   margin-top: 0;
   padding-bottom: 1.25rem;
 }
+.about-page-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+.about-page-photo {
+  margin: 0;
+}
+.about-page-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--control-radius);
+}
+.about-page .about-page-intro h1 {
+  font-size: 3rem;
+  line-height: 1.15;
+}
+[dir="rtl"] .about-page .about-page-intro h1 {
+  font-size: 2.4rem;
+}
+.about-page .about-page-intro .legal-intro {
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+.about-page .engineering-method {
+  margin-top: 1.5rem;
+}
+@media (max-width: 800px) {
+  .about-page-intro {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .about-page .about-page-intro h1,
+  [dir="rtl"] .about-page .about-page-intro h1 {
+    font-size: 2rem;
+  }
+}

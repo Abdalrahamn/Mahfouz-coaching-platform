@@ -8,6 +8,8 @@ import { Footer } from "@/components/layout/Footer";
 import { CoachingLink } from "@/components/layout/CoachingLink";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { legalSlugs, isLegalSlug } from "@/config/navigation";
+import { siteOrigin } from "@/lib/env";
+import { breadcrumbNode, serializeSchema } from "@/lib/schema";
 export function generateStaticParams() {
   return legalSlugs.map((legal) => ({ legal }));
 }
@@ -30,6 +32,11 @@ export default async function LegalPage({
   if (!isLocale(locale) || !isLegalSlug(legal)) notFound();
   const t = getContent(locale);
   const doc = t.legal[legal];
+  const origin = siteOrigin();
+  const schema = origin && {
+    "@context": "https://schema.org",
+    "@graph": [breadcrumbNode(origin, locale, [[doc.title, `/${legal}`]])],
+  };
   return (
     <>
       <a href="#main" className="skip-link">
@@ -52,6 +59,12 @@ export default async function LegalPage({
         <CoachingLink locale={locale}>{t.whatsapp}</CoachingLink>
       </main>
       <Footer locale={locale} />
+      {schema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: serializeSchema(schema) }}
+        />
+      )}
     </>
   );
 }

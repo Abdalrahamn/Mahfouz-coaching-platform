@@ -10,6 +10,11 @@ export default function EntryLayout({
 }) {
   return (
     <html lang="ar" dir="rtl" data-theme="dark">
+      <head>
+        <noscript>
+          <meta httpEquiv="refresh" content="0;url=/ar" />
+        </noscript>
+      </head>
       <body>{children}</body>
     </html>
   );

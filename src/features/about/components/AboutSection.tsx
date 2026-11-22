@@ -1,5 +1,7 @@
 import { getContent } from "@/lib/content";
 import Image from "next/image";
+import Link from "next/link";
+import { aboutPath } from "@/config/navigation";
 import { assets } from "@/config/assets";
 import { type Locale } from "@/lib/business";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -24,6 +26,14 @@ export function AboutSection({ locale }: { locale: Locale }) {
       <div className="about-copy">
         <Eyebrow>{t.about.eyebrow}</Eyebrow>
         <h2>{t.about.title}</h2>
+        <p>
+          {t.about.entityLead} {t.about.entityRest}
+        </p>
+        <p>
+          <Link href={`/${locale}${aboutPath}`} className="coaching-guide-link">
+            {t.about.more}
+          </Link>
+        </p>
         <p>{t.about.text}</p>
         <h3>{t.about.engineering}</h3>
         <p>{t.about.body}</p>

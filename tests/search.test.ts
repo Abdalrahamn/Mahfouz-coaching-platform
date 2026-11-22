@@ -1,12 +1,14 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { metadataFor } from "../src/lib/metadata";
+import { metadataFor, priceSnippet } from "../src/lib/metadata";
+import { business } from "../src/lib/business";
 import sitemap from "../src/app/sitemap";
 import robots from "../src/app/robots";
 
 const origin = "https://mahfouz-coaching.pages.dev";
 const paths = [
   "",
+  "/about",
   "/online-coaching-prices",
   "/terms",
   "/privacy",
@@ -101,4 +103,61 @@ test("missing SITE_URL cannot publish a fabricated canonical or sitemap origin",
       assert.equal(metadata.metadataBase, undefined);
     }
   });
+});
+
+test("about route is in the sitemap with hreflang and both coach images", () => {
+  withOrigin(origin, () => {
+    const about = sitemap().filter((entry) => entry.url.endsWith("/about"));
+    assert.equal(about.length, 2);
+    for (const entry of about) {
+      assert.deepEqual(entry.alternates?.languages, {
+        en: `${origin}/en/about`,
+        ar: `${origin}/ar/about`,
+      });
+      assert.ok(entry.lastModified);
+      assert.equal(entry.images?.length, 2);
+    }
+  });
+});
+
+test("home and about metadata share the square coach image after the share image", () => {
+  withOrigin(origin, () => {
+    for (const path of ["", "/about"]) {
+      const images = metadataFor("ar", path).openGraph?.images as {
+        url: string;
+        width: number;
+        height: number;
+      }[];
+      assert.equal(images.length, 2);
+      assert.ok(images[0].url.endsWith("/og-share.jpg"));
+      assert.equal(
+        images[1].url,
+        `${origin}/assets/coach/abdalrahman-mahfouz-online-coach-egypt.jpg`,
+      );
+      assert.equal(images[1].width, 1200);
+      assert.equal(images[1].height, 1200);
+    }
+  });
+});
+
+test("square coach image is 1200 by 1200", async () => {
+  const { default: sharp } = await import("sharp");
+  const meta = await sharp(
+    "public/assets/coach/abdalrahman-mahfouz-online-coach-egypt.jpg",
+  ).metadata();
+  assert.equal(meta.width, 1200);
+  assert.equal(meta.height, 1200);
+});
+
+test("search snippet lists every no-follow-up price before daily follow-up prices", () => {
+  for (const locale of ["ar", "en"] as const) {
+    const text = priceSnippet(locale);
+    const positions = [...business.selfPrices, ...business.prices.egypt].map(
+      (price) => text.indexOf(String(price)),
+    );
+    for (const pos of positions) assert.ok(pos >= 0, text);
+    assert.deepEqual([...positions].sort((a, b) => a - b), positions);
+    assert.equal(metadataFor(locale).description, text);
+    assert.ok(text.length <= 200, `${locale} snippet is ${text.length} chars`);
+  }
 });

@@ -17,6 +17,7 @@ export const content = {
       certifiedTrainer: "CERTIFIED FITNESS TRAINER",
       jobTitle: "Certified Fitness Trainer",
       onlineCoaching: "ONLINE COACHING",
+      breadcrumbHome: "Home",
     },
     skip: "Skip to content",
     notFound: {
@@ -45,14 +46,14 @@ export const content = {
       eyebrow: "YOUR ONLINE PERSONAL TRAINER",
       title: "ONLINE FITNESS COACHING\nIN EGYPT",
       description:
-        "Train with Abd Alrahman Mahfouz, a certified online fitness coach. Get a workout plan for your goal and equipment, a flexible nutrition plan, and the option of daily WhatsApp follow-up.",
+        "Online training in Egypt with Abd Alrahman Mahfouz, a certified online fitness coach and online personal trainer. Get a workout plan for your goal and equipment, a flexible nutrition plan, and the option of daily WhatsApp follow-up.",
       features: [
         [
           "Personalized training",
           "Built around your goal, level, schedule and equipment. Refined as you progress.",
         ],
         ["Flexible nutrition", "Food choices that fit your routine."],
-        ["Daily follow-up", "Direct WhatsApp support with Daily Coaching."],
+        ["Daily follow-up", "Direct WhatsApp support and follow-up videos with Daily Coaching."],
         [
           "Your coaching app",
           "Your training and nutrition, together on your phone.",
@@ -137,6 +138,12 @@ export const content = {
     about: {
       eyebrow: "MEET COACH ABD ALRAHMAN MAHFOUZ",
       title: "EXPERIENCE IN THE GYM.\nPRECISION IN THE PLAN.",
+      entityLead:
+        "Abd Alrahman Mahfouz is a Certified Fitness Trainer and online coach in Egypt with more than 15 years of hands-on training experience and a contribution to 300+ client transformations.",
+      entityRest:
+        "He holds the IASST Certified Fitness Trainer certificate (July 2026) and a FitXpert Certificate of Achievement from the Salah Seleem Initiative (April 15, 2025). As an online coach and online fitness trainer, he gives every client a personalized workout plan and a flexible nutrition plan through a dedicated coaching app, for clients inside and outside Egypt. Clients can choose daily WhatsApp follow-up or a plan without daily follow-up. Follow him on Instagram at @abdalrahman_mahfouz.",
+      more: "Read the full profile of Abd Alrahman Mahfouz",
+      profileAlt: "Abd Alrahman Mahfouz, online fitness coach in Egypt",
       text: "I’m Abd Alrahman Mahfouz, a Certified Fitness Trainer with more than 15 years of hands-on training experience and a contribution to 300+ client transformations.",
       engineering: "ENGINEERING MINDSET.\nAPPLIED TO PHYSIQUE TRANSFORMATION.",
       body: "My software engineering background brings structure to coaching. We analyze your starting point, plan around your life, measure progress and adjust as you develop.",
@@ -159,7 +166,7 @@ export const content = {
       offers: ["Daily coaching", "No follow-up"],
       offerTitles: ["Daily WhatsApp coaching", "No follow-up plan"],
       offerText: [
-        "Personalized training and nutrition with daily coaching support.",
+        "Personalized training and nutrition with daily coaching support and follow-up videos.",
         "Personalized training and nutrition delivered through the coaching app, with flexible food alternatives and monthly plan updates, without daily WhatsApp coaching.",
       ],
       regions: ["Inside Egypt", "Outside Egypt"],
@@ -181,7 +188,7 @@ export const content = {
       includes: [
         "Personalized training & nutrition",
         "Flexible food alternatives",
-        "Daily WhatsApp follow-up",
+        "Daily WhatsApp follow-up and follow-up videos",
         "Access to the coaching app",
         "Plan adjustments based on your needs",
       ],
@@ -190,7 +197,7 @@ export const content = {
         "Flexible food alternatives",
         "Access to the coaching app",
         "Monthly plan adjustments",
-        "Daily WhatsApp follow-up",
+        "Daily WhatsApp follow-up and follow-up videos",
       ],
       choose: "Pay with InstaPay",
       thenSend: "Next step",
@@ -219,7 +226,7 @@ export const content = {
         ],
         [
           "How does daily follow-up work?",
-          "Daily Coaching includes WhatsApp support, with replies generally within hours. No Follow-Up excludes daily messages.",
+          "Daily Coaching includes WhatsApp support, with replies generally within hours, and follow-up videos. No Follow-Up excludes daily messages and follow-up videos.",
         ],
         [
           "Where do I find my training and nutrition plan?",
@@ -251,7 +258,15 @@ export const content = {
         ],
         [
           "Do you coach clients outside Egypt?",
-          "Yes. Outside Egypt prices are listed in the pricing section, all in EGP.",
+          "Yes. Online coaching with Abd Alrahman Mahfouz is available inside and outside Egypt. Outside Egypt prices are listed in the pricing section, all in EGP.",
+        ],
+        [
+          "What is an online gym coach?",
+          "An online gym coach is a fitness coach who guides your training and nutrition remotely. With Abd Alrahman Mahfouz you get a workout plan built around your goal, level, schedule and equipment, plus a flexible nutrition plan in the coaching app.",
+        ],
+        [
+          "Does online training replace the gym?",
+          "Online training gives you a clear plan to follow, built around your equipment and adjusted as your progress and needs require. Results vary from person to person and no specific result is guaranteed.",
         ],
       ],
     },
@@ -265,6 +280,7 @@ export const content = {
       contact: "LET’S CONNECT",
       links: ["Terms", "Privacy", "Coaching disclaimer"],
       copyright: "Online Fitness Coaching. All rights reserved.",
+      about: "About the coach",
       back: "Back to home",
     },
     coachingGuide: {
@@ -280,6 +296,22 @@ export const content = {
         "Without daily follow-up",
       ],
       durations: ["1 month", "3 months", "6 months"],
+      includesQuestion: "What does online coaching include?",
+      includesAnswer:
+        "Both packages include a personalized workout plan and a flexible nutrition plan built around your goal, level, schedule and equipment, with food alternatives that fit your routine. Your training program and nutrition plan are delivered in a dedicated coaching app, so everything is in one place on your phone. The daily follow-up package adds direct daily WhatsApp coaching support, with replies generally within hours, follow-up videos, and plan updates as your progress and needs require. The package without daily follow-up excludes daily WhatsApp messages and includes monthly plan adjustments.",
+      priceQuestion: "How much does online coaching cost in Egypt?",
+      priceSentences: [
+        "Daily follow-up inside Egypt costs {m1} for 1 month, {m3} for 3 months and {m6} for 6 months.",
+        "Daily follow-up outside Egypt costs {m1} for 1 month, {m3} for 3 months and {m6} for 6 months.",
+        "The package without daily follow-up costs {m1} for 1 month, {m3} for 3 months and {m6} for 6 months, the same inside and outside Egypt.",
+      ],
+      priceNote: "All prices are in Egyptian pounds.",
+      compareQuestion: "Daily follow-up or no follow-up: what is the difference?",
+      compareAnswer:
+        "Both options give you the same personalized training and nutrition, flexible food alternatives and access to the coaching app. With daily follow-up you can message the coach on WhatsApp every day, receive follow-up videos, ask questions as you train and have your plan updated as your progress and needs require. Without daily follow-up you follow your plan independently and receive monthly plan adjustments, at a lower price that is the same inside and outside Egypt. Choose based on how much day-to-day support you want.",
+      paymentQuestion: "How does payment work?",
+      paymentAnswer:
+        "Choose your coaching type, region where it applies and duration in the pricing section of the homepage. The package button then opens the official InstaPay payment link. Pay the selected package through InstaPay, then send the payment confirmation screenshot on WhatsApp. Supported cash wallets, including Vodafone Cash, can still be arranged in that WhatsApp conversation. Packages can be renewed, and payments are non-refundable after enrollment.",
       sections: [
         [
           "How do I choose an online personal trainer in Egypt?",
@@ -297,13 +329,49 @@ export const content = {
           "What happens after I subscribe?",
           "Choose your package and duration, then pay through InstaPay and send the payment confirmation on WhatsApp. You’ll discuss your details privately with the coach and receive your personalized plan within 72 hours after payment confirmation.",
         ],
+        [
+          "Online personal trainer or a private coach at the gym?",
+          "With an online personal trainer you receive a personalized workout schedule and nutrition plan in the coaching app, and train at your own gym or at home with the equipment you have. With daily follow-up you also stay in touch with the coach on WhatsApp and receive follow-up videos, without needing a gym coach beside you for every session.",
+        ],
+        [
+          "Can I follow an online diet and workout plan to lose weight or build muscle?",
+          "Yes. Whether your goal is fat loss, cutting or muscle gain, the coach builds your workout plan and flexible nutrition plan around your goal, level and schedule, and adjusts them as you progress. Results vary from person to person depending on consistency and circumstances.",
+        ],
       ],
+      gymHeading: "What is an online gym coach?",
+      gymText:
+        "An online gym coach is a fitness coach who guides your training and nutrition remotely instead of in person. With Abd Alrahman Mahfouz, an online coach in Egypt, you receive a workout plan built around your goal, level, schedule and equipment, and a flexible nutrition plan in the coaching app. Online training in Egypt gives you a clear plan to follow, and results vary from person to person.",
       coachLink: "Meet your coach and view his credentials",
+      breadcrumb: "Online coaching prices",
+    },
+    aboutPage: {
+      title: "About Abd Alrahman Mahfouz | Online Coach in Egypt",
+      description:
+        "Meet Abd Alrahman Mahfouz, online coach in Egypt and Certified Fitness Trainer: his certificates, his coaching method and his packages for clients inside and outside Egypt.",
+      h1: "Abd Alrahman Mahfouz, online coach in Egypt",
+      breadcrumb: "About the coach",
+      credentials: "Certificates",
+      method: "How he coaches",
+      audience: "Who online coaching is for",
+      audienceText:
+        "Coaching is suitable for beginners and for people who already train, because training and nutrition are adapted to your level. It is available to clients inside and outside Egypt. If you have an injury or a medical condition, consult and remain under the guidance of the appropriate qualified medical professional. Coaching is not medical diagnosis or treatment.",
+      packages: "Packages and prices",
+      packagesText:
+        "Choose daily WhatsApp follow-up or a plan without daily follow-up, then choose your duration. Prices are in Egyptian pounds and are listed in the pricing section of the homepage. You can also compare every package in the guide.",
+      pricingLink: "View packages and prices",
+      gymHeading: "What is an online gym coach?",
+      gymText:
+        "An online gym coach is a fitness coach who guides your training and nutrition remotely. As an online personal trainer in Egypt, Abd Alrahman Mahfouz builds your workout plan around your goal, level, schedule and equipment, and adds a flexible nutrition plan in the coaching app. Online training in Egypt gives you a clear plan to follow, and results vary from person to person.",
+      instagram: "Instagram",
+      instagramText: "Follow Abd Alrahman Mahfouz on Instagram:",
     },
     seo: {
       title: "Abd Alrahman Mahfouz | Online Fitness Coach in Egypt",
+      titleSuffix: "Abd Alrahman Mahfouz",
       description:
-        "Train online with Abd Alrahman Mahfouz in Egypt or abroad. Get a personalized workout and nutrition plan, with daily WhatsApp follow-up available.",
+        "Online coach in Egypt Abd Alrahman Mahfouz: personalized workout and nutrition plans for clients in Egypt and abroad, with daily WhatsApp follow-up available.",
+      priceDescription:
+        "Online coach in Egypt Abd Alrahman Mahfouz. Without follow-up: 1 month {s1}, 3 months {s3}, 6 months {s6} EGP. Daily follow-up in Egypt: 1 month {d1}, 3 months {d3}, 6 months {d6} EGP.",
     },
     legal: {
       terms: {
@@ -312,7 +380,7 @@ export const content = {
         sections: [
           [
             "The coaching service",
-            "Daily Coaching includes personalized training, flexible nutrition, daily WhatsApp follow-up, the coaching app and adjustments according to progress and need. The No Follow-Up plan includes personalized training and nutrition, flexible food alternatives, the coaching app and monthly updates, without daily WhatsApp coaching. Plans are delivered within 72 hours after payment confirmation.",
+            "Daily Coaching includes personalized training, flexible nutrition, daily WhatsApp follow-up, follow-up videos, the coaching app and adjustments according to progress and need. The No Follow-Up plan includes personalized training and nutrition, flexible food alternatives, the coaching app and monthly updates, without daily WhatsApp coaching. Plans are delivered within 72 hours after payment confirmation.",
           ],
           [
             "Enrollment and payment",
@@ -389,6 +457,7 @@ export const content = {
       certifiedTrainer: "مدرب معتمد",
       jobTitle: "مدرب لياقة بدنية معتمد",
       onlineCoaching: "متابعة أونلاين",
+      breadcrumbHome: "الرئيسية",
     },
     skip: "انتقل للمحتوى",
     notFound: {
@@ -415,16 +484,16 @@ export const content = {
     daily: "كل يوم",
     coaching: {
       eyebrow: "أونلاين كوتشينج مع كابتن محفوظ",
-      title: "تدريب أونلاين في مصر\nبخطة مخصصة ليك",
+      title: "كوتش أونلاين في مصر\nبخطة مخصصة ليك",
       description:
-        "لو بتدور على مدرب أونلاين في مصر، اتمرّن مع كابتن عبدالرحمن محفوظ، مدرب لياقة بدنية معتمد. برنامج تمرين حسب هدفك ومستواك والأجهزة المتاحة، ونظام تغذية مرن، مع اختيار المتابعة اليومية على واتساب.",
+        "لو بتدور على كابتن اونلاين في مصر أو تدريب اونلاين في مصر، اتمرّن مع كابتن عبدالرحمن محفوظ، مدرب لياقة بدنية (فيتنس) معتمد. برنامج تمرين حسب هدفك ومستواك والأجهزة المتاحة، ونظام تغذية مرن، مع اختيار المتابعة اليومية على واتساب.",
       features: [
         [
           "تمرين مخصص ليك",
           "حسب هدفك ومستواك ووقتك والأجهزة المتاحة، مع تعديلات حسب تقدمك.",
         ],
         ["تغذية مرنة", "اختيارات أكل تناسب روتينك."],
-        ["متابعة يومية", "تواصل مباشر على واتساب ضمن باقات المتابعة اليومية."],
+        ["متابعة يومية", "تواصل مباشر على واتساب وفيديوهات متابعة ضمن باقات المتابعة اليومية."],
         ["تطبيق المتابعة", "تمرينك وتغذيتك معاك على موبايلك."],
       ],
     },
@@ -500,6 +569,12 @@ export const content = {
     about: {
       eyebrow: "اعرف كابتن عبد الرحمن محفوظ",
       title: "خبرة في التدريب.\nدقة في التخطيط.",
+      entityLead:
+        "كابتن عبدالرحمن محفوظ مدرب لياقة بدنية معتمد وكوتش أونلاين في مصر، عنده أكتر من 15 سنة خبرة عملية في التدريب وساهم في أكتر من 300 رحلة تحول.",
+      entityRest:
+        "حاصل على شهادة مدرب لياقة بدنية معتمد من IASST (يوليو 2026) وشهادة إنجاز من FitXpert ضمن مبادرة صلاح سليم (15 أبريل 2025). بيشتغل كابتن أونلاين ومدرب أونلاين، وبيقدم لكل عميل برنامج تمرين ونظام تغذية مرن مخصصين على تطبيق المتابعة، لعملاء داخل مصر وخارجها. العميل يقدر يختار متابعة يومية على واتساب أو باقة من غير متابعة يومية. وتقدر تتابعه على إنستجرام @abdalrahman_mahfouz.",
+      more: "اقرا الصفحة الكاملة عن كابتن عبدالرحمن محفوظ",
+      profileAlt: "كابتن عبدالرحمن محفوظ، كوتش أونلاين في مصر",
       text: "أنا عبدالرحمن محفوظ، مدرب لياقة بدنية معتمد. عندي أكتر من 15 سنة خبرة عملية في التدريب ومجال الـFitness، وساهمت في أكتر من 300 رحلة تحول.",
       engineering: "عقلية هندسية. في خدمة تحول جسمك.",
       body: "خلفيتي كمهندس برمجيات بتأثر على أسلوبي: تحليل، تخطيط، قياس وتعديل مستمر. جسمك وهدفك ونمط حياتك هم أساس الخطة، بدل ما نطبق نفس النظام على كل الناس.",
@@ -518,7 +593,7 @@ export const content = {
       offers: ["متابعة يومية", "بدون متابعة"],
       offerTitles: ["متابعة يومية على واتساب", "اشتراك بدون متابعة"],
       offerText: [
-        "تمرين وتغذية مخصصين ليك مع متابعة يومية مستمرة.",
+        "تمرين وتغذية مخصصين ليك مع متابعة يومية مستمرة وفيديوهات متابعة.",
         "برنامج تدريب وتغذية مخصص ليك على تطبيق المتابعة، مع بدائل أكل مرنة وتعديلات شهرية على الخطة، بدون متابعة يومية على واتساب.",
       ],
       regions: ["داخل مصر", "خارج مصر"],
@@ -536,7 +611,7 @@ export const content = {
       includes: [
         "تمرين وتغذية مخصصين ليك",
         "بدائل أكل مرنة",
-        "متابعة يومية على واتساب",
+        "متابعة يومية على واتساب وفيديوهات متابعة",
         "استخدام تطبيق المتابعة",
         "تعديلات على الخطة حسب احتياجك",
       ],
@@ -545,7 +620,7 @@ export const content = {
         "بدائل أكل مرنة",
         "استخدام تطبيق المتابعة",
         "تعديلات على الخطة شهريًا",
-        "متابعة يومية على واتساب",
+        "متابعة يومية على واتساب وفيديوهات متابعة",
       ],
       choose: "ادفع بإنستا باي",
       thenSend: "الخطوة الجاية",
@@ -565,7 +640,7 @@ export const content = {
     },
     faq: {
       eyebrow: "قبل ما نبدأ",
-      title: "أسئلتك عن الأونلاين كوتشينج.",
+      title: "أسئلتك عن كابتن أونلاين والأونلاين كوتشينج.",
       items: [
         [
           "هل المتابعة مناسبة للمبتدئين؟",
@@ -573,7 +648,7 @@ export const content = {
         ],
         [
           "المتابعة اليومية بتكون إزاي؟",
-          "على واتساب ضمن باقات المتابعة اليومية، والرد عادةً خلال ساعات. بدون متابعة مش بيشمل رسائل يومية.",
+          "على واتساب ضمن باقات المتابعة اليومية، والرد عادةً خلال ساعات، ومعاها فيديوهات متابعة. بدون متابعة مش بيشمل رسائل يومية ولا فيديوهات متابعة.",
         ],
         [
           "هلاقي برنامج التمرين ونظام التغذية فين؟",
@@ -599,7 +674,15 @@ export const content = {
         ],
         [
           "بتتابع عملاء خارج مصر؟",
-          "أيوه. أسعار خارج مصر ظاهرة في قسم الباقات، وكلها بالجنيه المصري.",
+          "أيوه. كوتش اونلاين أو أونلاين كوتشينج مع كابتن عبدالرحمن محفوظ متاح داخل مصر وخارجها. أسعار خارج مصر ظاهرة في قسم الباقات، وكلها بالجنيه المصري.",
+        ],
+        [
+          "يعني إيه كابتن جيم اونلاين؟",
+          "كابتن جيم اونلاين هو مدرب فيتنس بيتابع تمرينك وتغذيتك من بعيد. مع كابتن عبدالرحمن محفوظ بتاخد برنامج تمرين حسب هدفك ومستواك ووقتك والأجهزة المتاحة، ونظام تغذية مرن على تطبيق المتابعة.",
+        ],
+        [
+          "هل التدريب اونلاين بيغني عن الجيم؟",
+          "التدريب اونلاين بيديك خطة واضحة تمشي عليها حسب الأجهزة المتاحة ليك، وبتتحدث حسب تقدمك واحتياجك. النتايج بتختلف من شخص للتاني ومفيش ضمان لنتيجة معينة.",
         ],
       ],
     },
@@ -613,6 +696,7 @@ export const content = {
       contact: "خلينا نتواصل",
       links: ["الشروط", "الخصوصية", "تنويه التدريب والصحة"],
       copyright: "متابعة لياقة أونلاين. جميع الحقوق محفوظة.",
+      about: "عن الكابتن",
       back: "ارجع للرئيسية",
     },
     coachingGuide: {
@@ -628,6 +712,22 @@ export const content = {
         "من غير متابعة يومية",
       ],
       durations: ["شهر", "٣ شهور", "٦ شهور"],
+      includesQuestion: "المتابعة الأونلاين بتشمل إيه؟",
+      includesAnswer:
+        "النوعين بيشملوا برنامج تمرين ونظام تغذية مرن مخصصين ليك حسب هدفك ومستواك ووقتك والأجهزة المتاحة، مع بدائل أكل تناسب روتينك. برنامج التمرين ونظام التغذية بيوصلولك على تطبيق المتابعة، فكل حاجة معاك في مكان واحد على موبايلك. باقة المتابعة اليومية بتضيف تواصل مباشر على واتساب كل يوم، والرد عادةً خلال ساعات، وفيديوهات متابعة، وتحديث الخطة حسب تقدمك واحتياجك. أما الباقة من غير متابعة يومية فمش بتشمل رسائل يومية، وفيها تعديلات شهرية على الخطة. يعني بتبدأ بخطة مبنية عليك إنت مش خطة جاهزة لأي حد، وتقدر تفتحها وتراجعها في أي وقت من موبايلك.",
+      priceQuestion: "بكام التدريب الأونلاين في مصر؟",
+      priceSentences: [
+        "المتابعة اليومية داخل مصر: باقة الشهر بـ{m1}، وباقة 3 شهور بـ{m3}، وباقة 6 شهور بـ{m6}.",
+        "المتابعة اليومية خارج مصر: باقة الشهر بـ{m1}، وباقة 3 شهور بـ{m3}، وباقة 6 شهور بـ{m6}.",
+        "الباقة من غير متابعة يومية: الشهر بـ{m1}، و3 شهور بـ{m3}، و6 شهور بـ{m6}، والسعر واحد داخل مصر وخارجها.",
+      ],
+      priceNote: "كل الأسعار بالجنيه المصري.",
+      compareQuestion: "متابعة يومية ولا من غير متابعة: إيه الفرق؟",
+      compareAnswer:
+        "الاتنين بيدوك نفس برنامج التمرين والتغذية المخصصين، وبدائل الأكل المرنة، واستخدام تطبيق المتابعة. مع المتابعة اليومية تقدر تكلم الكابتن على واتساب كل يوم، وبتوصلك فيديوهات متابعة، وتسأله وإنت بتطبق الخطة، والخطة بتتحدث حسب تقدمك واحتياجك. ومن غير متابعة يومية بتمشي على خطتك باستقلالية وبتستلم تعديلات شهرية، بسعر أقل وواحد داخل مصر وخارجها. اختار على حسب حجم الدعم اللي محتاجه كل يوم. ولو لسه مش متأكد، اسأل نفسك: محتاج حد تكلمه كل يوم وإنت بتتمرن، ولا تحب تمشي على الخطة لوحدك؟ ولو عندك سؤال قبل ما تدفع، تقدر تتواصل مع الكابتن على واتساب.",
+      paymentQuestion: "الدفع بيتم إزاي؟",
+      paymentAnswer:
+        "اختار نوع الاشتراك والمنطقة لو مطلوبة والمدة من قسم الباقات في الرئيسية، وزرار الباقة هيفتحلك رابط الدفع الرسمي على إنستاباي. ادفع الباقة المختارة عن طريق إنستاباي، وبعدها ابعت سكرين شوت تأكيد الدفع على واتساب. المحافظ النقدية المدعومة، ومنها فودافون كاش، تقدر تتظبط في نفس محادثة واتساب. بعد تأكيد الدفع بتستلم خطتك المخصصة خلال 72 ساعة. تقدر تجدد باقتك، والمدفوعات غير قابلة للاسترداد بعد الاشتراك.",
       sections: [
         [
           "إزاي تختار كابتن أونلاين في مصر؟",
@@ -645,13 +745,49 @@ export const content = {
           "إيه اللي بيحصل بعد الاشتراك؟",
           "اختار باقتك ومدتها، وادفع عن طريق إنستاباي وابعت تأكيد الدفع على واتساب. بتتكلم مع الكابتن عن تفاصيلك بشكل خاص، وبتستلم خطتك المخصصة خلال ٧٢ ساعة من تأكيد الدفع.",
         ],
+        [
+          "مدرب شخصي اونلاين ولا برايفت كوتش في الجيم؟",
+          "مع المدرب الشخصي الأونلاين (بيرسونال ترينر اونلاين) بتاخد جدول تمارين ونظام أكل (سيستم أكل) مخصصين ليك على تطبيق المتابعة، وتتمرن في الجيم اللي إنت فيه أو في البيت حسب الأجهزة المتاحة. ولو اخترت المتابعة اليومية بتتابع مع الكابتن على واتساب ومعاها فيديوهات متابعة، من غير ما تحتاج كابتن جيم جنبك في كل تمرينة.",
+        ],
+        [
+          "ينفع أعمل دايت وتمرين اونلاين عشان أخس أو أزوّد عضل؟",
+          "أيوه. سواء هدفك تخسيس أو تنشيف أو زيادة عضل، الكابتن بيبني برنامج التمرين ونظام التغذية المرن حسب هدفك ومستواك ووقتك، وبيعدّلهم حسب تقدمك. النتايج بتختلف من شخص للتاني على حسب الالتزام والظروف.",
+        ],
       ],
+      gymHeading: "يعني إيه كابتن جيم اونلاين؟",
+      gymText:
+        "كابتن جيم اونلاين هو مدرب فيتنس بيتابع تمرينك وتغذيتك من بعيد بدل ما تقابله وش لوش. مع كابتن عبدالرحمن محفوظ، كوتش اونلاين في مصر، بتاخد برنامج تمرين حسب هدفك ومستواك ووقتك والأجهزة المتاحة، ونظام تغذية مرن على تطبيق المتابعة. تدريب اونلاين في مصر بيديك خطة واضحة تمشي عليها، والنتايج بتختلف من شخص للتاني.",
       coachLink: "اتعرف على كابتن محفوظ وشوف شهاداته",
+      breadcrumb: "أسعار التدريب الأونلاين",
+    },
+    aboutPage: {
+      title: "عن كابتن عبدالرحمن محفوظ | كوتش أونلاين في مصر",
+      description:
+        "اتعرف على كابتن عبدالرحمن محفوظ، كوتش أونلاين في مصر ومدرب لياقة بدنية معتمد: شهاداته وأسلوبه في التدريب والتغذية وباقات المتابعة لعملاء داخل مصر وخارجها.",
+      h1: "كابتن عبدالرحمن محفوظ، كوتش أونلاين في مصر",
+      breadcrumb: "عن الكابتن",
+      credentials: "شهادات كابتن عبدالرحمن محفوظ",
+      method: "أسلوب التدريب",
+      audience: "التدريب الأونلاين مناسب لمين؟",
+      audienceText:
+        "لو بتدور على كابتن اونلاين في مصر، المتابعة مناسبة للمبتدئين ولأي حد عنده خبرة في التمرين، لأن التمرين والتغذية بيتظبطوا حسب مستواك. ومتاحة لعملاء داخل مصر وخارجها. لو عندك إصابة أو حالة طبية، لازم تستشير الطبيب أو المختص الطبي المؤهل وتستمر تحت إشرافه. المتابعة مش تشخيص أو علاج طبي.",
+      packages: "الباقات والأسعار",
+      packagesText:
+        "اختار بين متابعة يومية على واتساب أو باقة من غير متابعة يومية، وبعدها اختار المدة. الأسعار بالجنيه المصري وظاهرة في قسم الباقات على الرئيسية، وتقدر تقارن بين كل الباقات في الدليل.",
+      pricingLink: "شوف الباقات والأسعار",
+      gymHeading: "يعني إيه كابتن جيم اونلاين؟",
+      gymText:
+        "كابتن جيم اونلاين هو مدرب فيتنس بيتابع تمرينك وتغذيتك من بعيد. كابتن عبدالرحمن محفوظ بيبني برنامج تمرينك حسب هدفك ومستواك ووقتك والأجهزة المتاحة، ويضيف نظام تغذية مرن على تطبيق المتابعة. والنتايج بتختلف من شخص للتاني.",
+      instagram: "إنستجرام",
+      instagramText: "تقدر تتابع كابتن عبدالرحمن محفوظ على إنستجرام:",
     },
     seo: {
-      title: "كابتن عبدالرحمن محفوظ | مدرب أونلاين في مصر",
+      title: "كابتن عبدالرحمن محفوظ | كوتش ومدرب أونلاين في مصر",
+      titleSuffix: "كابتن عبدالرحمن محفوظ",
       description:
-        "أونلاين كوتشينج مع كابتن عبدالرحمن محفوظ: تدريب أونلاين في مصر وخارجها، برنامج تمرين ونظام تغذية مخصصين ليك، وباقات بمتابعة يومية على واتساب أو بدونها.",
+        "كابتن عبدالرحمن محفوظ، كوتش أونلاين في مصر: تدريب أونلاين داخل مصر وخارجها، برنامج تمرين ونظام تغذية مخصصين ليك، وباقات بمتابعة يومية على واتساب أو بدونها.",
+      priceDescription:
+        "كابتن اونلاين في مصر: كابتن عبدالرحمن محفوظ. من غير متابعة: الشهر {s1}، 3 شهور {s3}، 6 شهور {s6} جنيه. بمتابعة يومية في مصر: الشهر {d1}، 3 شهور {d3}، 6 شهور {d6} جنيه.",
     },
     legal: {
       terms: {
@@ -660,7 +796,7 @@ export const content = {
         sections: [
           [
             "خدمة المتابعة",
-            "المتابعة اليومية تشمل تمرينًا مخصصًا وتغذية مرنة ومتابعة يومية على واتساب وتطبيق المتابعة وتعديلات حسب التقدم والاحتياج. الاشتراك بدون متابعة يشمل التمرين والتغذية وبدائل الأكل والتطبيق وتعديلات شهرية، بدون متابعة يومية على واتساب. يتم تسليم البرنامج خلال 72 ساعة من تأكيد الدفع.",
+            "المتابعة اليومية تشمل تمرينًا مخصصًا وتغذية مرنة ومتابعة يومية على واتساب وفيديوهات متابعة وتطبيق المتابعة وتعديلات حسب التقدم والاحتياج. الاشتراك بدون متابعة يشمل التمرين والتغذية وبدائل الأكل والتطبيق وتعديلات شهرية، بدون متابعة يومية على واتساب. يتم تسليم البرنامج خلال 72 ساعة من تأكيد الدفع.",
           ],
           [
             "الاشتراك والدفع",

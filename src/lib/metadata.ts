@@ -1,21 +1,48 @@
 import type { Metadata } from "next";
 import { assets } from "@/config/assets";
-import type { Locale } from "@/lib/business";
+import { business, type Locale } from "@/lib/business";
 import { siteOrigin } from "@/lib/env";
 import { getContent } from "@/lib/content";
+/** Search snippet: prices without follow-up first, then daily follow-up in Egypt. */
+export function priceSnippet(locale: Locale): string {
+  const fmt = new Intl.NumberFormat(locale === "ar" ? "ar-EG" : "en-US", {
+    numberingSystem: "latn",
+    useGrouping: false,
+  });
+  const values: Record<string, number> = {};
+  business.durations.forEach((months, i) => {
+    values[`s${months}`] = business.selfPrices[i];
+    values[`d${months}`] = business.prices.egypt[i];
+  });
+  return getContent(locale).seo.priceDescription.replace(
+    /\{([sd]\d)\}/g,
+    (_, key: string) => fmt.format(values[key]),
+  );
+}
+
 export function metadataFor(
   locale: Locale,
   path = "",
   title?: string,
   description?: string,
+  options: { rawTitle?: boolean } = {},
 ): Metadata {
   const t = getContent(locale);
   const origin = siteOrigin();
   const url = origin ? `${origin}/${locale}${path}` : undefined;
   const coachImage = origin ? `${origin}${assets.coachShare.src}` : undefined;
+  const squareImage = origin
+    ? `${origin}${assets.coachProfile.src}`
+    : undefined;
+  description ??= priceSnippet(locale);
+  const fullTitle = title
+    ? options.rawTitle
+      ? title
+      : `${title} | ${t.seo.titleSuffix}`
+    : t.seo.title;
   return {
-    title: title ? `${title} | MAHFOUZ` : t.seo.title,
-    description: description ?? t.seo.description,
+    title: fullTitle,
+    description: description,
     metadataBase: origin ? new URL(origin) : undefined,
     alternates: origin
       ? {
@@ -29,8 +56,8 @@ export function metadataFor(
       : undefined,
     openGraph: {
       type: "website",
-      title: title ?? t.seo.title,
-      description: description ?? t.seo.description,
+      title: fullTitle,
+      description: description,
       locale: locale === "ar" ? "ar_EG" : "en_US",
       alternateLocale: locale === "ar" ? "en_US" : "ar_EG",
       siteName: "MAHFOUZ",
@@ -44,14 +71,20 @@ export function metadataFor(
                 height: assets.coachShare.height,
                 alt: t.hero.photo,
               },
+              {
+                url: squareImage!,
+                width: assets.coachProfile.width,
+                height: assets.coachProfile.height,
+                alt: t.about.profileAlt,
+              },
             ],
           }
         : {}),
     },
     twitter: {
       card: "summary_large_image",
-      title: title ?? t.seo.title,
-      description: description ?? t.seo.description,
+      title: fullTitle,
+      description: description,
       ...(coachImage
         ? { images: [{ url: coachImage, alt: t.hero.photo }] }
         : {}),
@@ -75,7 +108,7 @@ export function metadataFor(
     robots: {
       index: true,
       follow: true,
-      ...(!path ? { "max-image-preview": "large" } : {}),
+      "max-image-preview": "large",
     },
   };
 }

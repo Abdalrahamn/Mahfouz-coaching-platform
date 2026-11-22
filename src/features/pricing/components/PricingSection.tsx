@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { coachingGuidePath } from "@/config/navigation";
 import { getContent } from "@/lib/content";
 import { business, type Locale } from "@/lib/business";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -13,6 +15,14 @@ export function PricingSection({ locale }: { locale: Locale }) {
           <Eyebrow>{t.pricing.eyebrow}</Eyebrow>
           <h2>{t.pricing.title}</h2>
           <p>{t.pricing.text}</p>
+          <p>
+            <Link
+              href={`/${locale}${coachingGuidePath}`}
+              className="coaching-guide-link"
+            >
+              {t.coachingGuide.link}
+            </Link>
+          </p>
         </div>
         <Pricing locale={locale} />
         <div className="payment-section">

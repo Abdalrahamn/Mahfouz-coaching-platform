@@ -11,6 +11,16 @@ export const assets = {
     width: 1200,
     height: 630,
   },
+  coachProfile: {
+    src: "/assets/coach/abdalrahman-mahfouz-online-coach-egypt.jpg",
+    width: 1200,
+    height: 1200,
+  },
+  coachPortrait: {
+    src: "/assets/coach/abdalrahman-mahfouz-online-coach-egypt-portrait.jpg",
+    width: 1200,
+    height: 1500,
+  },
   about: {
     src: "/assets/coach/coach-about-new-transparent.webp",
     width: 728,

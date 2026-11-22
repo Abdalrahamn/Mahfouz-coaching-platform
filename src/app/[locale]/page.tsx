@@ -1,6 +1,13 @@
 import { notFound } from "next/navigation";
-import { assets } from "@/config/assets";
-import { business, isLocale } from "@/lib/business";
+import { isLocale } from "@/lib/business";
+import {
+  faqNode,
+  personNode,
+  serializeSchema,
+  serviceNode,
+  webPageNode,
+  websiteNode as webSite,
+} from "@/lib/schema";
 import { siteOrigin } from "@/lib/env";
 import { getContent } from "@/lib/content";
 import { metadataFor } from "@/lib/metadata";
@@ -36,50 +43,23 @@ export default async function Home({
   if (!isLocale(locale)) notFound();
   const t = getContent(locale);
   const origin = siteOrigin();
-  const pageUrl = `${origin}/${locale}`;
-  const personId = `${origin}/#coach`;
-  const serviceId = `${pageUrl}#coaching`;
-  const photoUrl = `${origin}${assets.coachShare.src}`;
+  const faq = t.faq.items;
   const schema = origin && {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": pageUrl,
-        url: pageUrl,
-        name: t.seo.title,
-        inLanguage: locale,
-        mainEntity: { "@id": serviceId },
-        primaryImageOfPage: { "@id": photoUrl },
-      },
-      {
-        "@type": "Service",
-        "@id": serviceId,
-        name: t.coaching.title,
-        description: t.coaching.description,
-        url: serviceId,
-        provider: { "@id": personId },
-        areaServed: { "@type": "Country", name: "Egypt", identifier: "EG" },
-        image: { "@id": photoUrl },
-      },
-      {
-        "@type": "Person",
-        "@id": personId,
-        name: business.name,
-        alternateName: getContent("ar").hero.name,
-        jobTitle: t.chrome.jobTitle,
-        url: `${pageUrl}#about`,
-        image: { "@id": photoUrl },
-        sameAs: [business.instagram, business.facebook],
-      },
-      {
-        "@type": "ImageObject",
-        "@id": photoUrl,
-        contentUrl: photoUrl,
-        width: assets.coachShare.width,
-        height: assets.coachShare.height,
-        caption: t.hero.photo,
-      },
+      webSite(origin),
+      webPageNode(
+        origin,
+        locale,
+        "",
+        t.seo.title,
+        t.seo.description,
+        "WebPage",
+        { mainEntity: { "@id": `${origin}/${locale}#coaching` } },
+      ),
+      personNode(origin, locale),
+      serviceNode(origin, locale),
+      faqNode(origin, locale, "", faq),
     ],
   };
   return (
@@ -107,7 +87,7 @@ export default async function Home({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schema).replace(/</g, "\\u003c"),
+            __html: serializeSchema(schema),
           }}
         />
       )}

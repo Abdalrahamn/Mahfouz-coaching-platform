@@ -1,4 +1,4 @@
-import { legalSlugs } from "@/config/navigation";
+import { aboutPath, legalSlugs } from "@/config/navigation";
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
 import { business, whatsappLink, type Locale } from "@/lib/business";
@@ -92,6 +92,7 @@ export function Footer({ locale }: { locale: Locale }) {
             © {new Date().getFullYear()} MAHFOUZ. {t.footer.copyright}
           </p>
           <div>
+            <Link href={`/${locale}${aboutPath}`}>{t.footer.about}</Link>
             {legalSlugs.map((slug, i) => (
               <Link key={slug} href={`/${locale}/${slug}`}>
                 {t.footer.links[i]}
