@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "motion/react";
 import { ChevronLeft, ChevronRight, Pause, Play, Expand } from "lucide-react";
@@ -14,6 +13,15 @@ import {
   SCROLL_SETTLE,
   SLIDE_MS,
 } from "@/components/media/proofCarousel.constants";
+const EAGER = 3;
+const SIZES = "(max-width:700px) 86vw, (max-width:1000px) 45vw, 380px";
+function responsiveSrcSet(a: { src: string; width: number }) {
+  const parts = [480, 720]
+    .filter((w) => w < a.width)
+    .map((w) => `${a.src.replace(/\.webp$/, `-${w}w.webp`)} ${w}w`);
+  return [...parts, `${a.src} ${a.width}w`].join(", ");
+}
+
 export function ProofCarousel({
   locale,
   kind,
@@ -35,7 +43,8 @@ export function ProofCarousel({
     [hovered, setHovered] = useState(false),
     [focused, setFocused] = useState(false),
     [visible, setVisible] = useState(false),
-    [reading, setReading] = useState(false);
+    [reading, setReading] = useState(false),
+    [warmed, setWarmed] = useState(0);
   const settle = useRef<ReturnType<typeof setTimeout> | null>(null);
   const holdUntil = useRef(0);
   const drag = useRef<{ x: number; left: number; moved: boolean } | null>(null);
@@ -153,6 +162,46 @@ export function ProofCarousel({
       stopGlide();
     };
   }, [step, COUNT, stopGlide]);
+  // After the first screen has loaded, fetch the remaining images one by one in order, in the background.
+  useEffect(() => {
+    let cancelled = false;
+    const conn = (
+      navigator as Navigator & { connection?: { saveData?: boolean } }
+    ).connection;
+    if (conn?.saveData) return;
+    const idle = () =>
+      new Promise<void>((resolve) =>
+        "requestIdleCallback" in window
+          ? window.requestIdleCallback(() => resolve(), { timeout: 1500 })
+          : setTimeout(resolve, 300),
+      );
+    const preload = (asset: (typeof items)[number]) =>
+      new Promise<void>((resolve) => {
+        const image = new Image();
+        image.sizes = SIZES;
+        image.srcset = responsiveSrcSet(asset);
+        image.onload = image.onerror = () => resolve();
+        image.src = asset.src;
+      });
+    const run = async () => {
+      if (document.readyState !== "complete")
+        await new Promise<void>((resolve) =>
+          window.addEventListener("load", () => resolve(), { once: true }),
+        );
+      await idle();
+      for (let i = EAGER; i < COUNT; i++) {
+        if (cancelled) return;
+        await preload(items[i]);
+        if (cancelled) return;
+        setWarmed(i - EAGER + 1);
+        await idle();
+      }
+    };
+    run();
+    return () => {
+      cancelled = true;
+    };
+  }, [items, COUNT]);
   useEffect(() => {
     if (reduced || paused || hovered || focused || reading || !visible) return;
     const timer = setInterval(() => {
@@ -273,11 +322,28 @@ export function ProofCarousel({
                     feedback ? "testimonial-image" : "transformation-image"
                   }
                 >
-                  <Image
-                    {...asset}
-                    alt={duplicate ? "" : `${copy.alt} ${index - CLONES + 1}`}
-                    sizes="(max-width:700px) 86vw, (max-width:1000px) 45vw, 380px"
-                    quality={90}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={asset.src}
+                    srcSet={responsiveSrcSet(asset)}
+                    width={asset.width}
+                    height={asset.height}
+                    alt={
+                      duplicate
+                        ? ""
+                        : `${copy.alt} (${index - CLONES + 1} / ${COUNT})`
+                    }
+                    sizes={SIZES}
+                    loading={
+                      (index >= CLONES && index < CLONES + EAGER + warmed) ||
+                      (warmed >= COUNT - EAGER && duplicate)
+                        ? "eager"
+                        : "lazy"
+                    }
+                    fetchPriority={
+                      index >= CLONES && index < CLONES + 2 ? "high" : "auto"
+                    }
+                    decoding="async"
                     draggable={false}
                   />
                 </div>

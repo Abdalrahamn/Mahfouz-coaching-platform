@@ -166,6 +166,9 @@ export const assets = {
     [1242, 2022],
     [710, 1242],
     [1242, 2154],
+    [591, 1140],
+    [720, 1047],
+    [720, 1020],
   ].map(([width, height], i) => ({
     src: `/assets/testimonials/feedback-${String(i + 1).padStart(2, "0")}-full-redacted.webp`,
     width,

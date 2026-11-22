@@ -24,7 +24,7 @@ export const content = {
       title: "PAGE NOT FOUND.",
       text: "This page is unavailable. Continue to coaching, results and pricing on the homepage.",
     },
-    nav: ["Transformations", "Coaching", "About", "Pricing", "FAQ"],
+    nav: ["Transformations", "Feedback", "Coaching", "About", "Pricing", "FAQ"],
     start: "Start coaching",
     whatsapp: "Start on WhatsApp",
     menu: "Menu",
@@ -53,7 +53,10 @@ export const content = {
           "Built around your goal, level, schedule and equipment. Refined as you progress.",
         ],
         ["Flexible nutrition", "Food choices that fit your routine."],
-        ["Daily follow-up", "Direct WhatsApp support and follow-up videos with Daily Coaching."],
+        [
+          "Daily follow-up",
+          "Direct WhatsApp support and follow-up videos with Daily Coaching.",
+        ],
         [
           "Your coaching app",
           "Your training and nutrition, together on your phone.",
@@ -306,7 +309,8 @@ export const content = {
         "The package without daily follow-up costs {m1} for 1 month, {m3} for 3 months and {m6} for 6 months, the same inside and outside Egypt.",
       ],
       priceNote: "All prices are in Egyptian pounds.",
-      compareQuestion: "Daily follow-up or no follow-up: what is the difference?",
+      compareQuestion:
+        "Daily follow-up or no follow-up: what is the difference?",
       compareAnswer:
         "Both options give you the same personalized training and nutrition, flexible food alternatives and access to the coaching app. With daily follow-up you can message the coach on WhatsApp every day, receive follow-up videos, ask questions as you train and have your plan updated as your progress and needs require. Without daily follow-up you follow your plan independently and receive monthly plan adjustments, at a lower price that is the same inside and outside Egypt. Choose based on how much day-to-day support you want.",
       paymentQuestion: "How does payment work?",
@@ -407,7 +411,7 @@ export const content = {
           ],
           [
             "Client proof",
-            "Only permanently sanitized feedback images are published. Names, contact information, profile photos and identifying chat details are removed. Client identities are not used in transformation captions.",
+            "Only permanently sanitized feedback images are published. Contact information and identifying chat details are removed, and names appear only partially. Client identities are not used in transformation captions.",
           ],
           [
             "External services",
@@ -464,7 +468,7 @@ export const content = {
       title: "الصفحة غير موجودة.",
       text: "الصفحة دي مش متاحة. تقدر تشوف المتابعة والتحولات والباقات على الرئيسية.",
     },
-    nav: ["التحولات", "المتابعة", "عن الكابتن", "الباقات", "الأسئلة"],
+    nav: ["التحولات", "آراء العملاء", "المتابعة", "عن الكابتن", "الباقات", "الأسئلة"],
     start: "ابدأ المتابعة",
     whatsapp: "ابدأ على واتساب",
     menu: "القائمة",
@@ -493,7 +497,10 @@ export const content = {
           "حسب هدفك ومستواك ووقتك والأجهزة المتاحة، مع تعديلات حسب تقدمك.",
         ],
         ["تغذية مرنة", "اختيارات أكل تناسب روتينك."],
-        ["متابعة يومية", "تواصل مباشر على واتساب وفيديوهات متابعة ضمن باقات المتابعة اليومية."],
+        [
+          "متابعة يومية",
+          "تواصل مباشر على واتساب وفيديوهات متابعة ضمن باقات المتابعة اليومية.",
+        ],
         ["تطبيق المتابعة", "تمرينك وتغذيتك معاك على موبايلك."],
       ],
     },
@@ -823,7 +830,7 @@ export const content = {
           ],
           [
             "رسائل العملاء",
-            "ننشر فقط صور الرسائل بعد حذف بيانات الهوية بشكل دائم، بما فيها الأسماء وبيانات التواصل وصور الحساب والتفاصيل المُعرّفة. لا نستخدم هويات العملاء في وصف التحولات.",
+            "ننشر فقط صور الرسائل بعد حذف بيانات الهوية بشكل دائم، بما فيها بيانات التواصل والتفاصيل المُعرّفة، ولا تظهر الأسماء إلا جزئيًا. لا نستخدم هويات العملاء في وصف التحولات.",
           ],
           [
             "الخدمات الخارجية",

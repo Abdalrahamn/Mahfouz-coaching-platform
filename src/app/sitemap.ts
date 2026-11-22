@@ -32,10 +32,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${origin}/${locale}${path}`,
         lastModified: contentUpdated,
         changeFrequency: "monthly" as const,
-        priority: !path ? 1 : path === aboutPath ? 0.8 : path === coachingGuidePath ? 0.7 : 0.3,
+        priority: !path
+          ? 1
+          : path === aboutPath
+            ? 0.8
+            : path === coachingGuidePath
+              ? 0.7
+              : 0.3,
         ...(images ? { images } : {}),
         alternates: {
-          languages: { en: `${origin}/en${path}`, ar: `${origin}/ar${path}` },
+          languages: {
+            en: `${origin}/en${path}`,
+            ar: `${origin}/ar${path}`,
+          },
         },
       };
     }),

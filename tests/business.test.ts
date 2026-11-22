@@ -77,7 +77,7 @@ test("business pricing matches the supplied figures", () => {
 });
 test("only the expected privacy-safe proof assets are public", () => {
   assert.equal(assets.transformations.length, 25);
-  assert.equal(assets.feedback.length, 7);
+  assert.equal(assets.feedback.length, 10);
   assert.equal(assets.certificates.length, 2);
   for (const asset of [
     ...assets.transformations,
@@ -88,7 +88,7 @@ test("only the expected privacy-safe proof assets are public", () => {
   assert.ok(
     fs
       .readdirSync("public/assets/testimonials")
-      .every((name) => /^feedback-\d{2}-full-redacted\.(webp|png)$/.test(name)),
+      .every((name) => /^feedback-\d{2}-full-redacted(-(480|720)w)?\.(webp|png)$/.test(name)),
   );
   assert.ok(!fs.existsSync("public/private"));
 });
@@ -96,7 +96,7 @@ test("all FAQ, navigation, prices and legal copy exist in both locales", () => {
   for (const locale of ["en", "ar"] as const) {
     const copy = content[locale];
     assert.equal(copy.faq.items.length, 12);
-    assert.equal(copy.nav.length, 5);
+    assert.equal(copy.nav.length, 6);
     assert.equal(copy.pricing.duration.length, 3);
     assert.equal(Object.keys(copy.legal).length, 3);
   }

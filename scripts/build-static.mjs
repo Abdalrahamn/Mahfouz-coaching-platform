@@ -71,7 +71,7 @@ try {
       ),
     );
     allowed.add("/assets/hero/coach-training.webp");
-    for (let index = 1; index <= 7; index++)
+    for (let index = 1; index <= 10; index++)
       allowed.add(
         `/assets/testimonials/feedback-${String(index).padStart(2, "0")}-full-redacted.webp`,
       );
@@ -84,8 +84,11 @@ try {
       const file = path.join(entry.parentPath, entry.name);
       const url =
         "/assets/" + path.relative(assetsRoot, file).split(path.sep).join("/");
+      // Responsive derivatives (-480w/-720w) of an active file are allowed.
+      const base = url.replace(/-(480|720)w\.webp$/, ".webp");
       if (
         !allowed.has(url) &&
+        !allowed.has(base) &&
         !url.startsWith("/assets/branding/") &&
         !url.startsWith("/assets/cursors/")
       )

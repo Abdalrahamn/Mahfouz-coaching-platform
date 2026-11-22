@@ -50,7 +50,7 @@ export function metadataFor(
           languages: {
             en: `${origin}/en${path}`,
             ar: `${origin}/ar${path}`,
-            "x-default": `${origin}/en${path}`,
+            "x-default": `${origin}/ar${path}`,
           },
         }
       : undefined,

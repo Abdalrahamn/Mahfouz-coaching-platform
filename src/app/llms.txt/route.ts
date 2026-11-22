@@ -12,7 +12,9 @@ export function GET() {
   const [iasst, fitxpert] = en.about.credentials;
   const row = (values: readonly number[]) =>
     business.durations
-      .map((months, i) => `${months} month${months > 1 ? "s" : ""} ${values[i]}`)
+      .map(
+        (months, i) => `${months} month${months > 1 ? "s" : ""} ${values[i]}`,
+      )
       .join(", ");
   const link = (label: string, locale: string, path: string, note: string) =>
     `- [${label}](${origin}/${locale}${path}): ${note}`;
@@ -23,6 +25,8 @@ export function GET() {
 > ${ar.about.entityLead} ${ar.about.entityRest}
 
 ## Key pages
+
+- [Full reference](${origin}/llms-full.txt): all packages and FAQ answers in one file
 
 ${link("Home (Arabic)", "ar", "", "packages, results, FAQ")}
 ${link("Home (English)", "en", "", "packages, results, FAQ")}

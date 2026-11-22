@@ -67,6 +67,13 @@ export function personNode(origin: string, locale: Locale) {
     url: `${origin}/${locale}${aboutPath}`,
     image: profileImageNode(origin, locale),
     sameAs: [business.instagram, business.facebook],
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      telephone: `+${business.whatsapp}`,
+      url: `https://wa.me/${business.whatsapp}`,
+      availableLanguage: ["Arabic", "English"],
+    },
     knowsAbout: [
       "Online coaching",
       "Personal training",
@@ -144,10 +151,7 @@ export function breadcrumbNode(
   trail: [name: string, path: string][],
 ) {
   const t = getContent(locale);
-  const items: [string, string][] = [
-    [t.chrome.breadcrumbHome, ""],
-    ...trail,
-  ];
+  const items: [string, string][] = [[t.chrome.breadcrumbHome, ""], ...trail];
   return {
     "@type": "BreadcrumbList",
     "@id": `${origin}/${locale}${trail[trail.length - 1]?.[1] ?? ""}#breadcrumb`,

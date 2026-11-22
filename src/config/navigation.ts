@@ -12,6 +12,7 @@
  */
 export const sectionIds = [
   "transformations",
+  "feedback",
   "coaching",
   "about",
   "pricing",
