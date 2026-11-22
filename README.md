@@ -32,7 +32,7 @@ See `docs/ARCHITECTURE_REVIEW.md` for the final tree, move inventory, verificati
 
 ## Cloudflare Pages
 
-Create a separate Git-connected Pages application for this repository; leave `kelimeler` unchanged. Use project name `mahfouz-coaching`, branch `main`, build command `npm run build`, output `out`, and `SITE_URL=https://mahfouz-coaching.pages.dev`. Confirm the actual allocated hostname at deployment. Push reviewed updates to `main` to trigger subsequent builds. The build uses local licensed fonts and exports only active delivery images. No database or Worker runtime is required.
+Create a separate Git-connected Pages application for this repository; leave `kelimeler` unchanged. Use project name `mahfouz-coaching`, branch `main`, build command `npm run build`, output `out`, and `SITE_URL=https://coachmahfouz.com`. Confirm the actual allocated hostname at deployment. Push reviewed updates to `main` to trigger subsequent builds. The build uses local licensed fonts and exports only active delivery images. No database or Worker runtime is required.
 
 The build script works around a Next.js loader bug for local directory names containing apostrophes by building an isolated source copy and returning the generated output. It does not copy private originals or local environment files. Use exported environment values for production builds. See `docs/CLOUDFLARE_DEPLOYMENT_PLAN.md` for verification and release details.
 

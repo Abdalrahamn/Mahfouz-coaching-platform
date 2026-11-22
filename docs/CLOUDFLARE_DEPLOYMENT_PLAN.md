@@ -150,3 +150,7 @@ Final verification: lint, typecheck, all five unit tests, production build, and 
 Browser tests now target the current carousel controls, approved 1,100 EGP price, and preservation of the pricing section across locales instead of an exact heading offset or stale URL hash. The separate older `production-qa.spec.ts` suite still contains outdated assumptions such as English being the fresh-visit default; it was not represented as a passing release suite.
 
 For documentation/test-only commits, the official `[CF-Pages-Skip]` commit prefix can avoid an unnecessary Pages rebuild. Normal source pushes without a skip prefix continue to publish automatically. See https://developers.cloudflare.com/pages/configuration/git-integration/github-integration/.
+
+## Custom domain — 2026-11-22
+
+The owner registered `coachmahfouz.com` (Cloudflare Registrar) and attached it, with `www.coachmahfouz.com`, to the Pages project. Production build variable is now `SITE_URL=https://coachmahfouz.com`. The pages.dev hostname is no longer the canonical origin.
