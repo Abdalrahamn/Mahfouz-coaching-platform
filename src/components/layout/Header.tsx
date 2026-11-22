@@ -25,6 +25,53 @@ import { sectionIds } from "@/config/navigation";
  * must stay in sync with the sections rendered on the home page
  * (see src/config/navigation.ts).
  */
+
+/**
+ * Same-page section navigation. Smooth-scrolling to a hash can stop short when
+ * lazy images or late layout above the target change its position mid-scroll,
+ * so after starting the scroll we keep re-aligning until the layout settles.
+ */
+function goToSection(event: React.MouseEvent, locale: Locale, id: string) {
+  if (window.location.pathname.replace(/\/$/, "") !== `/${locale}`) return;
+  const target = document.getElementById(id);
+  if (!target) return;
+  event.preventDefault();
+  window.history.replaceState(window.history.state, "", `/${locale}#${id}`);
+  const offset = () =>
+    Math.round(
+      target.getBoundingClientRect().top -
+        parseFloat(
+          getComputedStyle(document.documentElement).scrollPaddingTop || "0",
+        ),
+    );
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.scrollTo({
+    top: window.scrollY + offset(),
+    behavior: reduce ? "instant" : "smooth",
+  });
+  const started = performance.now();
+  let stableSince = started;
+  let lastY = window.scrollY;
+  const tick = (now: number) => {
+    const y = window.scrollY;
+    if (y !== lastY) {
+      lastY = y;
+      stableSince = now;
+    }
+    // Scroll finished moving (or reduced motion): fix any remaining drift.
+    if (now - stableSince > 120 && Math.abs(offset()) > 2) {
+      window.scrollTo({ top: y + offset(), behavior: "instant" });
+      stableSince = now;
+    }
+    if (
+      now - started < 3000 &&
+      (now - stableSince < 700 || Math.abs(offset()) > 2)
+    ) {
+      requestAnimationFrame(tick);
+    }
+  };
+  requestAnimationFrame(tick);
+}
 export function Header({ locale }: { locale: Locale }) {
   const t = getContent(locale);
   const [open, setOpen] = useState(false);
@@ -84,7 +131,11 @@ export function Header({ locale }: { locale: Locale }) {
         </Link>
         <nav className="desktop-nav" aria-label={t.chrome.navigation}>
           {t.nav.map((label, i) => (
-            <Link key={label} href={`/${locale}#${sectionIds[i]}`}>
+            <Link
+              key={label}
+              href={`/${locale}#${sectionIds[i]}`}
+              onClick={(e) => goToSection(e, locale, sectionIds[i])}
+            >
               {label}
             </Link>
           ))}
@@ -115,7 +166,10 @@ export function Header({ locale }: { locale: Locale }) {
           <Link
             key={label}
             href={`/${locale}#${sectionIds[i]}`}
-            onClick={() => setOpen(false)}
+            onClick={(e) => {
+              setOpen(false);
+              goToSection(e, locale, sectionIds[i]);
+            }}
           >
             {label}
           </Link>
