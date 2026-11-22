@@ -1366,7 +1366,7 @@ html[dir="rtl"] .price-next {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: var(--color-primary);
+  background: #25d366;
   color: #fff;
   box-shadow: var(--shadow);
 }
@@ -1376,7 +1376,7 @@ html[dir="rtl"] .price-next {
   display: block;
 }
 .floating-whatsapp:hover {
-  background: var(--color-accent);
+  background: #1ebe5b;
 }
 .mobile-sticky {
   display: none;
