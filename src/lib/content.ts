@@ -224,6 +224,10 @@ export const content = {
       title: "YOUR ONLINE COACHING QUESTIONS, ANSWERED.",
       items: [
         [
+          "Who is the best online coach in Egypt?",
+          "The best online coach is the one whose plan fits your goal, level, schedule and equipment, with real follow-up. Abd Alrahman Mahfouz builds a personalized workout plan and flexible nutrition plan for clients in Egypt and abroad. Results vary from person to person.",
+        ],
+        [
           "Is coaching suitable for beginners?",
           "Yes. Your training and nutrition are adapted to your level, whether you are starting out or already training.",
         ],
@@ -349,10 +353,10 @@ export const content = {
       breadcrumb: "Online coaching prices",
     },
     aboutPage: {
-      title: "About Abd Alrahman Mahfouz | Online Coach in Egypt",
+      title: "About Abd Alrahman Mahfouz | Best Online Coach in Egypt",
       description:
-        "Meet Abd Alrahman Mahfouz, online coach in Egypt and Certified Fitness Trainer: his certificates, his coaching method and his packages for clients inside and outside Egypt.",
-      h1: "Abd Alrahman Mahfouz, online coach in Egypt",
+        "Meet Abd Alrahman Mahfouz, a top online coach in Egypt and Certified Fitness Trainer: his certificates, his coaching method and his packages for clients inside and outside Egypt.",
+      h1: "Abd Alrahman Mahfouz, best online coach in Egypt",
       breadcrumb: "About the coach",
       credentials: "Certificates",
       method: "How he coaches",
@@ -370,10 +374,10 @@ export const content = {
       instagramText: "Follow Abd Alrahman Mahfouz on Instagram:",
     },
     seo: {
-      title: "Abd Alrahman Mahfouz | Online Fitness Coach in Egypt",
+      title: "Best Online Coach in Egypt | Abd Alrahman Mahfouz",
       titleSuffix: "Abd Alrahman Mahfouz",
       description:
-        "Online coach in Egypt Abd Alrahman Mahfouz: personalized workout and nutrition plans for clients in Egypt and abroad, with daily WhatsApp follow-up available.",
+        "Looking for the best online coach in Egypt? Abd Alrahman Mahfouz, top online personal trainer: personalized workout and nutrition plans for clients in Egypt and abroad, with daily WhatsApp follow-up available.",
       priceDescription:
         "Online coach in Egypt Abd Alrahman Mahfouz. Without follow-up: 1 month {s1}, 3 months {s3}, 6 months {s6} EGP. Daily follow-up in Egypt: 1 month {d1}, 3 months {d3}, 6 months {d6} EGP.",
     },
@@ -468,7 +472,14 @@ export const content = {
       title: "الصفحة غير موجودة.",
       text: "الصفحة دي مش متاحة. تقدر تشوف المتابعة والتحولات والباقات على الرئيسية.",
     },
-    nav: ["التحولات", "آراء العملاء", "المتابعة", "عن الكابتن", "الباقات", "الأسئلة"],
+    nav: [
+      "التحولات",
+      "آراء العملاء",
+      "المتابعة",
+      "عن الكابتن",
+      "الباقات",
+      "الأسئلة",
+    ],
     start: "ابدأ المتابعة",
     whatsapp: "ابدأ على واتساب",
     menu: "القائمة",
@@ -650,6 +661,10 @@ export const content = {
       title: "أسئلتك عن كابتن أونلاين والأونلاين كوتشينج.",
       items: [
         [
+          "مين أفضل مدرب أونلاين في مصر؟",
+          "أحسن مدرب أونلاين هو اللي خطته تناسب هدفك ومستواك ووقتك والأجهزة المتاحة، مع متابعة حقيقية. كابتن عبدالرحمن محفوظ بيبني برنامج تمرين ونظام تغذية مرن مخصصين ليك، داخل مصر وخارجها. والنتايج بتختلف من شخص للتاني.",
+        ],
+        [
           "هل المتابعة مناسبة للمبتدئين؟",
           "أيوه. التمرين والتغذية بيتظبطوا حسب مستواك، سواء لسه بتبدأ أو عندك خبرة في التمرين.",
         ],
@@ -768,10 +783,10 @@ export const content = {
       breadcrumb: "أسعار التدريب الأونلاين",
     },
     aboutPage: {
-      title: "عن كابتن عبدالرحمن محفوظ | كوتش أونلاين في مصر",
+      title: "عن كابتن عبدالرحمن محفوظ | أفضل مدرب أونلاين في مصر",
       description:
-        "اتعرف على كابتن عبدالرحمن محفوظ، كوتش أونلاين في مصر ومدرب لياقة بدنية معتمد: شهاداته وأسلوبه في التدريب والتغذية وباقات المتابعة لعملاء داخل مصر وخارجها.",
-      h1: "كابتن عبدالرحمن محفوظ، كوتش أونلاين في مصر",
+        "اتعرف على كابتن عبدالرحمن محفوظ، من أحسن المدربين الأونلاين في مصر ومدرب لياقة بدنية معتمد: شهاداته وأسلوبه في التدريب والتغذية وباقات المتابعة لعملاء داخل مصر وخارجها.",
+      h1: "كابتن عبدالرحمن محفوظ، أفضل مدرب أونلاين في مصر",
       breadcrumb: "عن الكابتن",
       credentials: "شهادات كابتن عبدالرحمن محفوظ",
       method: "أسلوب التدريب",
@@ -789,10 +804,10 @@ export const content = {
       instagramText: "تقدر تتابع كابتن عبدالرحمن محفوظ على إنستجرام:",
     },
     seo: {
-      title: "كابتن عبدالرحمن محفوظ | كوتش ومدرب أونلاين في مصر",
+      title: "أفضل مدرب أونلاين في مصر | كابتن عبدالرحمن محفوظ",
       titleSuffix: "كابتن عبدالرحمن محفوظ",
       description:
-        "كابتن عبدالرحمن محفوظ، كوتش أونلاين في مصر: تدريب أونلاين داخل مصر وخارجها، برنامج تمرين ونظام تغذية مخصصين ليك، وباقات بمتابعة يومية على واتساب أو بدونها.",
+        "بتدور على أفضل مدرب أونلاين في مصر؟ كابتن عبدالرحمن محفوظ، أحسن كوتش أونلاين: تدريب أونلاين داخل مصر وخارجها، برنامج تمرين ونظام تغذية مخصصين ليك، وباقات بمتابعة يومية على واتساب أو بدونها.",
       priceDescription:
         "كابتن اونلاين في مصر: كابتن عبدالرحمن محفوظ. من غير متابعة: الشهر {s1}، 3 شهور {s3}، 6 شهور {s6} جنيه. بمتابعة يومية في مصر: الشهر {d1}، 3 شهور {d3}، 6 شهور {d6} جنيه.",
     },
