@@ -1056,7 +1056,7 @@ https://www.instagram.com/abdalrahman_mahfouz/
 
 Pricing:
 Egypt
-1100 / 3000 / 5500
+999 / 2800 / 4999
 
 Outside Egypt
 1500 / 4000 / 7500

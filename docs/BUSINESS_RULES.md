@@ -4,9 +4,9 @@ Approved facts. Do not change prices, payment details, privacy rules, or transfo
 
 ## Daily coaching — inside Egypt
 
-- 1 month: 1,200 EGP
-- 3 months: 3,000 EGP
-- 6 months: 5,500 EGP
+- 1 month: 999 EGP
+- 3 months: 2,800 EGP
+- 6 months: 4,999 EGP
 
 ## Daily coaching — outside Egypt
 

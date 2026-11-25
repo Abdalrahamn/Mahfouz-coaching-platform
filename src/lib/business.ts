@@ -19,7 +19,7 @@ export const business = {
   currency: "EGP",
   durations: [1, 3, 6] as const,
   prices: {
-    egypt: [1100, 3000, 5500],
+    egypt: [999, 2800, 4999],
     international: [1500, 4000, 7500],
   } as const,
   selfPrices: [500, 1000, 2000] as const,

@@ -18,7 +18,17 @@ test("all twelve locale/region/duration WhatsApp messages preserve the chosen pa
         const text = url.searchParams.get("text")!;
         assert.equal(url.origin, "https://wa.me");
         assert.equal(url.pathname, `/${business.whatsapp}`);
-        assert.ok(text.includes(String(months)));
+        const price = String(
+          business.prices[region][business.durations.indexOf(months)],
+        );
+        if (locale === "ar" && months === 1) assert.ok(text.includes("شهر"));
+        else
+          assert.ok(
+            text
+              .replaceAll(",", "")
+              .replace(price, "")
+              .includes(String(months)),
+          );
         assert.ok(
           text
             .replaceAll(",", "")
@@ -66,12 +76,12 @@ test("package payment uses the official InstaPay link and confirmation WhatsApp"
     }),
   );
   const selectedText = selected.searchParams.get("text") ?? "";
-  assert.match(selectedText, /1100/);
+  assert.match(selectedText, /999/);
   assert.match(selectedText, /داخل مصر/);
 });
 test("business pricing matches the supplied figures", () => {
   assert.deepEqual(business.prices, {
-    egypt: [1100, 3000, 5500],
+    egypt: [999, 2800, 4999],
     international: [1500, 4000, 7500],
   });
 });
@@ -88,7 +98,9 @@ test("only the expected privacy-safe proof assets are public", () => {
   assert.ok(
     fs
       .readdirSync("public/assets/testimonials")
-      .every((name) => /^feedback-\d{2}-full-redacted(-(480|720)w)?\.(webp|png)$/.test(name)),
+      .every((name) =>
+        /^feedback-\d{2}-full-redacted(-(480|720)w)?\.(webp|png)$/.test(name),
+      ),
   );
   assert.ok(!fs.existsSync("public/private"));
 });

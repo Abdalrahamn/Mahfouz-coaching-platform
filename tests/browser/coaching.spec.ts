@@ -81,9 +81,9 @@ for (const locale of ["en", "ar"] as const) {
     expect(await page.locator(".price bdi").allTextContents()).toEqual(
       locale === "ar"
         ? [
-            "١٬١٠٠",
-            "٣٬٠٠٠",
-            "٥٬٥٠٠",
+            "٩٩٩",
+            "٢٬٨٠٠",
+            "٤٬٩٩٩",
             "١٬٥٠٠",
             "٤٬٠٠٠",
             "٧٬٥٠٠",
@@ -92,9 +92,9 @@ for (const locale of ["en", "ar"] as const) {
             "٢٬٠٠٠",
           ]
         : [
-            "1,100",
-            "3,000",
-            "5,500",
+            "999",
+            "2,800",
+            "4,999",
             "1,500",
             "4,000",
             "7,500",
