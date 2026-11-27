@@ -14,7 +14,7 @@ import {
 import { business, isLocale } from "@/lib/business";
 import { getContent } from "@/lib/content";
 import { siteOrigin } from "@/lib/env";
-import { metadataFor, priceSnippet } from "@/lib/metadata";
+import { metadataFor } from "@/lib/metadata";
 import {
   breadcrumbNode,
   coachId,
@@ -37,7 +37,8 @@ export async function generateMetadata({ params }: GuideProps) {
     locale,
     coachingGuidePath,
     guide.title,
-    priceSnippet(locale),
+    // Unique snippet: the homepage already uses the price summary.
+    guide.intro,
   );
 }
 
